@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dra. Naira Villar · Dermatologia, Nutrologia e Estética em Salvador</title>
+<style>
+  /* Direção: CLÍNICA MADURA E SÉRIA. A Dra. Naira tem 50 anos de medicina (formada 1975, UFBA),
+     3 RQEs (Dermatologia, Nutrologia, Cir. Pediátrica). Sem site e sem fotos públicas em alta
+     (seção reduzida — nada de foto de banco). Azul-petróleo clínico + branco, tipografia serifada
+     institucional, linguagem de saúde integrativa. */
+  :root {
+    --branco: #ffffff;
+    --gelo: #f4f7f8;
+    --petroleo: #1f5560;
+    --petroleo-claro: #d9e8eb;
+    --verde-agua: #3f8f8f;
+    --tinta: #22333b;
+    --cinza: #5f7178;
+    --linha: #dbe7e9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: var(--gelo); color: var(--tinta); line-height: 1.65; }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: normal; }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 22px; }
+
+  .topbar { background: var(--petroleo); color: var(--branco); }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 13px 22px; font-size: 13px; }
+  .topbar .nome { font-family: Georgia, serif; font-size: 16px; }
+
+  .hero { background: linear-gradient(170deg, var(--branco) 45%, var(--petroleo-claro)); padding: 76px 0 62px; }
+  .hero .container { display: grid; grid-template-columns: 1.1fr .9fr; gap: 46px; align-items: center; }
+  .hero .tag { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--verde-agua); margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(30px, 4.2vw, 44px); line-height: 1.16; margin-bottom: 18px; }
+  .hero h1 em { font-style: italic; color: var(--petroleo); }
+  .hero .sub { font-size: 15.5px; color: var(--cinza); margin-bottom: 22px; max-width: 50ch; }
+  .hero .cred { background: var(--branco); border: 1px solid var(--linha); border-radius: 14px; padding: 14px 20px; font-size: 13.5px; margin-bottom: 26px; display: inline-block; }
+  .hero .cred b { color: var(--petroleo); }
+  .hero .rques { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 26px; }
+  .rque { background: var(--petroleo-claro); color: var(--petroleo); font-size: 12px; padding: 6px 14px; border-radius: 999px; }
+  .botoes { display: flex; gap: 13px; flex-wrap: wrap; }
+  .botoes a { text-decoration: none; padding: 14px 30px; border-radius: 6px; font-size: 15px; transition: .2s; }
+  .botoes .p { background: var(--petroleo); color: var(--branco); }
+  .botoes .p:hover { background: #17434c; }
+  .botoes .s { border: 1px solid var(--petroleo); color: var(--petroleo); }
+  .hero .aside { background: var(--branco); border: 1px solid var(--linha); border-radius: 18px; padding: 34px 30px; }
+  .hero .aside .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--verde-agua); margin-bottom: 12px; }
+  .hero .aside p { margin: 8px 0; font-size: 15px; }
+  .hero .aside .dest { font-family: Georgia, serif; font-size: 21px; color: var(--petroleo); }
+
+  .faixa { background: var(--petroleo); color: var(--petroleo-claro); }
+  .faixa .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; padding: 12px 22px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+
+  section { padding: 64px 0; }
+  .kicker { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--verde-agua); margin-bottom: 12px; }
+  h2 { font-size: clamp(25px, 3.2vw, 34px); margin-bottom: 24px; }
+
+  .sobre { background: var(--branco); }
+  .sobre .container { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .sobre p { margin-bottom: 14px; color: #41525a; font-size: 15.5px; }
+  .fichas { border-top: 1px solid var(--linha); font-size: 14px; }
+  .fichas .l { display: grid; grid-template-columns: 180px 1fr; padding: 10px 0; border-bottom: 1px solid var(--linha); }
+  .fichas .l b { color: var(--cinza); font-weight: 500; }
+
+  .areas { background: var(--gelo); }
+  .area-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .area { background: var(--branco); border: 1px solid var(--linha); border-top: 3px solid var(--verde-agua); border-radius: 12px; padding: 24px; }
+  .area h3 { font-size: 18.5px; margin-bottom: 8px; }
+  .area p { font-size: 14px; color: var(--cinza); }
+  .area .crm-rqe { font-size: 12px; color: var(--petroleo); margin-top: 10px; }
+
+  .google { background: var(--branco); text-align: center; }
+  .google .nota { font-family: Georgia, serif; font-size: 52px; font-style: italic; }
+  .google .estrelas { color: #e2a33c; font-size: 21px; letter-spacing: 7px; margin: 6px 0; }
+  .google p { font-size: 14px; color: var(--cinza); }
+  .google a { color: var(--petroleo); }
+
+  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .ender { background: var(--branco); border: 1px solid var(--linha); border-radius: 16px; padding: 30px; }
+  .ender .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--verde-agua); margin-bottom: 10px; }
+  .ender p { margin: 7px 0; font-size: 15px; }
+  .mapa { border-radius: 16px; overflow: hidden; border: 1px solid var(--linha); }
+  .mapa iframe { width: 100%; height: 330px; border: 0; }
+
+  .contato { background: var(--petroleo); color: var(--branco); text-align: center; padding: 58px 0; }
+  .contato h2 { color: var(--branco); margin-bottom: 8px; }
+  .contato p { margin-bottom: 24px; color: #c6dde1; }
+  .contato a.btn { background: var(--branco); color: var(--petroleo); text-decoration: none; font-weight: 700; padding: 16px 34px; border-radius: 6px; font-size: 15px; }
+
+  footer { background: #16323a; color: #9fb9be; padding: 30px 0; font-size: 12.5px; text-align: center; }
+  footer .disc { max-width: 700px; margin: 0 auto 10px; color: #7e9aa0; line-height: 1.55; }
+  footer .cred { color: var(--branco); }
+
+  @media (max-width: 780px) {
+    .hero .container, .sobre .container, .local .container, .area-g { grid-template-columns: 1fr; }
+    .faixa .container { gap: 12px; font-size: 10.5px; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="nome">Dra. Naira Villar</div>
+    <div>CRM-BA 4328 · Dermatologia · Nutrologia</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div>
+      <div class="tag">Dermatologia · Nutrologia · Estética · Salvador</div>
+      <h1>Saúde da pele e do corpo <em>num só acompanhamento</em>.</h1>
+      <p class="sub">Meio século de medicina dedicado ao cuidado integral: dermatologia, nutrologia e estética com a escuta de quem já atendeu gerações de pacientes em Salvador.</p>
+      <div class="cred"><b>Dra. Naira Carvalho Machado Villar</b><br>CRM-BA 4328 · Formada pela UFBA (1975)</div>
+      <div class="rques">
+        <span class="rque">RQE 8465 · Dermatologia</span>
+        <span class="rque">RQE 26180 · Nutrologia</span>
+        <span class="rque">RQE 3511 · Cirurgia Pediátrica</span>
+      </div>
+      <div class="botoes">
+        <a class="p" href="https://wa.me/5571996626854">Agendar consulta</a>
+        <a class="s" href="#areas">Ver áreas de cuidado</a>
+      </div>
+    </div>
+    <div class="aside">
+      <div class="r">Experiência</div>
+      <p class="dest">50 anos de medicina</p>
+      <p>Formação pela Universidade Federal da Bahia (UFBA), com três títulos de especialidade registrados no CFM.</p>
+      <p style="margin-top:16px">Atendimento no Complexo Odonto-Médico Itaigara, em Salvador.</p>
+    </div>
+  </div>
+</header>
+
+<div class="faixa">
+  <div class="container">
+    <span>Dermatologia</span><span>Nutrologia</span><span>Estética</span><span>Saúde integrativa</span>
+  </div>
+</div>
+
+<section class="sobre">
+  <div class="container">
+    <div>
+      <div class="kicker">Sobre a médica</div>
+      <h2>Uma visão integral da saúde</h2>
+      <p>A Dra. Naira Villar une dermatologia e nutrologia em um mesmo acompanhamento — porque a saúde da pele e a saúde do corpo caminham juntas.</p>
+      <p>Com formação pela UFBA e títulos de especialidade em dermatologia, nutrologia e cirurgia pediátrica, o atendimento considera o paciente como um todo: alimentação, rotina, saúde da pele e bem-estar.</p>
+    </div>
+    <div class="fichas">
+      <div class="l"><b>Registro</b><span>CRM-BA 4328 · Situação Regular</span></div>
+      <div class="l"><b>Dermatologia</b><span>RQE 8465</span></div>
+      <div class="l"><b>Nutrologia</b><span>RQE 26180</span></div>
+      <div class="l"><b>Cirurgia Pediátrica</b><span>RQE 3511</span></div>
+      <div class="l"><b>Formação</b><span>Universidade Federal da Bahia · UFBA (1975)</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="kicker">Áreas de cuidado</div>
+    <h2>Três especialidades, um só olhar</h2>
+    <div class="area-g">
+      <div class="area"><h3>Dermatologia</h3><p>Diagnóstico e acompanhamento das doenças da pele, cabelos e unhas, com conduta baseada em experiência clínica de décadas.</p><div class="crm-rqe">RQE 8465</div></div>
+      <div class="area"><h3>Nutrologia</h3><p>Cuidado da saúde a partir da alimentação e dos hábitos — o alicerce que se reflete na pele, na energia e no bem-estar.</p><div class="crm-rqe">RQE 26180</div></div>
+      <div class="area"><h3>Estética</h3><p>Procedimentos dermatológicos e estéticos integrados ao acompanhamento de saúde, sem promessas e com avaliação prévia.</p><div class="crm-rqe">Dermatologia + Nutrologia</div></div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--cinza);">Cada conduta é definida em consulta, após avaliação médica individualizada.</p>
+  </div>
+</section>
+
+<section class="google">
+  <div class="container">
+    <div class="kicker">Avaliações no Google</div>
+    <div class="nota">5,0</div>
+    <div class="estrelas">★★★★★</div>
+    <p>4 avaliações no Google · <a href="https://www.google.com/maps/place/Dra.+Naira+Villar+-+Dermatologista+-+Nutrologia+-+Est%C3%A9tica+-+Salvador/data=!4m7!3m6!1s0x7161b4a59ad6f2f:0x5424508a285d11a8!8m2!3d-12.998106!4d-38.4635524" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
+  </div>
+</section>
+
+<section class="local">
+  <div class="container">
+    <div class="ender">
+      <div class="r">Onde atendo</div>
+      <p><strong>Av. Antônio Carlos Magalhães, 585</strong></p>
+      <p>Complexo Odonto-Médico Itaigara · Ed. Louis Pasteur, Bloco B, Sala 1101</p>
+      <p>Itaigara · Salvador · BA</p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Av.+Ant%C3%B4nio+Carlos+Magalh%C3%A3es,+585+-+Itaigara,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contato">
+  <div class="container">
+    <div class="kicker" style="color:#c6dde1">Próximo passo</div>
+    <h2>Agende sua consulta</h2>
+    <p>Fale com o consultório e reserve o seu horário.</p>
+    <a class="btn" href="https://wa.me/5571996626854">Chamar no WhatsApp · (71) 99662-6854</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="disc">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui um site oficial e não foi publicada pela Dra. Naira Villar. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
+    <p class="cred">Dra. Naira Carvalho Machado Villar · CRM-BA 4328 · RQE 8465 (Dermatologia) · RQE 26180 (Nutrologia) · Salvador, BA</p>
+  </div>
+</footer>
+
+</body>
+</html>
