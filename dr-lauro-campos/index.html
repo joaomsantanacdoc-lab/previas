@@ -1,232 +1,470 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-BR" class="js-pending">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Dr. Lauro Campos · Cirurgia Plástica em Salvador</title>
+<meta name="description" content="Dr. Lauro Campos, cirurgião plástico em Salvador. Membro da SBCP. Contorno corporal: mamas, abdome, glúteos e lipoaspiração.">
+<meta property="og:title" content="Dr. Lauro Campos · Cirurgia Plástica em Salvador">
+<meta property="og:description" content="Contorno corporal com planejamento individual, segurança e acompanhamento do primeiro encontro à alta.">
+<meta property="og:image" content="retrato.jpg">
+<meta name="theme-color" content="#0B0A09">
+<link rel="icon" href="monograma.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.replace('js-pending','js')</script>
 <style>
-  /* Direção: PREMIUM CLÁSSICO. A identidade real da marca é o monograma dourado sobre branco
-     (logo oficial usado no site). Tipografia serifada grande, tom "sonho/transformação" do próprio médico.
-     Dourado + grafite + branco. Sem foto de paciente. */
-  :root {
-    --branco: #fdfcfa;
-    --creme: #f6f1e9;
-    --dourado: #b9963f;
-    --dourado-claro: #d5b96e;
-    --grafite: #23201c;
-    --cinza: #6e675e;
-    --linha: #e7dfd1;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: Georgia, 'Times New Roman', serif; background: var(--branco); color: var(--grafite); line-height: 1.65; }
-  img { display: block; max-width: 100%; }
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+:root{
+  --bg:#0B0A09; --bg2:#12100D; --card:#17140F; --line:rgba(200,164,98,.18);
+  --gold:#C8A462; --gold2:#E7CF94; --ivory:#F4EFE6; --muted:#A79E90; --soft:#CFC6B8;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-variant-numeric:lining-nums;background:var(--bg);color:var(--ivory);font-family:var(--sans);font-weight:400;line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4.4vw,3.6rem);line-height:1.08;letter-spacing:-.01em}
+.h2 em{font-style:italic;color:var(--gold2)}
+.lead{color:var(--soft);font-size:1.05rem;max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;padding:1rem 1.7rem;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .35s var(--ease),background .35s,box-shadow .35s,color .35s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1A140A;box-shadow:0 10px 30px -10px rgba(200,164,98,.6)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(200,164,98,.8)}
+.btn-ghost{border:1px solid rgba(244,239,230,.28);color:var(--ivory)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+.btn svg{width:18px;height:18px}
 
-  .topbar { border-bottom: 1px solid var(--linha); }
-  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; }
-  .topbar .nome { font-size: 16px; letter-spacing: 1px; }
-  .topbar .nome b { color: var(--dourado); }
-  .topbar .crm { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12.5px; color: var(--cinza); }
+/* navegação */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(11,10,9,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand img{width:42px;height:42px;mix-blend-mode:screen}
+.brand b{font-family:var(--serif);font-weight:600;font-size:1.25rem;letter-spacing:.04em}
+.brand small{display:block;font-size:.62rem;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-top:-2px}
+.nav ul{display:flex;gap:2rem;list-style:none;font-size:.84rem;color:var(--soft)}
+.nav ul a{position:relative;padding:.3rem 0}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav ul a:hover{color:var(--ivory)}
+.nav ul a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav .btn{padding:.7rem 1.2rem;font-size:.82rem}
+.burger{display:none;background:none;border:0;color:var(--ivory);width:44px;height:44px}
+.drawer{position:fixed;inset:78px 0 auto;z-index:49;background:rgba(11,10,9,.97);border-bottom:1px solid var(--line);padding:1.5rem 24px 2rem;display:none;flex-direction:column;gap:1.2rem;font-family:var(--serif);font-size:1.6rem}
+.drawer.open{display:flex}
 
-  /* HERO tipográfico (sem foto: acervo público não tem foto do médico em alta — seção reduzida) */
-  .hero { background: linear-gradient(175deg, var(--branco) 55%, var(--creme)); padding: 84px 0 64px; text-align: center; }
-  .hero .monograma { width: 96px; margin: 0 auto 26px; }
-  .hero .monograma img { border-radius: 50%; }
-  .hero .kicker { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--dourado); margin-bottom: 18px; }
-  .hero h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.12; font-weight: normal; margin-bottom: 20px; }
-  .hero h1 em { font-style: italic; color: var(--dourado); }
-  .hero p.sub { max-width: 58ch; margin: 0 auto 26px; font-size: 16.5px; color: var(--cinza); }
-  .hero .cred { display: inline-block; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13.5px; color: var(--grafite); border: 1px solid var(--linha); background: var(--branco); border-radius: 999px; padding: 9px 20px; margin-bottom: 30px; }
-  .botoes { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .botoes a { text-decoration: none; padding: 15px 30px; border-radius: 999px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; transition: .2s; }
-  .botoes .p { background: var(--grafite); color: var(--branco); }
-  .botoes .p:hover { background: var(--dourado); }
-  .botoes .s { border: 1px solid var(--grafite); color: var(--grafite); }
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero picture,.hero .bg{position:absolute;inset:0;z-index:-2}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:62% 30%;transform:scale(1.08);animation:kb 14s var(--ease) forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(90deg,rgba(11,10,9,.96) 0%,rgba(11,10,9,.82) 34%,rgba(11,10,9,.25) 64%,rgba(11,10,9,.35) 100%),
+  linear-gradient(0deg,var(--bg) 0%,rgba(11,10,9,0) 38%)}
+.hero .wrap{padding:9rem 0 4.5rem}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.7rem,6.4vw,5.6rem);line-height:1.02;letter-spacing:-.015em;max-width:12ch;margin:1.2rem 0 1.4rem}
+.hero h1 em{color:var(--gold2)}
+.hero .lead{max-width:46ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+.trust{display:flex;flex-wrap:wrap;gap:1.6rem 2.6rem;margin-top:3.2rem;padding-top:1.6rem;border-top:1px solid var(--line);max-width:760px}
+.trust div{font-size:.8rem;color:var(--muted);line-height:1.4}
+.trust strong{display:block;font-family:var(--serif);font-size:1.7rem;font-weight:500;color:var(--ivory)}
+.stars{color:var(--gold2);letter-spacing:.12em;font-size:.8rem}
+.scroll{position:absolute;right:28px;bottom:32px;writing-mode:vertical-rl;font-size:.68rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:.8rem}
+.scroll::after{content:"";width:1px;height:56px;background:linear-gradient(var(--gold),transparent);animation:drip 2.2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  .faixa { background: var(--grafite); color: var(--creme); font-family: 'Segoe UI', Arial, sans-serif; }
-  .faixa .container { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; padding: 13px 22px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+/* faixa de procedimentos */
+.marquee{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:1.3rem 0}
+.marquee .track{display:flex;gap:3.5rem;width:max-content;animation:mq 38s linear infinite}
+.marquee span{font-family:var(--serif);font-size:1.6rem;font-style:italic;color:var(--soft);white-space:nowrap;display:flex;align-items:center;gap:3.5rem}
+.marquee span::after{content:"✦";font-style:normal;font-size:.8rem;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-  section { padding: 72px 0; }
-  .kicker { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--dourado); margin-bottom: 14px; }
-  h2 { font-size: clamp(26px, 3.4vw, 36px); font-weight: normal; margin-bottom: 26px; }
+section{position:relative;scroll-margin-top:84px}
+.pad{padding:clamp(5rem,10vw,8.5rem) 0}
 
-  .sobre { background: var(--creme); }
-  .sobre .container { display: grid; grid-template-columns: 1.1fr .9fr; gap: 52px; }
-  .sobre p { margin-bottom: 15px; }
-  .pilares { display: grid; gap: 14px; }
-  .pilar { background: var(--branco); border: 1px solid var(--linha); border-left: 3px solid var(--dourado); padding: 18px 20px; border-radius: 8px; }
-  .pilar h3 { font-size: 17px; margin-bottom: 6px; }
-  .pilar p { font-size: 14px; color: var(--cinza); margin: 0; }
-  .ficha { margin-top: 22px; border-top: 1px solid var(--linha); font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; }
-  .ficha .l { display: grid; grid-template-columns: 190px 1fr; padding: 9px 0; border-bottom: 1px solid var(--linha); }
-  .ficha .l b { color: var(--cinza); font-weight: 500; }
+/* sobre */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.about .emblem{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:radial-gradient(120% 90% at 50% 20%,#1d1811 0%,#0B0A09 70%);border:1px solid var(--line);display:grid;place-items:center}
+.about .emblem img{width:78%;mix-blend-mode:screen}
+.about .emblem::after{content:"";position:absolute;inset:14px;border:1px solid var(--line);border-radius:2px;pointer-events:none}
+.about p{color:var(--soft);margin-top:1.2rem}
+.about p strong{color:var(--ivory);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.4rem}
+.facts div{background:var(--bg);padding:1.4rem 1.2rem}
+.facts strong{display:block;font-family:var(--serif);font-size:2.6rem;font-weight:500;color:var(--gold2);line-height:1}
+.facts span{font-size:.78rem;color:var(--muted);display:block;margin-top:.5rem}
+.cred{margin-top:2rem;display:grid;gap:.9rem}
+.cred div{display:flex;gap:1rem;align-items:baseline;padding-bottom:.9rem;border-bottom:1px solid var(--line);font-size:.92rem}
+.cred em{font-style:normal;color:var(--gold);min-width:9.5rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
 
-  .procedimentos { background: var(--branco); }
-  .proc-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .proc { border: 1px solid var(--linha); border-radius: 14px; padding: 26px; background: var(--branco); transition: .25s; }
-  .proc:hover { border-color: var(--dourado-claro); transform: translateY(-3px); }
-  .proc .g { color: var(--dourado); font-style: italic; font-size: 14px; margin-bottom: 8px; }
-  .proc h3 { font-size: 19px; margin-bottom: 9px; }
-  .proc p { font-size: 14px; color: var(--cinza); }
+/* procedimentos */
+.proc-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3.2rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.proc{background:var(--bg);padding:2.4rem 2rem 2.2rem;position:relative;overflow:hidden;transition:background .5s var(--ease)}
+.proc::before{content:"";position:absolute;inset:auto 0 0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.proc:hover{background:var(--card)}
+.proc:hover::before{transform:scaleX(1)}
+.proc .n{display:block;font-family:var(--serif);font-style:italic;color:var(--gold);font-size:3.4rem;line-height:1;margin-bottom:1.6rem;opacity:.9;transition:transform .6s var(--ease)}
+.proc:hover .n{transform:translateX(6px)}
+.proc svg{width:38px;height:38px;stroke:var(--gold2);stroke-width:1.2;fill:none;margin:1.3rem 0 1.1rem;transition:transform .6s var(--ease)}
+.proc:hover svg{transform:translateY(-4px) rotate(-4deg)}
+.proc h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;line-height:1.15}
+.proc p{color:var(--muted);font-size:.92rem;margin-top:.7rem}
+.note{font-size:.78rem;color:var(--muted);margin-top:1.4rem}
 
-  .caminho { background: var(--grafite); color: var(--creme); }
-  .caminho h2 { color: var(--creme); }
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-  .step { border-top: 2px solid var(--dourado); padding-top: 16px; }
-  .step .n { font-style: italic; font-size: 26px; color: var(--dourado); }
-  .step h3 { font-size: 17px; margin: 6px 0; color: var(--branco); }
-  .step p { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13.5px; color: #bfb6a8; }
+/* jornada */
+.journey{background:var(--bg2);border-block:1px solid var(--line)}
+.jgrid{display:grid;grid-template-columns:.9fr 1.3fr;gap:clamp(2rem,6vw,6rem)}
+.jgrid .sticky{position:sticky;top:120px;align-self:start}
+.steps{position:relative;padding-left:2.6rem}
+.steps::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.steps .bar{position:absolute;left:10px;top:6px;width:1px;height:0;background:linear-gradient(var(--gold2),var(--gold));transition:height .2s linear}
+.step{position:relative;padding-bottom:2.6rem}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-2.6rem;top:.45rem;width:21px;height:21px;border-radius:50%;background:var(--bg2);border:1px solid var(--gold);box-shadow:0 0 0 5px var(--bg2)}
+.step.on::before{background:var(--gold)}
+.step small{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.step h3{font-family:var(--serif);font-weight:500;font-size:1.65rem;margin:.2rem 0 .6rem}
+.step ul{list-style:none;color:var(--soft);font-size:.93rem;display:grid;gap:.35rem}
+.step li{padding-left:1.1rem;position:relative}
+.step li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:1px;background:var(--gold)}
 
-  .google { background: var(--creme); text-align: center; }
-  .google .nota { font-size: 58px; font-style: italic; }
-  .google .estrelas { color: var(--dourado); font-size: 22px; letter-spacing: 7px; margin: 6px 0; }
-  .google p { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; color: var(--cinza); }
-  .google a { color: var(--grafite); }
+/* avaliações */
+.rev-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.score{display:flex;align-items:center;gap:1.2rem}
+.score b{font-family:var(--serif);font-size:4.4rem;font-weight:500;line-height:1;color:var(--ivory)}
+.score span{font-size:.85rem;color:var(--muted);line-height:1.5}
+.gmark{width:20px;height:20px;vertical-align:-4px;margin-right:.35rem}
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.review{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:2rem;display:flex;flex-direction:column;gap:1.1rem;transition:transform .5s var(--ease),border-color .5s}
+.review:hover{transform:translateY(-4px);border-color:rgba(200,164,98,.45)}
+.review q{font-family:var(--serif);font-size:1.32rem;line-height:1.45;color:var(--ivory);quotes:"“" "”"}
+.review footer{display:flex;align-items:center;gap:.8rem;margin-top:auto;font-size:.84rem;color:var(--muted)}
+.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1A140A;font-weight:700;font-size:.85rem}
+.review footer b{color:var(--ivory);font-weight:600;display:block}
+.more{display:inline-flex;margin-top:2rem;color:var(--gold2);font-size:.9rem;border-bottom:1px solid var(--gold);padding-bottom:.2rem}
 
-  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
-  .ender { background: var(--creme); border: 1px solid var(--linha); border-radius: 16px; padding: 30px; font-family: 'Segoe UI', Arial, sans-serif; }
-  .ender .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--dourado); margin-bottom: 10px; }
-  .ender p { margin: 7px 0; font-size: 15px; }
-  .mapa { border-radius: 16px; overflow: hidden; border: 1px solid var(--linha); }
-  .mapa iframe { width: 100%; height: 330px; border: 0; }
+/* contato */
+.visit{display:grid;grid-template-columns:1fr 1.15fr;gap:1.4rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:2.2rem}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:999px;background:rgba(200,164,98,.1);color:var(--gold2)}
+.status i{width:8px;height:8px;border-radius:50%;background:#7CD992;box-shadow:0 0 0 0 rgba(124,217,146,.6);animation:ping 2s infinite}
+.status.closed i{background:#E0806F;animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(124,217,146,0)}100%{box-shadow:0 0 0 0 rgba(124,217,146,0)}}
+.hours{margin-top:1.6rem;display:grid;gap:.1rem}
+.hours div{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--line);font-size:.94rem;color:var(--soft)}
+.hours div.today{color:var(--ivory);font-weight:600}
+.hours div.today span:first-child::after{content:" · hoje";color:var(--gold);font-weight:500;font-size:.78rem}
+.addr{margin-top:1.8rem;color:var(--soft);font-size:.95rem}
+.addr b{display:block;color:var(--ivory);font-family:var(--serif);font-size:1.35rem;font-weight:500;margin-bottom:.3rem}
+.panel .btn{margin-top:1.6rem}
+.map{border-radius:6px;overflow:hidden;border:1px solid var(--line);min-height:460px;filter:grayscale(.35) contrast(1.05)}
+.map iframe{width:100%;height:100%;min-height:460px;border:0}
 
-  .contato { background: var(--dourado); color: var(--branco); text-align: center; padding: 58px 0; }
-  .contato h2 { color: var(--branco); margin-bottom: 8px; }
-  .contato p { margin-bottom: 22px; font-family: 'Segoe UI', Arial, sans-serif; }
-  .contato a.btn { background: var(--grafite); color: var(--branco); text-decoration: none; padding: 16px 34px; border-radius: 999px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; }
+/* perguntas */
+.faq{max-width:860px;margin:3rem auto 0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:1.6rem 0;font-family:var(--serif);font-size:1.45rem;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-family:var(--sans);font-size:1.5rem;transition:transform .4s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--soft);padding:0 0 1.6rem;max-width:70ch}
 
-  footer { background: var(--grafite); color: #a99f8f; padding: 32px 0; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; font-size: 12.5px; }
-  footer .disc { max-width: 700px; margin: 0 auto 10px; color: #857c6d; line-height: 1.55; }
-  footer .cred { color: var(--creme); }
+/* chamada final */
+.final{text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 100%,rgba(200,164,98,.16),transparent 70%)}
+.final .h2{max-width:18ch;margin:1rem auto 1.4rem}
+.final .lead{margin:0 auto 2.4rem}
 
-  @media (max-width: 780px) {
-    .sobre .container, .local .container { grid-template-columns: 1fr; }
-    .proc-g, .steps { grid-template-columns: 1fr; }
-    .faixa .container { gap: 14px; font-size: 10.5px; }
-    section { padding: 50px 0; }
-    .hero { padding: 60px 0 48px; }
-  }
+footer.site{border-top:1px solid var(--line);padding:3rem 0 2.4rem;color:var(--muted);font-size:.8rem}
+footer.site .row{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:center}
+footer.site .disc{margin-top:1.8rem;font-size:.72rem;line-height:1.6;max-width:90ch}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .35s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:ring 2.4s infinite}
+@keyframes ring{from{transform:scale(1);opacity:.7}to{transform:scale(1.6);opacity:0}}
+.wa svg{width:30px;height:30px}
+
+/* animações de entrada */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
+.hero .rv{transition-duration:1.3s}
+
+@media (max-width:960px){
+  .nav ul,.nav .btn{display:none}
+  .burger{display:grid;place-items:center}
+  .about,.jgrid,.visit{grid-template-columns:1fr}
+  .jgrid .sticky{position:static}
+  .grid3{grid-template-columns:1fr 1fr}
+  .reviews{grid-template-columns:1fr}
+  .hero{display:block;min-height:0}
+  .hero .bg{position:relative;inset:auto;height:64svh;min-height:420px}
+  .hero .bg img{object-position:60% 18%}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,9,.75) 0%,rgba(11,10,9,0) 16%),linear-gradient(0deg,var(--bg) 2%,rgba(11,10,9,.35) 38%,rgba(11,10,9,0) 60%)}
+  .hero::before{display:none}
+  .hero .wrap{padding:0 0 3.5rem;margin-top:-5.5rem;position:relative}
+  .scroll{display:none}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  .grid3{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr 1fr}
+  .facts strong{font-size:2rem}
+  .hero .wrap{padding-bottom:3rem}
+  .trust{gap:1.2rem 1.8rem}
+  .review{padding:1.6rem}
+  .map,.map iframe{min-height:340px}
+  .cred em{min-width:7rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="container">
-    <div class="nome">Dr. <b>Lauro Campos</b></div>
-    <div class="crm">CRM-BA 28689 · RQE 23414 (Cirurgia Plástica)</div>
-  </div>
-</div>
-
-<header class="hero">
-  <div class="container">
-    <div class="monograma"><img src="lauro-oficial.png" alt="Dr. Lauro Campos — Cirurgia Plástica"></div>
-    <div class="kicker">Cirurgia Plástica · Estética e Reparadora</div>
-    <h1>Cada sonho é único.<br>A cirurgia certa respeita <em>o seu corpo</em>.</h1>
-    <p class="sub">Cirurgias de contorno corporal — mamas, abdome, glúteos e lipoaspiração — com planejamento individualizado, segurança e acompanhamento próximo do pré ao pós-operatório.</p>
-    <div class="cred">Dr. Lauro Campos · CRM-BA 28689 · RQE 23414 · Membro Titular da SBCP</div>
-    <div class="botoes">
-      <a class="p" href="https://wa.me/5571996018224">Agendar consulta</a>
-      <a class="s" href="#procedimentos">Ver procedimentos</a>
-    </div>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Dr. Lauro Campos, início">
+      <img src="monograma.png" alt="">
+      <span><b>Dr. Lauro Campos</b><small>Cirurgia Plástica</small></span>
+    </a>
+    <ul>
+      <li><a href="#cirurgiao">O cirurgião</a></li>
+      <li><a href="#procedimentos">Procedimentos</a></li>
+      <li><a href="#jornada">Jornada</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="btn btn-gold" href="https://wa.me/5571996018224?text=Ol%C3%A1%2C%20Dr.%20Lauro!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
   </div>
 </header>
+<nav class="drawer" id="drawer" aria-label="Menu">
+  <a href="#cirurgiao">O cirurgião</a><a href="#procedimentos">Procedimentos</a><a href="#jornada">Jornada</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a>
+</nav>
 
-<div class="faixa">
-  <div class="container">
-    <span>Mamas</span><span>Abdome</span><span>Glúteos</span><span>Lipoaspiração</span><span>Contorno corporal</span>
+<main>
+<section class="hero" id="inicio">
+  <div class="bg"><picture><source srcset="retrato.webp" type="image/webp"><img src="retrato.jpg" alt="Dr. Lauro Campos em seu consultório" fetchpriority="high"></picture></div>
+  <div class="wrap">
+    <p class="eyebrow rv">Cirurgia Plástica · Salvador</p>
+    <h1 class="rv d1">Contorno corporal com <em>técnica</em>, segurança e naturalidade.</h1>
+    <p class="lead rv d2">Mamas, abdome, glúteos e lipoaspiração, com planejamento individual e acompanhamento próximo, do primeiro encontro até a alta.</p>
+    <div class="ctas rv d3">
+      <a class="btn btn-gold" href="https://wa.me/5571996018224?text=Ol%C3%A1%2C%20Dr.%20Lauro!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Agendar pelo WhatsApp</a>
+      <a class="btn btn-ghost" href="#jornada">Conhecer a jornada</a>
+    </div>
+    <div class="trust rv d4">
+      <div><strong>4,9 <span class="stars">★★★★★</span></strong>230 avaliações no Google</div>
+      <div><strong>SBCP</strong>Membro da Sociedade Brasileira<br>de Cirurgia Plástica</div>
+      <div><strong>11 anos</strong>de formação médica<br>em cirurgia</div>
+    </div>
   </div>
-</div>
+  <span class="scroll">Role</span>
+</section>
 
-<section class="sobre">
-  <div class="container">
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Lipoabdominoplastia</span><span>Lipoescultura de definição 360°</span><span>Mastopexia com prótese</span><span>Mamoplastia de aumento</span><span>Mamoplastia redutora</span><span>Cirurgia pós-bariátrica</span>
+  <span>Lipoabdominoplastia</span><span>Lipoescultura de definição 360°</span><span>Mastopexia com prótese</span><span>Mamoplastia de aumento</span><span>Mamoplastia redutora</span><span>Cirurgia pós-bariátrica</span>
+</div></div>
+
+<section class="pad" id="cirurgiao">
+  <div class="wrap about">
+    <div class="emblem rv"><img src="logo.png" alt="Logotipo Dr. Lauro Campos, Cirurgia Plástica"></div>
     <div>
-      <div class="kicker">Conheça o seu cirurgião</div>
-      <h2>Transparência, segurança e cuidado — do primeiro encontro à alta</h2>
-      <p>Dr. Lauro Campos é cirurgião plástico, membro da Sociedade Brasileira de Cirurgia Plástica (SBCP), com atuação nas áreas Estética e Reparadora da especialidade.</p>
-      <p>Formação em Cirurgia Geral pela Santa Casa de Misericórdia da Bahia (Hospital Santa Izabel) e especialização em Cirurgia Plástica pelo Hospital das Clínicas de Salvador (HUPES).</p>
-      <div class="ficha">
-        <div class="l"><b>Formação · Cirurgia Geral</b><span>Santa Casa de Misericórdia da Bahia</span></div>
-        <div class="l"><b>Especialização · Cir. Plástica</b><span>Hospital das Clínicas (HUPES) · Salvador</span></div>
-        <div class="l"><b>Sociedade</b><span>Membro da SBCP</span></div>
-        <div class="l"><b>Atuação</b><span>Contorno corporal: mamas, abdome, glúteos e lipoaspiração</span></div>
+      <p class="eyebrow rv">O cirurgião</p>
+      <h2 class="h2 rv d1">Cada sonho é único. A cirurgia certa <em>respeita o seu corpo.</em></h2>
+      <p class="rv d2">O Dr. Lauro Campos é cirurgião plástico, <strong>membro da Sociedade Brasileira de Cirurgia Plástica (SBCP)</strong>, com atuação nas áreas estética e reparadora da especialidade.</p>
+      <p class="rv d2">Formou-se em Cirurgia Geral pela Santa Casa de Misericórdia da Bahia (Hospital Santa Izabel) e especializou-se em Cirurgia Plástica pelo Hospital das Clínicas (HUPES), em Salvador. Seu foco é o contorno corporal, sempre priorizando segurança, naturalidade e tecnologia.</p>
+      <div class="facts rv d3">
+        <div><strong data-count="11">11</strong><span>anos de formação</span></div>
+        <div><strong data-count="4.9" data-decimals="1">4,9</strong><span>nota no Google</span></div>
+        <div><strong data-count="230">230</strong><span>avaliações públicas</span></div>
+      </div>
+      <div class="cred rv d4">
+        <div><em>Registro</em>CRM-BA 28689 · RQE 23414 (Cirurgia Plástica)</div>
+        <div><em>Cirurgia geral</em>Santa Casa de Misericórdia da Bahia</div>
+        <div><em>Cirurgia plástica</em>Hospital das Clínicas (HUPES) · Salvador</div>
       </div>
     </div>
-    <div class="pilares">
-      <div class="pilar"><h3>Segurança</h3><p>Avaliação individual e conduta técnica voltada para um processo cirúrgico seguro e bem orientado.</p></div>
-      <div class="pilar"><h3>Naturalidade</h3><p>Resultados pensados para valorizar a harmonia corporal, respeitando proporções e anatomia.</p></div>
-      <div class="pilar"><h3>Acompanhamento</h3><p>Suporte no pré e no pós-operatório, com orientações claras em todas as etapas da jornada.</p></div>
+  </div>
+</section>
+
+<section class="pad" id="procedimentos" style="padding-top:0">
+  <div class="wrap">
+    <div class="proc-head">
+      <div><p class="eyebrow rv">Procedimentos</p><h2 class="h2 rv d1">Contorno corporal com <em>planejamento individual</em></h2></div>
+      <p class="lead rv d2" style="max-width:40ch">A indicação é sempre definida em consulta, depois de uma avaliação cuidadosa dos seus objetivos e da sua anatomia.</p>
+    </div>
+    <div class="grid3">
+      <article class="proc rv"><span class="n">01</span><h3>Lipoabdominoplastia</h3><p>Para diminuir a cintura, retirar o excesso de gordura e corrigir sobra de pele e flacidez abdominal.</p></article>
+      <article class="proc rv d1"><span class="n">02</span><h3>Lipoescultura 360°</h3><p>Para esculpir o corpo, realçando o contorno muscular com naturalidade e precisão.</p></article>
+      <article class="proc rv d2"><span class="n">03</span><h3>Mastopexia com prótese</h3><p>Para tratar a flacidez e a queda das mamas, com ganho de volume e projeção.</p></article>
+      <article class="proc rv"><span class="n">04</span><h3>Mamoplastia de aumento</h3><p>Ganho de volume e projeção, com planejamento de proporções e expectativa realista.</p></article>
+      <article class="proc rv d1"><span class="n">05</span><h3>Mamoplastia redutora</h3><p>Redução do volume mamário com foco em conforto, postura e harmonia corporal.</p></article>
+      <article class="proc rv d2"><span class="n">06</span><h3>Cirurgia pós-bariátrica</h3><p>Correção de sobras de pele após grande perda de peso, em etapas planejadas.</p></article>
+    </div>
+    <p class="note">Cada indicação cirúrgica é definida em consulta, após avaliação médica individualizada. Resultados variam de pessoa para pessoa.</p>
+  </div>
+</section>
+
+<section class="pad journey" id="jornada">
+  <div class="wrap jgrid">
+    <div class="sticky">
+      <p class="eyebrow rv">Caminho da transformação</p>
+      <h2 class="h2 rv d1">Você sabe o que acontece <em>em cada etapa.</em></h2>
+      <p class="lead rv d2" style="margin-top:1.2rem">Da primeira consulta à alta, o acompanhamento é próximo, com concierge, grupo multidisciplinar no pós-operatório e revisões programadas.</p>
+      <a class="btn btn-gold rv d3" style="margin-top:2rem" href="https://wa.me/5571996018224?text=Ol%C3%A1%2C%20Dr.%20Lauro!%20Quero%20come%C3%A7ar%20minha%20jornada." target="_blank" rel="noopener">Começar pela consulta</a>
+    </div>
+    <div class="steps" id="steps">
+      <span class="bar" id="bar"></span>
+      <div class="step rv"><small>Etapa 1</small><h3>Primeiro encontro</h3><ul><li>Consulta com o Dr. Lauro Campos</li><li>Reunião com a concierge</li><li>Apresentação do plano de tratamento e do orçamento</li><li>Solicitação dos exames pré-operatórios</li></ul></div>
+      <div class="step rv"><small>Etapa 2 · 15 dias antes</small><h3>Segundo encontro</h3><ul><li>Entrega de exames e avaliações</li><li>Definição dos detalhes da cirurgia e retirada de dúvidas</li><li>Orientações pré-operatórias e da concierge (malhas, drenagem, seguro)</li></ul></div>
+      <div class="step rv"><small>Etapa 3</small><h3>Preparação</h3><ul><li>Grupo de acompanhamento multidisciplinar no WhatsApp</li><li>Vídeos, e-book, receitas e orientações</li><li>Termo de Consentimento Livre e Esclarecido</li><li>Conferência dos materiais cirúrgicos</li></ul></div>
+      <div class="step rv"><small>Etapa 4</small><h3>Dia da cirurgia</h3><ul><li>Internamento e conferência de exames e materiais</li><li>Avaliação com a enfermagem e checklist de segurança</li><li>Avaliação pré-operatória com o anestesista</li><li>Marcação cirúrgica com o Dr. Lauro</li></ul></div>
+      <div class="step rv"><small>Etapa 5</small><h3>Alta hospitalar</h3><ul><li>Orientações pós-operatórias</li><li>Entrega de atestado e receitas</li></ul></div>
+      <div class="step rv"><small>Etapa 6 · até o 4º mês</small><h3>Revisões</h3><ul><li>1ª semana, presencial: curativo, orientações e retirada de dreno, se houver</li><li>2ª e 3ª semanas: curativos e retirada dos pontos</li><li>Revisões mensais ou quinzenais até a alta</li></ul></div>
     </div>
   </div>
 </section>
 
-<section class="procedimentos" id="procedimentos">
-  <div class="container">
-    <div class="kicker">Principais procedimentos</div>
-    <h2>Contorno corporal com planejamento individualizado</h2>
-    <div class="proc-g">
-      <div class="proc"><div class="g">i.</div><h3>Lipoabdominoplastia</h3><p>Para quem deseja diminuir a cintura, eliminar o excesso de gordura e corrigir a sobra de pele e flacidez.</p></div>
-      <div class="proc"><div class="g">ii.</div><h3>Lipoescultura de definição 360˚</h3><p>Para quem deseja esculpir o corpo, realçando o contorno muscular com naturalidade e precisão.</p></div>
-      <div class="proc"><div class="g">iii.</div><h3>Mastopexia com prótese</h3><p>Para quem deseja eliminar a flacidez e a queda das mamas e aumentar o volume mamário.</p></div>
-      <div class="proc"><div class="g">iv.</div><h3>Mamoplastia de aumento</h3><p>Ganho de volume e projeção com planejamento respeitando proporções e expectativa realista.</p></div>
-      <div class="proc"><div class="g">v.</div><h3>Mamoplastia redutora</h3><p>Redução do volume mamário com foco em conforto e harmonia corporal.</p></div>
-      <div class="proc"><div class="g">vi.</div><h3>Cirurgia pós-bariátrica</h3><p>Correção de sobras de pele após grande perda de peso, em etapas planejadas.</p></div>
+<section class="pad" id="avaliacoes">
+  <div class="wrap">
+    <div class="rev-head">
+      <div><p class="eyebrow rv">Avaliações no Google</p><h2 class="h2 rv d1">O que dizem os <em>pacientes</em></h2></div>
+      <div class="score rv d2"><b>4,9</b><span><span class="stars">★★★★★</span><br>230 avaliações públicas<br>no Google Maps</span></div>
     </div>
-    <p style="margin-top:22px;font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:var(--cinza);">Cada indicação cirúrgica é definida em consulta, após avaliação médica individualizada.</p>
+    <div class="reviews">
+      <figure class="review rv"><q>Extremamente competente tecnicamente e, acima de tudo, muito atencioso com seus pacientes. Transmite segurança, explica tudo com clareza e demonstra verdadeiro cuidado em cada atendimento.</q><footer><span class="avatar">EA</span><span><b>Edvagner A.</b><span class="stars">★★★★★</span> · há 6 meses</span></footer></figure>
+      <figure class="review rv d1"><q>Desde a primeira consulta me senti acolhida, segura e totalmente confiante na escolha que fiz. O profissionalismo, a atenção, a paciência em esclarecer todas as minhas dúvidas e o carinho no pré e pós-operatório fizeram toda a diferença.</q><footer><span class="avatar">NV</span><span><b>Naomi V.</b><span class="stars">★★★★★</span> · há 7 meses</span></footer></figure>
+      <figure class="review rv"><q>Ótimo profissional e pessoa incrível! […] Humano, detalhista, atencioso […] e extremamente competente. Indico sem nem pensar duas vezes!</q><footer><span class="avatar">GA</span><span><b>Gabriela A.</b><span class="stars">★★★★★</span> · há 1 mês</span></footer></figure>
+      <figure class="review rv d1"><q>Sou grata pela forma como você e sua equipe cuidaram de mim […] Obrigado por me ouvir e por todo o cuidado durante o procedimento.</q><footer><span class="avatar">SA</span><span><b>Sônia A.</b><span class="stars">★★★★★</span> · há 10 meses</span></footer></figure>
+    </div>
+    <a class="more rv" href="https://www.google.com/maps?cid=14660681741763975494" target="_blank" rel="noopener"><svg class="gmark" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>Ver todas as avaliações no Google</a>
   </div>
 </section>
 
-<section class="caminho">
-  <div class="container">
-    <div class="kicker" style="color:var(--dourado)">O caminho da transformação</div>
-    <h2>Como a jornada funciona</h2>
-    <div class="steps">
-      <div class="step"><div class="n">01</div><h3>Consulta de avaliação</h3><p>Primeiro encontro: escuta dos objetivos, avaliação e apresentação do plano de tratamento.</p></div>
-      <div class="step"><div class="n">02</div><h3>Preparo</h3><p>Exames pré-operatórios, definição dos detalhes da cirurgia e orientações do que vem depois.</p></div>
-      <div class="step"><div class="n">03</div><h3>Cirurgia e pós</h3><p>Internamento hospitalar e acompanhamento nas revisões, do curativo da 1ª semana até a alta.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="google">
-  <div class="container">
-    <div class="kicker">Avaliações no Google</div>
-    <div class="nota">4,9</div>
-    <div class="estrelas">★★★★★</div>
-    <p>229 avaliações no Google · <a href="https://www.google.com/maps/place/Dr.+Lauro+Campos+%7C+Cirurgia+Pl%C3%A1stica+em+Salvador+%7C+Mamas,+Abdominoplastia+e+LipoHD/data=!4m7!3m6!1s0x7161b2c766659c7:0xcb75345e56e59946!8m2!3d-12.9823005!4d-38.458913" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
-  </div>
-</section>
-
-<section class="local">
-  <div class="container">
-    <div class="ender">
-      <div class="r">Onde atendo</div>
-      <p><strong>Alameda das Espatódeas, 567</strong></p>
-      <p>Caminho das Árvores</p>
-      <p>Salvador · BA · CEP 41820-460</p>
-      <p style="margin-top:14px;color:var(--cinza);">Atendimento em dias de semana, com agenda definida na consulta.</p>
-    </div>
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps?q=Alameda+das+Espatodeas,+567+-+Caminho+das+Arvores,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+<section class="pad" id="contato" style="padding-top:0">
+  <div class="wrap">
+    <div style="margin-bottom:3rem"><p class="eyebrow rv">Consultório</p><h2 class="h2 rv d1">Onde e quando <em>atendemos</em></h2></div>
+    <div class="visit">
+      <div class="panel rv">
+        <span class="status" id="status"><i></i><span>Horário de atendimento</span></span>
+        <div class="hours" id="hours">
+          <div data-d="1"><span>Segunda-feira</span><span>08:00 – 18:00</span></div>
+          <div data-d="2"><span>Terça-feira</span><span>08:00 – 18:00</span></div>
+          <div data-d="3"><span>Quarta-feira</span><span>08:00 – 18:00</span></div>
+          <div data-d="4"><span>Quinta-feira</span><span>08:00 – 18:00</span></div>
+          <div data-d="5"><span>Sexta-feira</span><span>08:00 – 18:00</span></div>
+          <div data-d="6"><span>Sábado</span><span>Fechado</span></div>
+          <div data-d="0"><span>Domingo</span><span>Fechado</span></div>
+        </div>
+        <p class="addr"><b>Caminho das Árvores</b>Alameda das Espatódeas, 567<br>Salvador · BA · CEP 41820-460</p>
+        <a class="btn btn-gold" href="https://wa.me/5571996018224?text=Ol%C3%A1%2C%20Dr.%20Lauro!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">WhatsApp · (71) 99601-8224</a>
+        <a class="btn btn-ghost" style="margin-left:.4rem" href="https://www.google.com/maps/dir/?api=1&destination=Alameda+das+Espat%C3%B3deas,+567,+Caminho+das+%C3%81rvores,+Salvador+-+BA" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="map rv d1"><iframe title="Mapa do consultório" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Alameda+das+Espat%C3%B3deas,+567+-+Caminho+das+%C3%81rvores,+Salvador+-+BA&output=embed"></iframe></div>
     </div>
   </div>
 </section>
 
-<section class="contato">
-  <div class="container">
-    <div class="kicker" style="color:var(--branco)">Próximo passo</div>
-    <h2>Seu sonho começa com uma conversa</h2>
-    <p>Agende sua consulta e entenda o plano mais adequado para o seu caso.</p>
-    <a class="btn" href="https://wa.me/5571996018224">Chamar no WhatsApp · (71) 99601-8224</a>
+<section class="pad" id="perguntas" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow rv" style="text-align:center">Perguntas frequentes</p>
+    <h2 class="h2 rv d1" style="text-align:center">Antes da sua <em>consulta</em></h2>
+    <div class="faq">
+      <details class="rv"><summary>O que acontece na primeira consulta?</summary><p>Você conversa com o Dr. Lauro sobre seus objetivos, passa por avaliação e conhece a concierge. Nesse encontro são apresentados o plano de tratamento e o orçamento, e são solicitados os exames pré-operatórios.</p></details>
+      <details class="rv"><summary>A consulta já define a cirurgia?</summary><p>A indicação é feita apenas depois da avaliação médica individual. O plano considera sua anatomia, sua saúde e o que é realista para o seu caso.</p></details>
+      <details class="rv"><summary>Quando entrego os exames?</summary><p>No segundo encontro, cerca de 15 dias antes da cirurgia, quando também são definidos os detalhes do procedimento e passadas as orientações pré-operatórias.</p></details>
+      <details class="rv"><summary>Como é o acompanhamento depois da cirurgia?</summary><p>Há um grupo multidisciplinar de acompanhamento no WhatsApp e revisões programadas: presencial na 1ª semana, nas 2ª e 3ª semanas e depois mensais ou quinzenais até a alta, por volta do 4º mês.</p></details>
+      <details class="rv"><summary>Onde fica o consultório?</summary><p>Na Alameda das Espatódeas, 567, Caminho das Árvores, Salvador. O atendimento é de segunda a sexta, das 8h às 18h.</p></details>
+    </div>
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <p class="disc">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui o site oficial e não foi publicada pelo Dr. Lauro Campos. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
-    <p class="cred">Dr. Lauro Campos · CRM-BA 28689 · RQE 23414 · Salvador, BA</p>
+<section class="pad final" id="agendar">
+  <div class="wrap" style="position:relative">
+    <p class="eyebrow rv">Seu sonho começa com uma conversa</p>
+    <h2 class="h2 rv d1">Agende sua consulta e conheça o <em>plano ideal para você.</em></h2>
+    <p class="lead rv d2">Atendimento de segunda a sexta, das 8h às 18h, no Caminho das Árvores.</p>
+    <a class="btn btn-gold rv d3" href="https://wa.me/5571996018224?text=Ol%C3%A1%2C%20Dr.%20Lauro!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="#inicio"><img src="monograma.png" alt=""><span><b>Dr. Lauro Campos</b><small>Cirurgia Plástica</small></span></a>
+      <span>CRM-BA 28689 · RQE 23414 · Membro da SBCP</span>
+    </div>
+    <p class="disc">Prévia de demonstração, não oficial, criada pela AVIXco para apresentar uma proposta de site ao Dr. Lauro Campos. Informações extraídas de canais públicos do próprio médico; avaliações públicas do Google Maps reproduzidas em trechos, com nome abreviado. Conteúdo informativo, sem promessa de resultado: cada indicação é definida em consulta.</p>
   </div>
 </footer>
 
+<a class="wa" href="https://wa.me/5571996018224?text=Ol%C3%A1%2C%20Dr.%20Lauro!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+
+<script>
+(() => {
+  const nav = document.getElementById("nav");
+  const onScroll = () => nav.classList.toggle("solid", scrollY > 40);
+  onScroll(); addEventListener("scroll", onScroll, { passive: true });
+
+  const burger = document.getElementById("burger"), drawer = document.getElementById("drawer");
+  burger.addEventListener("click", () => { const open = drawer.classList.toggle("open"); burger.setAttribute("aria-expanded", open); });
+  drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { drawer.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+
+  const counters = (root) => root.querySelectorAll("[data-count]").forEach((el) => {
+    const target = parseFloat(el.dataset.count), dec = +(el.dataset.decimals || 0), t0 = performance.now(), dur = 1600;
+    const tick = (t) => { const p = Math.min(1, (t - t0) / dur), v = target * (1 - Math.pow(1 - p, 3));
+      el.textContent = v.toFixed(dec).replace(".", ","); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  });
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("in"); if (e.target.querySelector("[data-count]")) counters(e.target); io.unobserve(e.target);
+  }), { threshold: .14, rootMargin: "0px 0px -6% 0px" });
+  const pendingRv = [...document.querySelectorAll(".rv")];
+  pendingRv.forEach((el) => io.observe(el));
+  const sweep = () => pendingRv.forEach((el) => {
+    if (!el.classList.contains("in") && el.getBoundingClientRect().top < innerHeight * .96) {
+      el.classList.add("in"); if (el.querySelector("[data-count]")) counters(el); io.unobserve(el);
+    }
+  });
+  addEventListener("scroll", sweep, { passive: true }); addEventListener("load", sweep);
+  setTimeout(sweep, 400);
+  requestAnimationFrame(() => document.querySelectorAll(".hero .rv").forEach((el) => el.classList.add("in")));
+
+  const steps = document.getElementById("steps"), bar = document.getElementById("bar"), stepEls = [...steps.querySelectorAll(".step")];
+  const progress = () => {
+    const r = steps.getBoundingClientRect(), mid = innerHeight * .55;
+    const h = Math.max(0, Math.min(r.height - 12, mid - r.top));
+    bar.style.height = h + "px";
+    stepEls.forEach((s) => s.classList.toggle("on", s.getBoundingClientRect().top < mid));
+  };
+  progress(); addEventListener("scroll", progress, { passive: true });
+
+  // Aberto agora, no horário de Salvador.
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/Bahia", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
+  const get = (t) => parts.find((p) => p.type === t).value;
+  const day = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(get("weekday"));
+  const mins = (+get("hour") % 24) * 60 + +get("minute");
+  document.querySelector(`#hours [data-d="${day}"]`)?.classList.add("today");
+  const status = document.getElementById("status"), open = day >= 1 && day <= 5 && mins >= 480 && mins < 1080;
+  const next = day >= 1 && day <= 5 && mins < 480 ? "hoje" : day === 5 || day === 6 ? "segunda" : "amanhã";
+  status.querySelector("span").textContent = open ? "Aberto agora · fecha às 18:00" : `Fechado · abre ${next} às 08:00`;
+  status.classList.toggle("closed", !open);
+})();
+</script>
 </body>
 </html>
