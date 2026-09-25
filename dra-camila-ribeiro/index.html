@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dra. Camila Ribeiro · Instituto de Dermatologia em Salvador</title>
+<style>
+  /* Direção: "Cuidado com ciência, escuta e sem exageros" — a tagline real dela.
+     Verde-sálvia clínico + creme + terracota suave. Serifada humanista, arejada.
+     Fotos reais dela (publicadas no site oficial). */
+  :root {
+    --creme: #faf7f1;
+    --papel: #f2ede3;
+    --salvia: #5c7a6a;
+    --salvia-escuro: #3e5a4c;
+    --salvia-claro: #dce7df;
+    --terracota: #c4825c;
+    --tinta: #2f2b26;
+    --cinza: #6f675c;
+    --linha: #e3dccb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: var(--creme); color: var(--tinta); line-height: 1.65; }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: normal; }
+  img { display: block; max-width: 100%; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+
+  .topbar { background: var(--salvia-escuro); color: var(--creme); }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 14px 22px; font-size: 13px; }
+  .topbar .nome { font-family: Georgia, serif; font-size: 16px; }
+  .topbar .crm { opacity: .85; }
+
+  .hero { background: linear-gradient(180deg, var(--creme), var(--salvia-claro)); padding: 66px 0 58px; }
+  .hero .container { display: grid; grid-template-columns: 1.05fr .95fr; gap: 46px; align-items: center; }
+  .hero .tag { font-size: 12.5px; letter-spacing: 3px; text-transform: uppercase; color: var(--salvia); margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(32px, 4.4vw, 46px); line-height: 1.15; margin-bottom: 18px; }
+  .hero h1 em { font-style: italic; color: var(--salvia-escuro); }
+  .hero .sub { font-size: 16px; color: var(--cinza); margin-bottom: 22px; max-width: 50ch; }
+  .hero .cred { display: inline-flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid var(--linha); border-radius: 14px; padding: 14px 20px; margin-bottom: 24px; font-size: 13.5px; }
+  .hero .cred b { color: var(--salvia-escuro); }
+  .botoes { display: flex; gap: 13px; flex-wrap: wrap; }
+  .botoes a { text-decoration: none; padding: 14px 28px; border-radius: 999px; font-size: 15px; transition: .2s; }
+  .botoes .p { background: var(--salvia-escuro); color: #fff; }
+  .botoes .p:hover { background: var(--salvia); }
+  .botoes .s { border: 1px solid var(--salvia-escuro); color: var(--salvia-escuro); }
+  .hero figure img { border-radius: 20px; box-shadow: 0 22px 44px rgba(62,90,76,.18); }
+  .hero figure figcaption { font-size: 12px; color: var(--cinza); margin-top: 10px; text-align: center; }
+
+  .faixa { background: var(--salvia-escuro); color: var(--creme); }
+  .faixa .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 26px; padding: 12px 22px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+
+  section { padding: 66px 0; }
+  .kicker { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--salvia); margin-bottom: 12px; }
+  h2 { font-size: clamp(25px, 3.2vw, 34px); margin-bottom: 24px; }
+
+  .sobre { background: #fff; }
+  .sobre .container { display: grid; grid-template-columns: .95fr 1.05fr; gap: 48px; align-items: center; }
+  .sobre figure img { border-radius: 18px; }
+  .sobre p { margin-bottom: 14px; color: #4b463d; font-size: 15.5px; }
+  .sobre p.missao { border-left: 3px solid var(--terracota); padding-left: 16px; font-style: italic; color: var(--tinta); }
+  .credbadges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .badge { background: var(--salvia-claro); color: var(--salvia-escuro); font-size: 12.5px; padding: 7px 14px; border-radius: 999px; }
+
+  .servicos { background: var(--creme); }
+  .serv-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .serv { background: #fff; border: 1px solid var(--linha); border-radius: 16px; padding: 24px; transition: .22s; }
+  .serv:hover { border-color: var(--salvia); }
+  .serv .ic { width: 40px; height: 40px; border-radius: 12px; background: var(--salvia-claro); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-family: Georgia, serif; font-size: 19px; color: var(--salvia-escuro); }
+  .serv h3 { font-size: 18px; margin-bottom: 8px; }
+  .serv p { font-size: 14px; color: var(--cinza); }
+
+  .escuta { background: var(--salvia-escuro); color: var(--creme); }
+  .escuta .container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .escuta h2 { color: var(--creme); margin-bottom: 10px; }
+  .escuta .kicker { color: var(--salvia-claro); }
+  .passo { border-top: 2px solid var(--salvia-claro); padding-top: 16px; }
+  .passo .n { font-family: Georgia, serif; font-style: italic; font-size: 24px; color: var(--terracota); }
+  .passo h3 { color: var(--creme); font-size: 17px; margin: 6px 0; }
+  .passo p { font-size: 13.5px; color: #c9d6cc; }
+
+  .google { background: #fff; text-align: center; }
+  .google .nota { font-family: Georgia, serif; font-size: 56px; font-style: italic; }
+  .google .estrelas { color: #e2a33c; font-size: 22px; letter-spacing: 7px; margin: 6px 0; }
+  .google p { font-size: 14px; color: var(--cinza); }
+  .google a { color: var(--salvia-escuro); }
+
+  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .ender { background: var(--salvia-claro); border-radius: 18px; padding: 30px; }
+  .ender .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--salvia-escuro); margin-bottom: 10px; }
+  .ender p { margin: 7px 0; font-size: 15px; }
+  .ender .aviso { margin-top: 14px; font-size: 13px; color: var(--cinza); }
+  .mapa { border-radius: 18px; overflow: hidden; border: 1px solid var(--linha); }
+  .mapa iframe { width: 100%; height: 330px; border: 0; }
+
+  .contato { background: var(--terracota); color: #fff; text-align: center; padding: 56px 0; }
+  .contato h2 { color: #fff; margin-bottom: 8px; }
+  .contato p { margin-bottom: 22px; opacity: .95; }
+  .contato a.btn { background: #fff; color: var(--salvia-escuro); text-decoration: none; font-weight: 600; padding: 16px 34px; border-radius: 999px; font-size: 15px; }
+
+  footer { background: #26231f; color: #a49a8a; padding: 30px 0; font-size: 12.5px; text-align: center; }
+  footer .disc { max-width: 700px; margin: 0 auto 10px; color: #82796a; line-height: 1.55; }
+  footer .cred { color: var(--creme); }
+
+  @media (max-width: 780px) {
+    .hero .container, .sobre .container, .local .container { grid-template-columns: 1fr; }
+    .serv-g, .escuta .container { grid-template-columns: 1fr; }
+    .faixa .container { gap: 12px; font-size: 10.5px; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="nome">Instituto de Dermatologia · Dra. Camila Ribeiro</div>
+    <div class="crm">CRM-BA 21467 · RQE 11906</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div>
+      <div class="tag">Dermatologia completa · Salvador</div>
+      <h1>Cuidado com ciência, escuta <em>e sem exageros</em>.</h1>
+      <p class="sub">Dermatologia clínica, cirúrgica, estética e saúde capilar — cada paciente único, cada tratamento definido depois de entender você.</p>
+      <div class="cred">
+        <span><b>Dra. Camila Sampaio Ribeiro</b></span>
+        <span>CRM-BA 21467 · RQE 11906 (Dermatologia)</span>
+      </div>
+      <div class="botoes">
+        <a class="p" href="https://wa.me/5571999858585">Agendar consulta</a>
+        <a class="s" href="#servicos">Ver áreas de cuidado</a>
+      </div>
+    </div>
+    <figure>
+      <img src="camila-hero.jpg" alt="Dra. Camila Ribeiro na entrada do Instituto de Dermatologia">
+      <figcaption>Instituto de Dermatologia · Itaigara, Salvador</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="faixa">
+  <div class="container">
+    <span>Clínica</span><span>Cirúrgica</span><span>Estética</span><span>Saúde capilar</span><span>Laser</span>
+  </div>
+</div>
+
+<section class="sobre">
+  <div class="container">
+    <figure>
+      <img src="camila-sobre.jpg" alt="Dra. Camila Ribeiro">
+    </figure>
+    <div>
+      <div class="kicker">Sobre a dermatologista</div>
+      <h2>A consulta começa pela escuta</h2>
+      <p>Cada paciente é único. Ao longo de anos de experiência e da vivência prática adquirida no cuidado de milhares de pacientes, entendemos que nenhuma pele, rotina ou expectativa é igual à outra.</p>
+      <p>A consulta começa através da escuta, entendendo as necessidades da sua pele e, somente depois, definindo o tratamento que realmente é ideal para o seu caso.</p>
+      <p class="missao">Promover saúde, prevenir doenças e proporcionar resultados naturais através de uma dermatologia moderna, ética e baseada em evidências científicas.</p>
+      <div class="credbadges">
+        <span class="badge">Mestrado · UFBA</span>
+        <span class="badge">Residência em Dermatologia</span>
+        <span class="badge">Fellowship · University of California, San Francisco</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="container">
+    <div class="kicker">Áreas de cuidado</div>
+    <h2>Tratamentos completos para a saúde e a beleza da sua pele</h2>
+    <div class="serv-g">
+      <div class="serv"><div class="ic">Cl</div><h3>Dermatologia Clínica</h3><p>Diagnóstico, prevenção e tratamento de doenças da pele, cabelos e unhas com acompanhamento personalizado.</p></div>
+      <div class="serv"><div class="ic">Ci</div><h3>Dermatologia Cirúrgica</h3><p>Procedimentos cirúrgicos realizados com segurança para remoção de lesões, biópsias e pequenas cirurgias dermatológicas.</p></div>
+      <div class="serv"><div class="ic">Es</div><h3>Dermatologia Estética</h3><p>Procedimentos modernos que promovem rejuvenescimento, equilíbrio facial e resultados naturais.</p></div>
+      <div class="serv"><div class="ic">Ca</div><h3>Saúde Capilar</h3><p>Avaliação e tratamento da queda de cabelo, alopecias e doenças do couro cabeludo.</p></div>
+      <div class="serv"><div class="ic">Ac</div><h3>Acne e Manchas</h3><p>Protocolos personalizados para acne, cicatrizes, manchas e renovação da pele.</p></div>
+      <div class="serv"><div class="ic">La</div><h3>Laser e Tecnologias</h3><p>Tecnologia avançada para tratamento de manchas, cicatrizes, rugas e rejuvenescimento.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="escuta">
+  <div class="container">
+    <div>
+      <div class="kicker">Como funciona</div>
+      <h2>Compreender você antes de indicar qualquer tratamento</h2>
+    </div>
+    <div style="grid-column: span 3; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px;">
+      <div class="passo"><div class="n">01</div><h3>Escuta</h3><p>A consulta começa entendendo as necessidades da sua pele e a sua rotina.</p></div>
+      <div class="passo"><div class="n">02</div><h3>Avaliação</h3><p>Exame clínico cuidadoso e, quando necessário, exames complementares.</p></div>
+      <div class="passo"><div class="n">03</div><h3>Plano individual</h3><p>Tratamento definido para o seu caso — sem exageros, com evidência.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="google">
+  <div class="container">
+    <div class="kicker">Avaliações no Google</div>
+    <div class="nota">5,0</div>
+    <div class="estrelas">★★★★★</div>
+    <p>335 avaliações no Google · <a href="https://www.google.com/maps/place/Camila+Ribeiro+-+Instituto+de+Dermatologia/data=!4m7!3m6!1s0x7161b18b4eca249:0xe792db3050c69c!8m2!3d-12.9981724!4d-38.4635316" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
+  </div>
+</section>
+
+<section class="local">
+  <div class="container">
+    <div class="ender">
+      <div class="r">Onde atendemos</div>
+      <p><strong>Edf. Louis Pasteur · Complexo Odonto-Médico Itaigara</strong></p>
+      <p>Av. Antônio Carlos Magalhães, 585 · Sala 1107</p>
+      <p>Itaigara · Salvador · BA · 41825-000</p>
+      <p class="aviso">Estacionamento pago disponível no complexo.</p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Av.+Ant%C3%B4nio+Carlos+Magalh%C3%A3es,+585+-+Sala+1107+-+Itaigara,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contato">
+  <div class="container">
+    <div class="kicker" style="color:#fff">Próximo passo</div>
+    <h2>Estamos prontos para receber você</h2>
+    <p>Entre em contato para agendar sua consulta, esclarecer dúvidas e conhecer nossos tratamentos.</p>
+    <a class="btn" href="https://wa.me/5571999858585">Chamar no WhatsApp · (71) 99985-8585</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="disc">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui o site oficial e não foi publicada pela Dra. Camila Ribeiro. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
+    <p class="cred">Dra. Camila Sampaio Ribeiro · CRM-BA 21467 · RQE 11906 · Salvador, BA</p>
+  </div>
+</footer>
+
+</body>
+</html>
