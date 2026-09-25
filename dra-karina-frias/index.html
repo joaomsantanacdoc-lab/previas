@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dra. Karina Frias · Dermatologista em Salvador</title>
+<style>
+  /* Direção: DERMATOLOGIA FEMININA CLARA. Sem foto pública em alta do acervo dela (seção reduzida:
+     nada de foto de banco). Paleta rosa-queimado/neutro quente + tipografia serifada elegante.
+     A tagline real dela: "Ajudo mulheres a realçarem a sua beleza natural com segurança". */
+  :root {
+    --off: #fbf7f3;
+    --areia: #f3ebe2;
+    --rosa: #c98d7a;
+    --rosa-escuro: #a5674f;
+    --choco: #4a3b32;
+    --cinza: #7c7168;
+    --linha: #e9ded3;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: var(--off); color: var(--choco); line-height: 1.65; }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: normal; }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 22px; }
+
+  .topbar { background: var(--choco); color: var(--off); }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 13px 22px; font-size: 13px; }
+  .topbar .nome { font-family: Georgia, serif; font-size: 16px; }
+
+  .hero { background: linear-gradient(175deg, var(--off) 40%, var(--areia)); padding: 74px 0 60px; text-align: center; }
+  .hero .tag { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--rosa-escuro); margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(32px, 4.6vw, 48px); line-height: 1.14; margin-bottom: 18px; }
+  .hero h1 em { font-style: italic; color: var(--rosa-escuro); }
+  .hero .sub { max-width: 54ch; margin: 0 auto 24px; color: var(--cinza); font-size: 16px; }
+  .hero .cred { display: inline-block; background: #fff; border: 1px solid var(--linha); border-radius: 999px; padding: 10px 22px; font-size: 13.5px; margin-bottom: 28px; }
+  .hero .cred b { color: var(--rosa-escuro); }
+  .botoes { display: flex; gap: 13px; justify-content: center; flex-wrap: wrap; }
+  .botoes a { text-decoration: none; padding: 14px 30px; border-radius: 999px; font-size: 15px; transition: .2s; }
+  .botoes .p { background: var(--rosa-escuro); color: #fff; }
+  .botoes .p:hover { background: var(--choco); }
+  .botoes .s { border: 1px solid var(--choco); color: var(--choco); }
+
+  .faixa { background: var(--rosa-escuro); color: var(--off); }
+  .faixa .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; padding: 12px 22px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+
+  section { padding: 64px 0; }
+  .kicker { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--rosa-escuro); margin-bottom: 12px; }
+  h2 { font-size: clamp(25px, 3.2vw, 34px); margin-bottom: 24px; }
+
+  .sobre { background: #fff; }
+  .sobre .container { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .sobre p { margin-bottom: 14px; color: #55493f; font-size: 15.5px; }
+  .sobre .ass { font-family: Georgia, serif; font-style: italic; font-size: 19px; color: var(--rosa-escuro); margin-top: 6px; }
+  .fichas { border-top: 1px solid var(--linha); font-size: 14px; }
+  .fichas .l { display: grid; grid-template-columns: 170px 1fr; padding: 10px 0; border-bottom: 1px solid var(--linha); }
+  .fichas .l b { color: var(--cinza); font-weight: 500; }
+
+  .areas { background: var(--areia); }
+  .area-g { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .area { background: #fff; border: 1px solid var(--linha); border-radius: 16px; padding: 26px; transition: .22s; }
+  .area:hover { border-color: var(--rosa); }
+  .area .n { font-family: Georgia, serif; font-style: italic; color: var(--rosa); margin-bottom: 8px; }
+  .area h3 { font-size: 19px; margin-bottom: 8px; }
+  .area p { font-size: 14px; color: var(--cinza); }
+
+  .google { background: #fff; text-align: center; }
+  .google .nota { font-family: Georgia, serif; font-size: 56px; font-style: italic; }
+  .google .estrelas { color: #e2a33c; font-size: 22px; letter-spacing: 7px; margin: 6px 0; }
+  .google p { font-size: 14px; color: var(--cinza); }
+  .google a { color: var(--rosa-escuro); }
+
+  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .ender { background: var(--areia); border-radius: 18px; padding: 30px; }
+  .ender .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--rosa-escuro); margin-bottom: 10px; }
+  .ender p { margin: 7px 0; font-size: 15px; }
+  .mapa { border-radius: 18px; overflow: hidden; border: 1px solid var(--linha); }
+  .mapa iframe { width: 100%; height: 330px; border: 0; }
+
+  .contato { background: var(--choco); color: var(--off); text-align: center; padding: 58px 0; }
+  .contato h2 { color: var(--off); margin-bottom: 8px; }
+  .contato p { margin-bottom: 24px; color: #d8cfc5; }
+  .contato a.btn { background: var(--rosa-escuro); color: #fff; text-decoration: none; font-weight: 600; padding: 16px 34px; border-radius: 999px; font-size: 15px; }
+
+  footer { background: #332a23; color: #a89c8e; padding: 30px 0; font-size: 12.5px; text-align: center; }
+  footer .disc { max-width: 700px; margin: 0 auto 10px; color: #8a7f72; line-height: 1.55; }
+  footer .cred { color: var(--off); }
+
+  @media (max-width: 780px) {
+    .sobre .container, .local .container, .area-g { grid-template-columns: 1fr; }
+    .faixa .container { gap: 12px; font-size: 10.5px; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="nome">Dra. Karina Frias</div>
+    <div>CRM-BA 15890 · RQE 11538</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="tag">Dermatologia · Salvador, BA</div>
+    <h1>Ajudo mulheres a realçarem <em>a sua beleza natural</em> com segurança.</h1>
+    <p class="sub">Dermatologista especialista pela SBD, com atendimento individualizado em Itaigara — do cuidado clínico da pele aos procedimentos estéticos.</p>
+    <div class="cred"><b>Dra. Karina Frias Mota</b> · CRM-BA 15890 · RQE 11538 (Dermatologia)</div>
+    <div class="botoes">
+      <a class="p" href="https://wa.me/5571993867583">Agendar consulta</a>
+      <a class="s" href="#areas">Ver áreas de cuidado</a>
+    </div>
+  </div>
+</header>
+
+<div class="faixa">
+  <div class="container">
+    <span>Pele clínica</span><span>Estética</span><span>Beleza natural</span><span>Segurança</span>
+  </div>
+</div>
+
+<section class="sobre">
+  <div class="container">
+    <div>
+      <div class="kicker">Sobre a dermatologista</div>
+      <h2>Beleza natural com a expertise de especialista</h2>
+      <p>Dermatologista em Salvador com título de especialista pela Sociedade Brasileira de Dermatologia (SBD), dedicada a ajudar mulheres a realçarem a própria beleza natural — com segurança e sem exageros.</p>
+      <p>O atendimento começa por entender a sua pele, a sua rotina e o que você espera — e só então definir o cuidado que faz sentido para o seu caso.</p>
+      <p class="ass">— Dra. Karina Frias</p>
+    </div>
+    <div class="fichas">
+      <div class="l"><b>Registro</b><span>CRM-BA 15890 · RQE 11538 (Dermatologia)</span></div>
+      <div class="l"><b>Título</b><span>Especialista pela Sociedade Brasileira de Dermatologia (SBD)</span></div>
+      <div class="l"><b>Atendimento</b><span>Itaigara · Salvador, BA</span></div>
+      <div class="l"><b>Foco</b><span>Saúde e beleza da pele feminina</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="kicker">Áreas de cuidado</div>
+    <h2>Da saúde da pele à estética, com segurança</h2>
+    <div class="area-g">
+      <div class="area"><div class="n">i.</div><h3>Saúde da pele</h3><p>Avaliação, diagnóstico e acompanhamento das doenças da pele, com plano de cuidado individual.</p></div>
+      <div class="area"><div class="n">ii.</div><h3>Estética dermatológica</h3><p>Procedimentos para realçar a beleza natural, sempre com avaliação prévia e conduta baseada em evidência.</p></div>
+      <div class="area"><div class="n">iii.</div><h3>Cuidado diário</h3><p>Orientação de rotina de skincare adequada ao seu tipo de pele e ao clima de Salvador.</p></div>
+      <div class="area"><div class="n">iv.</div><h3>Prevenção</h3><p>Acompanhamento de manchas, sinais e lesões, com ênfase em prevenção e diagnóstico precoce.</p></div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--cinza);">Cada conduta é definida em consulta, após avaliação dermatológica individualizada.</p>
+  </div>
+</section>
+
+<section class="google">
+  <div class="container">
+    <div class="kicker">Avaliações no Google</div>
+    <div class="nota">5,0</div>
+    <div class="estrelas">★★★★★</div>
+    <p>51 avaliações no Google · <a href="https://www.google.com/maps/place/Dra.+Karina+Frias,+Dermatologista+em+Salvador/data=!4m7!3m6!1s0x7161b7d9376c8f9:0xdd2e4fb66217a00e!8m2!3d-12.998499!4d-38.4651285" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
+  </div>
+</section>
+
+<section class="local">
+  <div class="container">
+    <div class="ender">
+      <div class="r">Onde atendo</div>
+      <p><strong>R. Altino Serbeto de Barros, 241 · Sala 701</strong></p>
+      <p>Itaigara Memorial Hospital Dia</p>
+      <p>Itaigara · Salvador · BA · 41830-492</p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=R.+Altino+Serbeto+de+Barros,+241+-+Itaigara,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contato">
+  <div class="container">
+    <div class="kicker" style="color:var(--rosa)">Próximo passo</div>
+    <h2>Agende sua consulta</h2>
+    <p>Fale com o consultório e reserve o seu horário.</p>
+    <a class="btn" href="https://wa.me/5571993867583">Chamar no WhatsApp · (71) 99386-7583</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="disc">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui um site oficial e não foi publicada pela Dra. Karina Frias. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
+    <p class="cred">Dra. Karina Frias Mota · CRM-BA 15890 · RQE 11538 · Salvador, BA</p>
+  </div>
+</footer>
+
+</body>
+</html>
