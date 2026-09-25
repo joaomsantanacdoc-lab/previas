@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dr. Edson Freitas · Rinoplastia em Salvador</title>
+<style>
+  /* Direção: MONOGRÁFICA, técnica, documental. Uma cirurgia só (rinoplastia).
+     Preto/branco + um único vermelho de precisão. Editorial suíço, grade dura. */
+  :root {
+    --papel: #f4f2ee;
+    --branco: #ffffff;
+    --tinta: #141414;
+    --cinza: #6b6b6b;
+    --linha: #d8d4cc;
+    --vermelho: #c8322b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: var(--papel); color: var(--tinta); line-height: 1.55; }
+  img { display: block; max-width: 100%; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 22px; }
+  .mono { font-family: 'SF Mono', 'Courier New', monospace; font-size: 12.5px; letter-spacing: .5px; }
+
+  /* TOPBAR */
+  .topbar { border-bottom: 1px solid var(--linha); background: var(--branco); }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 16px 22px; }
+  .topbar .marca { font-weight: 700; letter-spacing: -0.5px; font-size: 17px; }
+  .topbar .marca span { color: var(--vermelho); }
+  .topbar nav { display: flex; gap: 22px; font-size: 13px; }
+  .topbar nav a { color: var(--tinta); text-decoration: none; }
+  .topbar .crm { color: var(--cinza); font-size: 12px; }
+
+  /* HERO */
+  .hero { background: var(--tinta); color: var(--papel); padding: 90px 0 70px; position: relative; overflow: hidden; }
+  .hero .container { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+  .hero .um { color: var(--vermelho); font-size: 13px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(34px, 4.6vw, 52px); line-height: 1.08; font-weight: 700; letter-spacing: -1px; margin-bottom: 22px; }
+  .hero h1 em { font-style: normal; color: var(--vermelho); }
+  .hero p.sub { font-size: 16.5px; color: #cfcac2; max-width: 46ch; margin-bottom: 30px; }
+  .hero .cred { border-left: 3px solid var(--vermelho); padding: 6px 0 6px 18px; margin-bottom: 30px; font-size: 14px; color: #e8e4dd; }
+  .hero .cred strong { color: var(--papel); }
+  .hero figure { position: relative; }
+  .hero figure img { filter: grayscale(100%) contrast(1.05); border-radius: 4px; }
+  .hero figure figcaption { position: absolute; bottom: 12px; left: 12px; background: rgba(20,20,20,.75); color: var(--papel); padding: 6px 12px; font-size: 11px; letter-spacing: 1.5px; }
+  .botoes { display: flex; gap: 14px; flex-wrap: wrap; }
+  .botoes a { text-decoration: none; padding: 15px 28px; font-size: 14.5px; font-weight: 600; border-radius: 3px; transition: .2s; }
+  .botoes .sol { background: var(--vermelho); color: #fff; }
+  .botoes .sol:hover { background: #a82822; }
+  .botoes .cai { border: 1px solid #4a4a4a; color: var(--papel); }
+  .botoes .cai:hover { border-color: var(--papel); }
+
+  /* NÚMEROS */
+  .nums { background: var(--vermelho); color: #fff; }
+  .nums .container { display: grid; grid-template-columns: repeat(4, 1fr); padding: 26px 22px; }
+  .nums .n { font-size: 30px; font-weight: 800; letter-spacing: -1px; }
+  .nums .l { font-size: 12px; opacity: .92; margin-top: 2px; }
+
+  /* SOBRE */
+  .sobre { padding: 84px 0; background: var(--branco); }
+  .sobre .container { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start; }
+  .sobre figure img { filter: grayscale(100%); border-radius: 4px; }
+  .sobre .rot { color: var(--vermelho); font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .sobre h2 { font-size: clamp(26px, 3.2vw, 34px); letter-spacing: -0.8px; line-height: 1.15; margin-bottom: 22px; }
+  .sobre p { margin-bottom: 16px; color: #2e2e2e; font-size: 15.5px; }
+  .fichas { margin-top: 26px; display: grid; gap: 0; border-top: 1px solid var(--linha); }
+  .fichas .f { display: grid; grid-template-columns: 150px 1fr; padding: 12px 0; border-bottom: 1px solid var(--linha); font-size: 14px; }
+  .fichas .f b { color: var(--cinza); font-weight: 500; }
+
+  /* MÉTODO */
+  .metodo { background: var(--papel); padding: 80px 0; }
+  .metodo .rot { color: var(--vermelho); font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .metodo h2 { font-size: clamp(26px, 3.2vw, 34px); letter-spacing: -0.8px; margin-bottom: 40px; }
+  .grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-left: 1px solid var(--linha); }
+  .grade .c { border-right: 1px solid var(--linha); border-bottom: 1px solid var(--linha); padding: 26px 22px; background: var(--branco); }
+  .grade .c .k { color: var(--vermelho); font-size: 12px; margin-bottom: 10px; }
+  .grade .c h3 { font-size: 18px; letter-spacing: -0.4px; margin-bottom: 8px; }
+  .grade .c p { font-size: 13.5px; color: #4c4c4c; }
+
+  /* PERGUNTAS */
+  .perguntas { background: var(--branco); padding: 80px 0; }
+  .perguntas .rot { color: var(--vermelho); font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .perguntas h2 { font-size: clamp(26px, 3.2vw, 34px); letter-spacing: -0.8px; margin-bottom: 34px; }
+  .faq { display: grid; gap: 0; border-top: 1px solid var(--linha); }
+  .faq details { border-bottom: 1px solid var(--linha); }
+  .faq summary { cursor: pointer; list-style: none; padding: 18px 4px; font-size: 16px; font-weight: 600; display: flex; justify-content: space-between; }
+  .faq summary::after { content: '+'; color: var(--vermelho); font-weight: 700; }
+  .faq details[open] summary::after { content: '–'; }
+  .faq details p { padding: 0 4px 18px; color: #4c4c4c; font-size: 14.5px; max-width: 70ch; }
+
+  /* AVALIAÇÃO GOOGLE */
+  .google { background: var(--tinta); color: var(--papel); padding: 64px 0; text-align: center; }
+  .google .n { font-size: 54px; font-weight: 800; letter-spacing: -2px; }
+  .google .e { color: var(--vermelho); font-size: 22px; letter-spacing: 8px; margin: 6px 0; }
+  .google p { color: #b5b0a8; font-size: 14px; }
+  .google p a { color: var(--papel); }
+
+  /* CONSULTÓRIO + CONTATO */
+  .local { padding: 80px 0; background: var(--papel); }
+  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .local .rot { color: var(--vermelho); font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .local h2 { font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.8px; margin-bottom: 18px; }
+  .local .ender { background: var(--branco); border: 1px solid var(--linha); padding: 28px; border-radius: 4px; }
+  .local .ender p { margin: 6px 0; font-size: 15px; }
+  .local .ender b { display: block; }
+  .local .horario { margin-top: 16px; color: var(--cinza); font-size: 14px; }
+  .local .mapa { border-radius: 4px; overflow: hidden; border: 1px solid var(--linha); }
+  .local iframe { width: 100%; height: 330px; border: 0; }
+  .contato-cta { background: var(--vermelho); color: #fff; text-align: center; padding: 60px 0; }
+  .contato-cta h2 { font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.6px; margin-bottom: 10px; }
+  .contato-cta p { opacity: .95; margin-bottom: 24px; }
+  .contato-cta a { background: #fff; color: var(--vermelho); text-decoration: none; font-weight: 700; padding: 16px 34px; border-radius: 3px; font-size: 15px; }
+
+  /* RODAPÉ */
+  footer { background: var(--tinta); color: #8e897f; padding: 34px 0; font-size: 12.5px; text-align: center; }
+  footer .disclosure { max-width: 720px; margin: 0 auto 10px; line-height: 1.55; color: #6f6a61; }
+  footer .cred { color: var(--papel); }
+
+  @media (max-width: 780px) {
+    .hero .container, .sobre .container, .local .container { grid-template-columns: 1fr; }
+    .nums .container { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .grade { grid-template-columns: 1fr; border-left: none; }
+    .topbar nav { display: none; }
+    section, .sobre, .metodo, .perguntas, .local { padding: 54px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="marca">Dr. Edson Freitas<span>.</span></div>
+    <nav>
+      <a href="#sobre">O cirurgião</a>
+      <a href="#metodo">O método</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#local">Onde atendo</a>
+    </nav>
+    <div class="crm mono">CRM-BA 27163 · RQE 17779</div>
+  </div>
+</div>
+
+<header class="hero" id="topo">
+  <div class="container">
+    <div>
+      <div class="um">Uma única cirurgia · Rinoplastia</div>
+      <h1>Um nariz desenhado para um único rosto: <em>o seu</em>.</h1>
+      <p class="sub">Otorrinolaringologista formado pela USP, com Fellowship em Cirurgia Plástica Facial pela mesma instituição. Mais de 2.000 rinoplastias em pacientes de 19 países.</p>
+      <div class="cred">
+        <strong>Dr. Edson Leite Freitas</strong><br>
+        CRM-BA 27163 · RQE 17779 (Otorrinolaringologia)<br>
+        Fellowship em Cirurgia Plástica Facial · USP
+      </div>
+      <div class="botoes">
+        <a class="sol" href="https://wa.me/5571996101799">Agendar consulta</a>
+        <a class="cai" href="#metodo">Conhecer o método</a>
+      </div>
+    </div>
+    <figure>
+      <img src="edson-operating-bw.jpg" alt="Dr. Edson Freitas em centro cirúrgico">
+      <figcaption>CENTRO CIRÚRGICO · SALVADOR</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="nums">
+  <div class="container">
+    <div><div class="n">1×</div><div class="l">Uma única especialidade</div></div>
+    <div><div class="n">2.000+</div><div class="l">Rinoplastias realizadas</div></div>
+    <div><div class="n">19</div><div class="l">Países de origem dos pacientes</div></div>
+    <div><div class="n">24h</div><div class="l">Atenção dedicada no pós</div></div>
+  </div>
+</div>
+
+<section class="sobre" id="sobre">
+  <div class="container">
+    <figure>
+      <img src="edson-about.jpg" alt="Dr. Edson Freitas">
+    </figure>
+    <div>
+      <div class="rot">Quem cuida do seu rosto</div>
+      <h2>Excelência não se improvisa. Lapida-se.</h2>
+      <p>A rinoplastia está entre as cirurgias mais técnicas e delicadas da medicina estética. Milímetros separam o natural do artificial — e decidem se o seu nariz continuará respirando bem pelas próximas décadas.</p>
+      <p>É por isso que o Dr. Edson Freitas fez uma escolha rara: dedicar a trajetória inteira a uma única cirurgia — e dominá-la por completo.</p>
+      <div class="fichas">
+        <div class="f"><b>Formação</b><span>Otorrinolaringologia · USP</span></div>
+        <div class="f"><b>Fellowship</b><span>Cirurgia Plástica Facial · USP</span></div>
+        <div class="f"><b>Registro</b><span>CRM-BA 27163 · RQE 17779</span></div>
+        <div class="f"><b>Foco</b><span>Rinoplastia exclusivamente</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="metodo" id="metodo">
+  <div class="container">
+    <div class="rot">O método</div>
+    <h2>Cada plano, peça única.</h2>
+    <div class="grade">
+      <div class="c"><div class="k">01</div><h3>Uma só cirurgia</h3><p>Rinoplastia, ano após ano, até o gesto se tornar assinatura.</p></div>
+      <div class="c"><div class="k">02</div><h3>Desenho milimétrico</h3><p>Cada nariz é concebido como peça única, para um único rosto.</p></div>
+      <div class="c"><div class="k">03</div><h3>Naturalidade absoluta</h3><p>Nada de catálogo. O seu nariz, em sua melhor versão.</p></div>
+      <div class="c"><div class="k">04</div><h3>Beleza que respira</h3><p>Forma e função, refinadas no mesmo gesto cirúrgico.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="perguntas" id="faq">
+  <div class="container">
+    <div class="rot">Dúvidas comuns</div>
+    <h2>Antes de agendar sua avaliação</h2>
+    <div class="faq">
+      <details open><summary>A rinoplastia deixa cicatriz visível?</summary><p>A técnica é planejada para minimizar cicatrizes; na rinoplastia fechada não há cicatriz externa. A indicação de técnica é definida em consulta, conforme a sua anatomia e objetivos.</p></details>
+      <details><summary>Dói muito no pós-operatório?</summary><p>O desconforto é geralmente controlado com medicação comum. A maior parte das pessoas retoma atividades leves nos primeiros dias, seguindo as orientações individuais.</p></details>
+      <details><summary>Quanto tempo dura o resultado?</summary><p>O resultado é duradouro; o edema final diminui gradualmente ao longo dos meses. O acompanhamento segue até a consolidação completa.</p></details>
+      <details><summary>Posso respirar melhor depois?</summary><p>Sim — forma e função são avaliadas juntas. Muitos pacientes buscam a rinoplastia justamente por obstrução nasal, e a avaliação clínica define a conduta.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="google">
+  <div class="container">
+    <div class="n">5,0</div>
+    <div class="e">★★★★★</div>
+    <p>315 avaliações no Google · <a href="https://www.google.com/maps/place/Dr+Edson+Freitas+-+Especialista+em+Rinoplastia+USP/data=!4m7!3m6!1s0x7161b398c960119:0x6d334079ff5cbec4!8m2!3d-12.9979441!4d-38.4634868" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
+  </div>
+</div>
+
+<section class="local" id="local">
+  <div class="container">
+    <div>
+      <div class="rot">Onde atendo</div>
+      <h2>Salvador · Pituba</h2>
+      <div class="ender">
+        <p><b>Av. Antônio Carlos Magalhães, 585</b></p>
+        <p>Ed. Louis Pasteur · Complexo Odonto-Médico</p>
+        <p>Pituba · Salvador · BA · 41800-700</p>
+        <p class="horario">Atendimento em dias de semana, com agenda definida na consulta.</p>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Av.+Ant%C3%B4nio+Carlos+Magalh%C3%A3es,+585+-+Pituba,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contato-cta">
+  <div class="container">
+    <h2>Uma decisão à altura.</h2>
+    <p>Agende sua avaliação e entenda o que a rinoplastia pode fazer por você.</p>
+    <a href="https://wa.me/5571996101799">Falar no WhatsApp · (71) 99610-1799</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="disclosure">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui o site oficial e não foi publicada pelo Dr. Edson Freitas. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
+    <p class="cred">Dr. Edson Leite Freitas · CRM-BA 27163 · RQE 17779 · Salvador, BA</p>
+  </div>
+</footer>
+
+</body>
+</html>
