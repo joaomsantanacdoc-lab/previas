@@ -1,240 +1,411 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-BR" class="js-pending">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Dra. Camila Ribeiro · Instituto de Dermatologia em Salvador</title>
+<title>Camila Ribeiro · Instituto de Dermatologia · Salvador</title>
+<meta name="description" content="Instituto de Dermatologia da Dra. Camila Ribeiro, no Itaigara. Dermatologia clínica, cirúrgica, estética e saúde capilar. Nota 5,0 em 335 avaliações no Google.">
+<meta property="og:title" content="Camila Ribeiro · Instituto de Dermatologia">
+<meta property="og:description" content="Cuidado com ciência, escuta e sem exageros. Dermatologia clínica, cirúrgica e estética no Itaigara, Salvador.">
+<meta property="og:image" content="instituto.jpg">
+<meta name="theme-color" content="#F7F4EE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317352F'/%3E%3Ctext x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23F7F4EE'%3ECR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.replace('js-pending','js')</script>
 <style>
-  /* Direção: "Cuidado com ciência, escuta e sem exageros" — a tagline real dela.
-     Verde-sálvia clínico + creme + terracota suave. Serifada humanista, arejada.
-     Fotos reais dela (publicadas no site oficial). */
-  :root {
-    --creme: #faf7f1;
-    --papel: #f2ede3;
-    --salvia: #5c7a6a;
-    --salvia-escuro: #3e5a4c;
-    --salvia-claro: #dce7df;
-    --terracota: #c4825c;
-    --tinta: #2f2b26;
-    --cinza: #6f675c;
-    --linha: #e3dccb;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: var(--creme); color: var(--tinta); line-height: 1.65; }
-  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: normal; }
-  img { display: block; max-width: 100%; }
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+:root{
+  --bg:#F7F4EE; --paper:#FFFFFF; --ink:#16241F; --ink2:#4A5A54; --muted:#7D8A85;
+  --jade:#2E9E80; --jade2:#8FD3BE; --deep:#17352F; --wood:#A5673F; --wood2:#D9B99B; --line:rgba(22,36,31,.1);
+  --display:"Marcellus",Georgia,serif; --sans:"Figtree",system-ui,sans-serif; --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;overflow-x:hidden;font-variant-numeric:lining-nums}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+section{position:relative;scroll-margin-top:84px}
+.pad{padding:clamp(5rem,10vw,8rem) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:.76rem;letter-spacing:.24em;text-transform:uppercase;color:var(--jade);font-weight:600}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.12;letter-spacing:.005em}
+.h2 span{color:var(--jade)}
+.lead{color:var(--ink2);font-size:1.08rem;max-width:58ch}
+.btn{display:inline-flex;align-items:center;gap:.6rem;border-radius:12px;padding:1rem 1.6rem;font-weight:600;font-size:.95rem;transition:transform .35s var(--ease),background .35s,box-shadow .35s,color .35s}
+.btn svg{width:18px;height:18px}
+.btn-jade{background:var(--deep);color:#fff;box-shadow:0 14px 30px -16px rgba(23,53,47,.8)}
+.btn-jade:hover{background:var(--jade);transform:translateY(-2px)}
+.btn-line{border:1.5px solid rgba(22,36,31,.2)}
+.btn-line:hover{border-color:var(--jade);color:var(--jade)}
 
-  .topbar { background: var(--salvia-escuro); color: var(--creme); }
-  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 14px 22px; font-size: 13px; }
-  .topbar .nome { font-family: Georgia, serif; font-size: 16px; }
-  .topbar .crm { opacity: .85; }
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s}
+.nav.solid{background:rgba(247,244,238,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.mark{font-family:var(--display);line-height:1.05}
+.mark b{display:block;font-weight:400;font-size:1.35rem;letter-spacing:.12em}
+.mark small{display:block;font-size:.62rem;letter-spacing:.34em;color:var(--wood);text-transform:uppercase;font-family:var(--sans);font-weight:600;margin-top:.2rem}
+.nav ul{display:flex;gap:2rem;list-style:none;font-size:.9rem;color:var(--ink2);font-weight:500}
+.nav ul a:hover{color:var(--jade)}
+.nav .btn{padding:.72rem 1.2rem;font-size:.86rem}
+.burger{display:none;background:none;border:0;width:44px;height:44px;color:var(--ink)}
+.drawer{position:fixed;inset:84px 0 auto;z-index:49;background:var(--paper);padding:1.4rem 24px 2rem;display:none;flex-direction:column;gap:1.1rem;font-family:var(--display);font-size:1.5rem;box-shadow:0 20px 40px -20px rgba(22,36,31,.3)}
+.drawer.open{display:flex}
 
-  .hero { background: linear-gradient(180deg, var(--creme), var(--salvia-claro)); padding: 66px 0 58px; }
-  .hero .container { display: grid; grid-template-columns: 1.05fr .95fr; gap: 46px; align-items: center; }
-  .hero .tag { font-size: 12.5px; letter-spacing: 3px; text-transform: uppercase; color: var(--salvia); margin-bottom: 16px; }
-  .hero h1 { font-size: clamp(32px, 4.4vw, 46px); line-height: 1.15; margin-bottom: 18px; }
-  .hero h1 em { font-style: italic; color: var(--salvia-escuro); }
-  .hero .sub { font-size: 16px; color: var(--cinza); margin-bottom: 22px; max-width: 50ch; }
-  .hero .cred { display: inline-flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid var(--linha); border-radius: 14px; padding: 14px 20px; margin-bottom: 24px; font-size: 13.5px; }
-  .hero .cred b { color: var(--salvia-escuro); }
-  .botoes { display: flex; gap: 13px; flex-wrap: wrap; }
-  .botoes a { text-decoration: none; padding: 14px 28px; border-radius: 999px; font-size: 15px; transition: .2s; }
-  .botoes .p { background: var(--salvia-escuro); color: #fff; }
-  .botoes .p:hover { background: var(--salvia); }
-  .botoes .s { border: 1px solid var(--salvia-escuro); color: var(--salvia-escuro); }
-  .hero figure img { border-radius: 20px; box-shadow: 0 22px 44px rgba(62,90,76,.18); }
-  .hero figure figcaption { font-size: 12px; color: var(--cinza); margin-top: 10px; text-align: center; }
+.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:100svh}
+.hero .copy{padding:9.5rem clamp(24px,5vw,72px) 6rem max(24px,calc((100vw - 1200px)/2));display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,5.2vw,4.6rem);line-height:1.06;margin:1.4rem 0 1.4rem}
+.hero h1 span{color:var(--jade)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+.hero .photo{position:relative;overflow:hidden;border-bottom-left-radius:48px}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:scale(1.1);transition:transform 2s var(--ease)}
+.hero .photo.in img{transform:scale(1)}
+.hero .photo figcaption{position:absolute;left:24px;bottom:24px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-radius:14px;padding:.8rem 1.1rem;font-size:.82rem;color:var(--ink2);display:flex;align-items:center;gap:.6rem}
+.hero .photo figcaption b{color:var(--ink)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--jade)}
 
-  .faixa { background: var(--salvia-escuro); color: var(--creme); }
-  .faixa .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 26px; padding: 12px 22px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+.proof{margin-top:-3.5rem;position:relative;z-index:2}
+.proof .row{display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper);border-radius:22px;box-shadow:0 30px 60px -36px rgba(22,36,31,.4);overflow:hidden}
+.proof .row>div{padding:1.8rem 1.6rem;border-right:1px solid var(--line)}
+.proof .row>div:last-child{border-right:0}
+.proof strong{display:block;font-family:var(--display);font-size:2.4rem;font-weight:400;line-height:1;color:var(--deep)}
+.proof span{display:block;margin-top:.55rem;font-size:.85rem;color:var(--ink2);line-height:1.45}
+.stars{color:#E0A526;letter-spacing:.08em;font-size:.85rem}
 
-  section { padding: 66px 0; }
-  .kicker { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--salvia); margin-bottom: 12px; }
-  h2 { font-size: clamp(25px, 3.2vw, 34px); margin-bottom: 24px; }
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.about figure{position:relative}
+.about figure img{border-radius:28px;aspect-ratio:4/4.6;object-fit:cover;object-position:40% 30%;width:100%}
+.about figure::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1.5px solid var(--wood2);border-radius:32px;z-index:-1}
+.about p{color:var(--ink2);margin-top:1.1rem}
+.creds{list-style:none;margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.creds li{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;font-size:.9rem;line-height:1.45}
+.creds b{display:block;color:var(--deep);font-weight:600}
+.creds li span{color:var(--muted);font-size:.82rem}
 
-  .sobre { background: #fff; }
-  .sobre .container { display: grid; grid-template-columns: .95fr 1.05fr; gap: 48px; align-items: center; }
-  .sobre figure img { border-radius: 18px; }
-  .sobre p { margin-bottom: 14px; color: #4b463d; font-size: 15.5px; }
-  .sobre p.missao { border-left: 3px solid var(--terracota); padding-left: 16px; font-style: italic; color: var(--tinta); }
-  .credbadges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-  .badge { background: var(--salvia-claro); color: var(--salvia-escuro); font-size: 12.5px; padding: 7px 14px; border-radius: 999px; }
+.services{background:var(--paper)}
+.scols{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.scol{border-radius:24px;padding:2rem;background:var(--bg);border:1px solid var(--line)}
+.scol h3{font-family:var(--display);font-weight:400;font-size:1.55rem;color:var(--deep);display:flex;justify-content:space-between;align-items:baseline}
+.scol h3 small{font-family:var(--sans);font-size:.75rem;color:var(--wood);letter-spacing:.18em}
+.item{border-top:1px solid var(--line);padding:1.1rem 0}
+.item:first-of-type{margin-top:1.2rem}
+.item b{display:block;font-weight:600;font-size:1rem;transition:color .3s}
+.item p{color:var(--ink2);font-size:.9rem;margin-top:.35rem}
+.item:hover b,.item:focus-within b{color:var(--jade)}
 
-  .servicos { background: var(--creme); }
-  .serv-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .serv { background: #fff; border: 1px solid var(--linha); border-radius: 16px; padding: 24px; transition: .22s; }
-  .serv:hover { border-color: var(--salvia); }
-  .serv .ic { width: 40px; height: 40px; border-radius: 12px; background: var(--salvia-claro); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-family: Georgia, serif; font-size: 19px; color: var(--salvia-escuro); }
-  .serv h3 { font-size: 18px; margin-bottom: 8px; }
-  .serv p { font-size: 14px; color: var(--cinza); }
+.band{background:var(--deep);color:#EAF4F0}
+.band .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem}
+.band .h2{color:#fff}.band .h2 span{color:var(--jade2)}
+.band .eyebrow{color:var(--jade2)}
+.band h3{font-family:var(--display);font-weight:400;font-size:1.35rem;color:#fff;margin:.9rem 0 .5rem}
+.band p{color:#B9CCC5;font-size:.93rem}
+.band i{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:rgba(143,211,190,.14);color:var(--jade2);font-style:normal;font-family:var(--display);font-size:1.2rem}
 
-  .escuta { background: var(--salvia-escuro); color: var(--creme); }
-  .escuta .container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-  .escuta h2 { color: var(--creme); margin-bottom: 10px; }
-  .escuta .kicker { color: var(--salvia-claro); }
-  .passo { border-top: 2px solid var(--salvia-claro); padding-top: 16px; }
-  .passo .n { font-family: Georgia, serif; font-style: italic; font-size: 24px; color: var(--terracota); }
-  .passo h3 { color: var(--creme); font-size: 17px; margin: 6px 0; }
-  .passo p { font-size: 13.5px; color: #c9d6cc; }
+.rev-top{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap}
+.arrows{display:flex;gap:.6rem}
+.arrows button{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(22,36,31,.18);background:var(--paper);cursor:pointer;font-size:1.1rem;transition:background .3s,color .3s}
+.arrows button:hover{background:var(--deep);color:#fff}
+.scroller{display:grid;grid-auto-flow:column;grid-auto-columns:min(420px,86%);gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.6rem 0 1rem;scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+.review{scroll-snap-align:start;background:var(--paper);border-radius:22px;padding:2rem;border:1px solid var(--line);display:flex;flex-direction:column;gap:1rem}
+.review q{font-size:1.05rem;color:var(--ink)}
+.review footer{margin-top:auto;display:flex;align-items:center;gap:.7rem;font-size:.86rem;color:var(--muted)}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--jade2);color:var(--deep);display:grid;place-items:center;font-weight:700;font-size:.8rem}
+.review footer b{display:block;color:var(--ink)}
+.gcta{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;color:var(--deep);border-bottom:1.5px solid var(--jade);padding-bottom:.15rem;margin-top:1rem}
 
-  .google { background: #fff; text-align: center; }
-  .google .nota { font-family: Georgia, serif; font-size: 56px; font-style: italic; }
-  .google .estrelas { color: #e2a33c; font-size: 22px; letter-spacing: 7px; margin: 6px 0; }
-  .google p { font-size: 14px; color: var(--cinza); }
-  .google a { color: var(--salvia-escuro); }
+.visit{display:grid;grid-template-columns:1fr 1.15fr;gap:1.4rem;margin-top:3rem}
+.card{background:var(--paper);border-radius:24px;padding:2.2rem;border:1px solid var(--line)}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.86rem;font-weight:600;padding:.45rem .95rem;border-radius:999px;background:#E9F5F0;color:var(--deep)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--jade);box-shadow:0 0 0 0 rgba(46,158,128,.5);animation:ping 2s infinite}
+.status.closed{background:#F7ECE6}.status.closed i{background:#C8624E;animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(46,158,128,0)}100%{box-shadow:0 0 0 0 rgba(46,158,128,0)}}
+.hours{margin-top:1.4rem}
+.hours div{display:flex;justify-content:space-between;padding:.68rem 0;border-bottom:1px solid var(--line);color:var(--ink2)}
+.hours div.today{color:var(--ink);font-weight:600}
+.hours div.today span:first-child::after{content:" · hoje";color:var(--jade);font-weight:500;font-size:.8rem}
+.addr{margin-top:1.6rem;color:var(--ink2)}
+.addr b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--ink);margin-bottom:.2rem}
+.tag{display:inline-block;margin-top:.8rem;font-size:.8rem;background:var(--bg);border-radius:8px;padding:.35rem .7rem;color:var(--wood);font-weight:600}
+.card .btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.map{border-radius:24px;overflow:hidden;min-height:480px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:480px;border:0}
 
-  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
-  .ender { background: var(--salvia-claro); border-radius: 18px; padding: 30px; }
-  .ender .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--salvia-escuro); margin-bottom: 10px; }
-  .ender p { margin: 7px 0; font-size: 15px; }
-  .ender .aviso { margin-top: 14px; font-size: 13px; color: var(--cinza); }
-  .mapa { border-radius: 18px; overflow: hidden; border: 1px solid var(--linha); }
-  .mapa iframe { width: 100%; height: 330px; border: 0; }
+.faq{max-width:860px;margin:2.6rem auto 0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:1.4rem 0;font-family:var(--display);font-size:1.3rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--line);color:var(--jade);font-family:var(--sans);transition:transform .4s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--ink2);padding-bottom:1.4rem;max-width:72ch}
 
-  .contato { background: var(--terracota); color: #fff; text-align: center; padding: 56px 0; }
-  .contato h2 { color: #fff; margin-bottom: 8px; }
-  .contato p { margin-bottom: 22px; opacity: .95; }
-  .contato a.btn { background: #fff; color: var(--salvia-escuro); text-decoration: none; font-weight: 600; padding: 16px 34px; border-radius: 999px; font-size: 15px; }
+.final{padding:0 0 clamp(5rem,9vw,7rem)}
+.final .box{background:linear-gradient(120deg,var(--deep),#1F4A40);border-radius:36px;color:#fff;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:2rem;padding:clamp(2.4rem,5vw,4rem);overflow:hidden;position:relative}
+.final .box::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:1.5px solid rgba(143,211,190,.3)}
+.final .h2{color:#fff}.final .h2 span{color:var(--jade2)}
+.final p{color:#B9CCC5;margin-top:1rem}
+.final .btn{background:#fff;color:var(--deep);justify-self:end;position:relative;z-index:1}
+.final .btn:hover{background:var(--jade2)}
 
-  footer { background: #26231f; color: #a49a8a; padding: 30px 0; font-size: 12.5px; text-align: center; }
-  footer .disc { max-width: 700px; margin: 0 auto 10px; color: #82796a; line-height: 1.55; }
-  footer .cred { color: var(--creme); }
+footer.site{padding:0 0 2.6rem;color:var(--muted);font-size:.85rem}
+footer.site .row{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);padding-top:2rem}
+footer.site .disc{margin-top:1.4rem;font-size:.75rem;max-width:92ch}
 
-  @media (max-width: 780px) {
-    .hero .container, .sobre .container, .local .container { grid-template-columns: 1fr; }
-    .serv-g, .escuta .container { grid-template-columns: 1fr; }
-    .faixa .container { gap: 12px; font-size: 10.5px; }
-    section { padding: 48px 0; }
-  }
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .35s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:ring 2.4s infinite}
+@keyframes ring{from{transform:scale(1);opacity:.7}to{transform:scale(1.6);opacity:0}}
+.wa svg{width:30px;height:30px}
+
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .95s var(--ease),transform .95s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+
+@media (max-width:980px){
+  .nav ul,.nav .btn{display:none}
+  .burger{display:grid;place-items:center}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero .photo{order:-1;height:62svh;min-height:420px;border-radius:0 0 36px 36px}
+  .hero .copy{padding:3rem 24px 5rem}
+  .proof .row{grid-template-columns:1fr 1fr}
+  .proof .row>div:nth-child(2){border-right:0}
+  .proof .row>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .about,.visit,.final .box{grid-template-columns:1fr}
+  .scols{grid-template-columns:1fr}
+  .band .grid{grid-template-columns:1fr 1fr}
+  .final .btn{justify-self:start}
+  .about figure::before{display:none}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  .hero .copy{padding:2.4rem 16px 4.5rem}
+  .proof strong{font-size:1.9rem}
+  .proof .row>div{padding:1.3rem 1.1rem}
+  .creds,.band .grid{grid-template-columns:1fr}
+  .map,.map iframe{min-height:340px}
+  .final .box{border-radius:26px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="container">
-    <div class="nome">Instituto de Dermatologia · Dra. Camila Ribeiro</div>
-    <div class="crm">CRM-BA 21467 · RQE 11906</div>
-  </div>
-</div>
-
-<header class="hero">
-  <div class="container">
-    <div>
-      <div class="tag">Dermatologia completa · Salvador</div>
-      <h1>Cuidado com ciência, escuta <em>e sem exageros</em>.</h1>
-      <p class="sub">Dermatologia clínica, cirúrgica, estética e saúde capilar — cada paciente único, cada tratamento definido depois de entender você.</p>
-      <div class="cred">
-        <span><b>Dra. Camila Sampaio Ribeiro</b></span>
-        <span>CRM-BA 21467 · RQE 11906 (Dermatologia)</span>
-      </div>
-      <div class="botoes">
-        <a class="p" href="https://wa.me/5571999858585">Agendar consulta</a>
-        <a class="s" href="#servicos">Ver áreas de cuidado</a>
-      </div>
-    </div>
-    <figure>
-      <img src="camila-hero.jpg" alt="Dra. Camila Ribeiro na entrada do Instituto de Dermatologia">
-      <figcaption>Instituto de Dermatologia · Itaigara, Salvador</figcaption>
-    </figure>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="mark" href="#inicio"><b>CAMILA RIBEIRO</b><small>Instituto de Dermatologia</small></a>
+    <ul>
+      <li><a href="#sobre">A médica</a></li>
+      <li><a href="#tratamentos">Tratamentos</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="btn btn-jade" href="https://wa.me/5571999858585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camila%20Ribeiro." target="_blank" rel="noopener">Agendar consulta</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
   </div>
 </header>
+<nav class="drawer" id="drawer" aria-label="Menu"><a href="#sobre">A médica</a><a href="#tratamentos">Tratamentos</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></nav>
 
-<div class="faixa">
-  <div class="container">
-    <span>Clínica</span><span>Cirúrgica</span><span>Estética</span><span>Saúde capilar</span><span>Laser</span>
+<main>
+<section class="hero" id="inicio">
+  <div class="copy">
+    <p class="eyebrow rv">Dermatologia clínica · cirúrgica · estética</p>
+    <h1 class="rv d1">Cuidado com ciência, escuta e <span>sem exageros.</span></h1>
+    <p class="lead rv d2">A consulta começa pela escuta: entender a sua pele, a sua rotina e as suas expectativas, e só depois definir o tratamento ideal para o seu caso.</p>
+    <div class="ctas rv d3">
+      <a class="btn btn-jade" href="https://wa.me/5571999858585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camila%20Ribeiro." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Agendar pelo WhatsApp</a>
+      <a class="btn btn-line" href="#tratamentos">Ver tratamentos</a>
+    </div>
+  </div>
+  <figure class="photo rv">
+    <picture><source srcset="instituto.webp" type="image/webp"><img src="instituto.jpg" alt="Dra. Camila Ribeiro na entrada do Instituto de Dermatologia" fetchpriority="high"></picture>
+    <figcaption><span class="dot"></span><span><b>Dra. Camila Sampaio Ribeiro</b> · CRM-BA 21467 · RQE 11906</span></figcaption>
+  </figure>
+</section>
+
+<div class="proof">
+  <div class="wrap row rv">
+    <div><strong data-count="5" data-decimals="1">5,0</strong><span><span class="stars">★★★★★</span><br>nota no Google</span></div>
+    <div><strong data-count="335">335</strong><span>avaliações públicas<br>de pacientes</span></div>
+    <div><strong>UCSF</strong><span>Fellow em Dermatopatologia<br>University of California, San Francisco</span></div>
+    <div><strong>SBD</strong><span>Especialista pela Sociedade<br>Brasileira de Dermatologia</span></div>
   </div>
 </div>
 
-<section class="sobre">
-  <div class="container">
-    <figure>
-      <img src="camila-sobre.jpg" alt="Dra. Camila Ribeiro">
-    </figure>
+<section class="pad" id="sobre">
+  <div class="wrap about">
+    <figure class="rv"><img src="tecnologia.jpg" alt="Dra. Camila Ribeiro no consultório com equipamento de laser" loading="lazy"></figure>
     <div>
-      <div class="kicker">Sobre a dermatologista</div>
-      <h2>A consulta começa pela escuta</h2>
-      <p>Cada paciente é único. Ao longo de anos de experiência e da vivência prática adquirida no cuidado de milhares de pacientes, entendemos que nenhuma pele, rotina ou expectativa é igual à outra.</p>
-      <p>A consulta começa através da escuta, entendendo as necessidades da sua pele e, somente depois, definindo o tratamento que realmente é ideal para o seu caso.</p>
-      <p class="missao">Promover saúde, prevenir doenças e proporcionar resultados naturais através de uma dermatologia moderna, ética e baseada em evidências científicas.</p>
-      <div class="credbadges">
-        <span class="badge">Mestrado · UFBA</span>
-        <span class="badge">Residência em Dermatologia</span>
-        <span class="badge">Fellowship · University of California, San Francisco</span>
+      <p class="eyebrow rv">Conheça a Dra. Camila</p>
+      <h2 class="h2 rv d1">Ciência, experiência e um <span>olhar atento</span> para cada paciente</h2>
+      <p class="rv d2">“Escolhi a Dermatologia porque ela reúne tudo o que mais gosto na medicina: ouvir cada paciente com atenção, investigar a causa do problema e oferecer um tratamento seguro, individualizado e baseado em evidências científicas.”</p>
+      <p class="rv d2">Formada em 2009, com residência em Dermatologia e especialização em Dermatopatologia, a Dra. Camila também é professora de Dermatologia na graduação e na pós-graduação em Medicina.</p>
+      <ul class="creds">
+        <li class="rv d2"><b>Fellow · UCSF, 2014</b><span>Dermatopatologia, University of California, San Francisco</span></li>
+        <li class="rv d2"><b>Mestrado · UFBA</b><span>Universidade Federal da Bahia, 2018</span></li>
+        <li class="rv d3"><b>Diplomada · ISDP</b><span>International Society of Dermatopathology</span></li>
+        <li class="rv d3"><b>Professora</b><span>Graduação UNIFACS e pós-graduação AFYA Salvador</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pad services" id="tratamentos">
+  <div class="wrap">
+    <p class="eyebrow rv">Tratamentos</p>
+    <h2 class="h2 rv d1">Dermatologia completa, <span>em um só lugar</span></h2>
+    <div class="scols">
+      <div class="scol rv">
+        <h3>Clínica <small>01</small></h3>
+        <div class="item"><b>Dermatologia clínica</b><p>Diagnóstico, prevenção e tratamento de doenças da pele, cabelos e unhas, com acompanhamento personalizado.</p></div>
+        <div class="item"><b>Acne e manchas</b><p>Protocolos personalizados para acne, cicatrizes, manchas e renovação da pele.</p></div>
+        <div class="item"><b>Saúde capilar</b><p>Avaliação e tratamento da queda de cabelo, alopecias e doenças do couro cabeludo.</p></div>
+      </div>
+      <div class="scol rv d1">
+        <h3>Cirúrgica <small>02</small></h3>
+        <div class="item"><b>Dermatologia cirúrgica</b><p>Remoção de lesões, biópsias e pequenas cirurgias dermatológicas, com segurança.</p></div>
+        <div class="item"><b>Cirurgia de unha e tumores</b><p>Tratamento de unhas encravadas, tumores e outras alterações ungueais, com diagnóstico preciso.</p></div>
+        <div class="item"><b>MMP capilar</b><p>Mesoterapia para queda de cabelo e alopecias, com acompanhamento individual.</p></div>
+      </div>
+      <div class="scol rv d2">
+        <h3>Estética <small>03</small></h3>
+        <div class="item"><b>Procedimentos injetáveis</b><p>Toxina botulínica, ácido hialurônico e bioestimuladores de colágeno, com foco em resultados elegantes e naturais.</p></div>
+        <div class="item"><b>Laser e tecnologias</b><p>Tecnologia para manchas, cicatrizes, rugas e rejuvenescimento da pele.</p></div>
+        <div class="item"><b>Dermatologia estética</b><p>Rejuvenescimento e equilíbrio facial, preservando a sua essência.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="servicos" id="servicos">
-  <div class="container">
-    <div class="kicker">Áreas de cuidado</div>
-    <h2>Tratamentos completos para a saúde e a beleza da sua pele</h2>
-    <div class="serv-g">
-      <div class="serv"><div class="ic">Cl</div><h3>Dermatologia Clínica</h3><p>Diagnóstico, prevenção e tratamento de doenças da pele, cabelos e unhas com acompanhamento personalizado.</p></div>
-      <div class="serv"><div class="ic">Ci</div><h3>Dermatologia Cirúrgica</h3><p>Procedimentos cirúrgicos realizados com segurança para remoção de lesões, biópsias e pequenas cirurgias dermatológicas.</p></div>
-      <div class="serv"><div class="ic">Es</div><h3>Dermatologia Estética</h3><p>Procedimentos modernos que promovem rejuvenescimento, equilíbrio facial e resultados naturais.</p></div>
-      <div class="serv"><div class="ic">Ca</div><h3>Saúde Capilar</h3><p>Avaliação e tratamento da queda de cabelo, alopecias e doenças do couro cabeludo.</p></div>
-      <div class="serv"><div class="ic">Ac</div><h3>Acne e Manchas</h3><p>Protocolos personalizados para acne, cicatrizes, manchas e renovação da pele.</p></div>
-      <div class="serv"><div class="ic">La</div><h3>Laser e Tecnologias</h3><p>Tecnologia avançada para tratamento de manchas, cicatrizes, rugas e rejuvenescimento.</p></div>
+<section class="pad band">
+  <div class="wrap">
+    <p class="eyebrow rv">Por que o Instituto</p>
+    <h2 class="h2 rv d1">Uma experiência completa em <span>dermatologia</span></h2>
+    <div class="grid">
+      <div class="rv"><i>01</i><h3>Atendimento humanizado</h3><p>Cada paciente é recebido com atenção, escuta e acolhimento, em todas as consultas.</p></div>
+      <div class="rv d1"><i>02</i><h3>Baseada em evidências</h3><p>Tratamentos indicados com base científica, com mais segurança e previsibilidade.</p></div>
+      <div class="rv d2"><i>03</i><h3>Resultados naturais</h3><p>Harmonia e individualidade, com resultados elegantes que preservam sua essência.</p></div>
+      <div class="rv d3"><i>04</i><h3>Ambiente acolhedor</h3><p>Um espaço pensado para bem-estar, privacidade e tranquilidade desde a chegada.</p></div>
     </div>
   </div>
 </section>
 
-<section class="escuta">
-  <div class="container">
-    <div>
-      <div class="kicker">Como funciona</div>
-      <h2>Compreender você antes de indicar qualquer tratamento</h2>
+<section class="pad" id="avaliacoes">
+  <div class="wrap">
+    <div class="rev-top">
+      <div><p class="eyebrow rv">Avaliações no Google</p><h2 class="h2 rv d1">Nota <span>5,0</span> em 335 avaliações</h2></div>
+      <div class="arrows rv d2"><button type="button" id="prev" aria-label="Avaliação anterior">←</button><button type="button" id="next" aria-label="Próxima avaliação">→</button></div>
     </div>
-    <div style="grid-column: span 3; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px;">
-      <div class="passo"><div class="n">01</div><h3>Escuta</h3><p>A consulta começa entendendo as necessidades da sua pele e a sua rotina.</p></div>
-      <div class="passo"><div class="n">02</div><h3>Avaliação</h3><p>Exame clínico cuidadoso e, quando necessário, exames complementares.</p></div>
-      <div class="passo"><div class="n">03</div><h3>Plano individual</h3><p>Tratamento definido para o seu caso — sem exageros, com evidência.</p></div>
+    <div class="scroller" id="scroller">
+      <article class="review"><span class="stars">★★★★★</span><q>A Dra. Camila foi muito atenciosa, demonstrou grande conhecimento e passou muita confiança durante a consulta. O atendimento foi objetivo, sem enrolação, e todas as minhas dúvidas foram esclarecidas com clareza.</q><footer><span class="avatar">WR</span><span><b>Willamis R.</b>há 2 meses</span></footer></article>
+      <article class="review"><span class="stars">★★★★★</span><q>A Dra. Camila é uma profissional extremamente cuidadosa, atenciosa e competente. Explica tudo com muita clareza, transmite segurança e demonstra um olhar muito humano durante a consulta.</q><footer><span class="avatar">IS</span><span><b>Isabella S.</b>há 4 meses</span></footer></article>
+      <article class="review"><span class="stars">★★★★★</span><q>Fui retirar um cisto no pescoço e fiquei impressionada com a segurança e, ao mesmo tempo, a leveza de Dra. Camila em conduzir todo o procedimento. […] O pós também está sendo super tranquilo, com toda assistência da clínica.</q><footer><span class="avatar">EL</span><span><b>Elaine L.</b>há 4 meses</span></footer></article>
+      <article class="review"><span class="stars">★★★★★</span><q>Ótima profissional, muito simpática, humana. Sou sua paciente há tempo. Vim de Camaçari a Salvador […] A secretária, Milene, também exerce um tratamento diferenciado, desde o atendimento via WhatsApp quanto pessoalmente.</q><footer><span class="avatar">QB</span><span><b>Quitéria B.</b>há 2 meses</span></footer></article>
+      <article class="review"><span class="stars">★★★★★</span><q>Ela me passou muita segurança durante a consulta, esclareceu minhas dúvidas com atenção e demonstrou ser uma profissional extremamente competente e dedicada. Fui muito bem atendido por toda a equipe.</q><footer><span class="avatar">G</span><span><b>Avaliação no Google</b>há 3 meses</span></footer></article>
+    </div>
+    <a class="gcta rv" href="https://www.google.com/maps?cid=65182189726254748" target="_blank" rel="noopener">Ler todas as 335 avaliações no Google →</a>
+  </div>
+</section>
+
+<section class="pad" id="contato" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow rv">Visite o Instituto</p>
+    <h2 class="h2 rv d1">Estamos prontos para <span>receber você</span></h2>
+    <div class="visit">
+      <div class="card rv">
+        <span class="status" id="status"><i></i><span>Horário de atendimento</span></span>
+        <div class="hours" id="hours">
+          <div data-d="1"><span>Segunda-feira</span><span>08:00 – 17:00</span></div>
+          <div data-d="2"><span>Terça-feira</span><span>08:00 – 17:00</span></div>
+          <div data-d="3"><span>Quarta-feira</span><span>08:00 – 17:00</span></div>
+          <div data-d="4"><span>Quinta-feira</span><span>08:00 – 17:00</span></div>
+          <div data-d="5"><span>Sexta-feira</span><span>08:00 – 17:00</span></div>
+          <div data-d="6"><span>Sábado</span><span>Fechado</span></div>
+          <div data-d="0"><span>Domingo</span><span>Fechado</span></div>
+        </div>
+        <p class="addr"><b>Itaigara · Ed. Louis Pasteur</b>Complexo Odonto-Médico Itaigara · Sala 1107<br>Av. Antônio Carlos Magalhães, 585 · Salvador · BA · 41825-000</p>
+        <span class="tag">Estacionamento pago no local</span>
+        <div class="btns">
+          <a class="btn btn-jade" href="https://wa.me/5571999858585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camila%20Ribeiro." target="_blank" rel="noopener">WhatsApp · (71) 99985-8585</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Ant%C3%B4nio+Carlos+Magalh%C3%A3es,+585,+Itaigara,+Salvador+-+BA" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="map rv d1"><iframe title="Mapa do Instituto" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Camila+Ribeiro+Instituto+de+Dermatologia,+Av.+Ant%C3%B4nio+Carlos+Magalh%C3%A3es,+585,+Salvador&output=embed"></iframe></div>
     </div>
   </div>
 </section>
 
-<section class="google">
-  <div class="container">
-    <div class="kicker">Avaliações no Google</div>
-    <div class="nota">5,0</div>
-    <div class="estrelas">★★★★★</div>
-    <p>335 avaliações no Google · <a href="https://www.google.com/maps/place/Camila+Ribeiro+-+Instituto+de+Dermatologia/data=!4m7!3m6!1s0x7161b18b4eca249:0xe792db3050c69c!8m2!3d-12.9981724!4d-38.4635316" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
-  </div>
-</section>
-
-<section class="local">
-  <div class="container">
-    <div class="ender">
-      <div class="r">Onde atendemos</div>
-      <p><strong>Edf. Louis Pasteur · Complexo Odonto-Médico Itaigara</strong></p>
-      <p>Av. Antônio Carlos Magalhães, 585 · Sala 1107</p>
-      <p>Itaigara · Salvador · BA · 41825-000</p>
-      <p class="aviso">Estacionamento pago disponível no complexo.</p>
-    </div>
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps?q=Av.+Ant%C3%B4nio+Carlos+Magalh%C3%A3es,+585+-+Sala+1107+-+Itaigara,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+<section class="pad" id="perguntas" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow rv" style="display:flex;justify-content:center">Dúvidas frequentes</p>
+    <h2 class="h2 rv d1" style="text-align:center">Antes da sua <span>consulta</span></h2>
+    <div class="faq">
+      <details class="rv"><summary>A consulta já define o tratamento?</summary><p>A consulta começa pela escuta: entender as necessidades da sua pele e, somente depois, definir o tratamento realmente ideal para o seu caso.</p></details>
+      <details class="rv"><summary>Quais áreas da dermatologia o Instituto atende?</summary><p>Dermatologia clínica, cirúrgica e estética, saúde capilar, acne e manchas, laser e tecnologias, procedimentos injetáveis e cirurgia de unha e tumores.</p></details>
+      <details class="rv"><summary>Onde fica e tem estacionamento?</summary><p>No Ed. Louis Pasteur, Complexo Odonto-Médico Itaigara, sala 1107, na Av. Antônio Carlos Magalhães, 585. Há estacionamento pago disponível no local.</p></details>
+      <details class="rv"><summary>Como agendar?</summary><p>Pelo WhatsApp (71) 99985-8585, de segunda a sexta, das 8h às 17h.</p></details>
     </div>
   </div>
 </section>
 
-<section class="contato">
-  <div class="container">
-    <div class="kicker" style="color:#fff">Próximo passo</div>
-    <h2>Estamos prontos para receber você</h2>
-    <p>Entre em contato para agendar sua consulta, esclarecer dúvidas e conhecer nossos tratamentos.</p>
-    <a class="btn" href="https://wa.me/5571999858585">Chamar no WhatsApp · (71) 99985-8585</a>
+<section class="final" id="agendar">
+  <div class="wrap">
+    <div class="box rv">
+      <div><h2 class="h2">Sua pele merece <span>um olhar atento.</span></h2><p>Agende sua consulta no Instituto de Dermatologia Camila Ribeiro.</p></div>
+      <a class="btn" href="https://wa.me/5571999858585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camila%20Ribeiro." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </div>
   </div>
 </section>
+</main>
 
-<footer>
-  <div class="container">
-    <p class="disc">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui o site oficial e não foi publicada pela Dra. Camila Ribeiro. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
-    <p class="cred">Dra. Camila Sampaio Ribeiro · CRM-BA 21467 · RQE 11906 · Salvador, BA</p>
+<footer class="site">
+  <div class="wrap">
+    <div class="row"><span class="mark"><b>CAMILA RIBEIRO</b><small>Instituto de Dermatologia</small></span><span>Dra. Camila Sampaio Ribeiro · CRM-BA 21467 · RQE 11906 (Dermatologia)</span></div>
+    <p class="disc">Prévia de demonstração, não oficial, criada pela AVIXco para apresentar uma proposta de site à Dra. Camila Ribeiro. Informações de canais públicos da própria médica e do Doctoralia; avaliações públicas do Google Maps reproduzidas em trechos, com nome abreviado. Conteúdo informativo, sem promessa de resultado.</p>
   </div>
 </footer>
 
+<a class="wa" href="https://wa.me/5571999858585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camila%20Ribeiro." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+
+<script>
+(() => {
+  const nav = document.getElementById("nav");
+  const onScroll = () => nav.classList.toggle("solid", scrollY > 30);
+  onScroll(); addEventListener("scroll", onScroll, { passive: true });
+  const burger = document.getElementById("burger"), drawer = document.getElementById("drawer");
+  burger.addEventListener("click", () => burger.setAttribute("aria-expanded", drawer.classList.toggle("open")));
+  drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { drawer.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+
+  const counters = (root) => root.querySelectorAll("[data-count]").forEach((el) => {
+    const target = parseFloat(el.dataset.count), dec = +(el.dataset.decimals || 0), t0 = performance.now();
+    const tick = (t) => { const p = Math.min(1, (t - t0) / 1600), v = target * (1 - Math.pow(1 - p, 3));
+      el.textContent = v.toFixed(dec).replace(".", ","); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  });
+  const reveal = (el) => { el.classList.add("in"); if (el.querySelector("[data-count]")) counters(el); io.unobserve(el); };
+  const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && reveal(e.target)), { threshold: .12, rootMargin: "0px 0px -6% 0px" });
+  const items = [...document.querySelectorAll(".rv")];
+  items.forEach((el) => io.observe(el));
+  const sweep = () => items.forEach((el) => !el.classList.contains("in") && el.getBoundingClientRect().top < innerHeight * .96 && reveal(el));
+  addEventListener("scroll", sweep, { passive: true }); addEventListener("load", sweep); setTimeout(sweep, 400);
+
+
+  const sc = document.getElementById("scroller"), step = () => sc.firstElementChild.getBoundingClientRect().width + 19;
+  document.getElementById("next").addEventListener("click", () => sc.scrollBy({ left: step(), behavior: "smooth" }));
+  document.getElementById("prev").addEventListener("click", () => sc.scrollBy({ left: -step(), behavior: "smooth" }));
+  let auto = setInterval(() => { if (sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 8) sc.scrollTo({ left: 0, behavior: "smooth" }); else sc.scrollBy({ left: step(), behavior: "smooth" }); }, 5200);
+  ["pointerdown", "wheel", "touchstart"].forEach((ev) => sc.addEventListener(ev, () => clearInterval(auto), { passive: true }));
+
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/Bahia", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
+  const get = (t) => parts.find((p) => p.type === t).value;
+  const day = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(get("weekday")), mins = (+get("hour") % 24) * 60 + +get("minute");
+  document.querySelector(`#hours [data-d="${day}"]`)?.classList.add("today");
+  const open = day >= 1 && day <= 5 && mins >= 480 && mins < 1020, status = document.getElementById("status");
+  const next = day >= 1 && day <= 5 && mins < 480 ? "hoje" : day === 5 || day === 6 ? "segunda" : "amanhã";
+  status.querySelector("span").textContent = open ? "Aberto agora · fecha às 17:00" : `Fechado · abre ${next} às 08:00`;
+  status.classList.toggle("closed", !open);
+})();
+</script>
 </body>
 </html>
