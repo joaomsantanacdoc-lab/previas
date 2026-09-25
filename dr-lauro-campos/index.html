@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dr. Lauro Campos · Cirurgia Plástica em Salvador</title>
+<style>
+  /* Direção: PREMIUM CLÁSSICO. A identidade real da marca é o monograma dourado sobre branco
+     (logo oficial usado no site). Tipografia serifada grande, tom "sonho/transformação" do próprio médico.
+     Dourado + grafite + branco. Sem foto de paciente. */
+  :root {
+    --branco: #fdfcfa;
+    --creme: #f6f1e9;
+    --dourado: #b9963f;
+    --dourado-claro: #d5b96e;
+    --grafite: #23201c;
+    --cinza: #6e675e;
+    --linha: #e7dfd1;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: var(--branco); color: var(--grafite); line-height: 1.65; }
+  img { display: block; max-width: 100%; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+
+  .topbar { border-bottom: 1px solid var(--linha); }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; }
+  .topbar .nome { font-size: 16px; letter-spacing: 1px; }
+  .topbar .nome b { color: var(--dourado); }
+  .topbar .crm { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12.5px; color: var(--cinza); }
+
+  /* HERO tipográfico (sem foto: acervo público não tem foto do médico em alta — seção reduzida) */
+  .hero { background: linear-gradient(175deg, var(--branco) 55%, var(--creme)); padding: 84px 0 64px; text-align: center; }
+  .hero .monograma { width: 96px; margin: 0 auto 26px; }
+  .hero .monograma img { border-radius: 50%; }
+  .hero .kicker { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--dourado); margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.12; font-weight: normal; margin-bottom: 20px; }
+  .hero h1 em { font-style: italic; color: var(--dourado); }
+  .hero p.sub { max-width: 58ch; margin: 0 auto 26px; font-size: 16.5px; color: var(--cinza); }
+  .hero .cred { display: inline-block; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13.5px; color: var(--grafite); border: 1px solid var(--linha); background: var(--branco); border-radius: 999px; padding: 9px 20px; margin-bottom: 30px; }
+  .botoes { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .botoes a { text-decoration: none; padding: 15px 30px; border-radius: 999px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; transition: .2s; }
+  .botoes .p { background: var(--grafite); color: var(--branco); }
+  .botoes .p:hover { background: var(--dourado); }
+  .botoes .s { border: 1px solid var(--grafite); color: var(--grafite); }
+
+  .faixa { background: var(--grafite); color: var(--creme); font-family: 'Segoe UI', Arial, sans-serif; }
+  .faixa .container { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; padding: 13px 22px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+
+  section { padding: 72px 0; }
+  .kicker { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--dourado); margin-bottom: 14px; }
+  h2 { font-size: clamp(26px, 3.4vw, 36px); font-weight: normal; margin-bottom: 26px; }
+
+  .sobre { background: var(--creme); }
+  .sobre .container { display: grid; grid-template-columns: 1.1fr .9fr; gap: 52px; }
+  .sobre p { margin-bottom: 15px; }
+  .pilares { display: grid; gap: 14px; }
+  .pilar { background: var(--branco); border: 1px solid var(--linha); border-left: 3px solid var(--dourado); padding: 18px 20px; border-radius: 8px; }
+  .pilar h3 { font-size: 17px; margin-bottom: 6px; }
+  .pilar p { font-size: 14px; color: var(--cinza); margin: 0; }
+  .ficha { margin-top: 22px; border-top: 1px solid var(--linha); font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; }
+  .ficha .l { display: grid; grid-template-columns: 190px 1fr; padding: 9px 0; border-bottom: 1px solid var(--linha); }
+  .ficha .l b { color: var(--cinza); font-weight: 500; }
+
+  .procedimentos { background: var(--branco); }
+  .proc-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .proc { border: 1px solid var(--linha); border-radius: 14px; padding: 26px; background: var(--branco); transition: .25s; }
+  .proc:hover { border-color: var(--dourado-claro); transform: translateY(-3px); }
+  .proc .g { color: var(--dourado); font-style: italic; font-size: 14px; margin-bottom: 8px; }
+  .proc h3 { font-size: 19px; margin-bottom: 9px; }
+  .proc p { font-size: 14px; color: var(--cinza); }
+
+  .caminho { background: var(--grafite); color: var(--creme); }
+  .caminho h2 { color: var(--creme); }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .step { border-top: 2px solid var(--dourado); padding-top: 16px; }
+  .step .n { font-style: italic; font-size: 26px; color: var(--dourado); }
+  .step h3 { font-size: 17px; margin: 6px 0; color: var(--branco); }
+  .step p { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13.5px; color: #bfb6a8; }
+
+  .google { background: var(--creme); text-align: center; }
+  .google .nota { font-size: 58px; font-style: italic; }
+  .google .estrelas { color: var(--dourado); font-size: 22px; letter-spacing: 7px; margin: 6px 0; }
+  .google p { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; color: var(--cinza); }
+  .google a { color: var(--grafite); }
+
+  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .ender { background: var(--creme); border: 1px solid var(--linha); border-radius: 16px; padding: 30px; font-family: 'Segoe UI', Arial, sans-serif; }
+  .ender .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--dourado); margin-bottom: 10px; }
+  .ender p { margin: 7px 0; font-size: 15px; }
+  .mapa { border-radius: 16px; overflow: hidden; border: 1px solid var(--linha); }
+  .mapa iframe { width: 100%; height: 330px; border: 0; }
+
+  .contato { background: var(--dourado); color: var(--branco); text-align: center; padding: 58px 0; }
+  .contato h2 { color: var(--branco); margin-bottom: 8px; }
+  .contato p { margin-bottom: 22px; font-family: 'Segoe UI', Arial, sans-serif; }
+  .contato a.btn { background: var(--grafite); color: var(--branco); text-decoration: none; padding: 16px 34px; border-radius: 999px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; }
+
+  footer { background: var(--grafite); color: #a99f8f; padding: 32px 0; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; font-size: 12.5px; }
+  footer .disc { max-width: 700px; margin: 0 auto 10px; color: #857c6d; line-height: 1.55; }
+  footer .cred { color: var(--creme); }
+
+  @media (max-width: 780px) {
+    .sobre .container, .local .container { grid-template-columns: 1fr; }
+    .proc-g, .steps { grid-template-columns: 1fr; }
+    .faixa .container { gap: 14px; font-size: 10.5px; }
+    section { padding: 50px 0; }
+    .hero { padding: 60px 0 48px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="nome">Dr. <b>Lauro Campos</b></div>
+    <div class="crm">CRM-BA 28689 · RQE 23414 (Cirurgia Plástica)</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="monograma"><img src="lauro-oficial.png" alt="Dr. Lauro Campos — Cirurgia Plástica"></div>
+    <div class="kicker">Cirurgia Plástica · Estética e Reparadora</div>
+    <h1>Cada sonho é único.<br>A cirurgia certa respeita <em>o seu corpo</em>.</h1>
+    <p class="sub">Cirurgias de contorno corporal — mamas, abdome, glúteos e lipoaspiração — com planejamento individualizado, segurança e acompanhamento próximo do pré ao pós-operatório.</p>
+    <div class="cred">Dr. Lauro Campos · CRM-BA 28689 · RQE 23414 · Membro Titular da SBCP</div>
+    <div class="botoes">
+      <a class="p" href="https://wa.me/5571996018224">Agendar consulta</a>
+      <a class="s" href="#procedimentos">Ver procedimentos</a>
+    </div>
+  </div>
+</header>
+
+<div class="faixa">
+  <div class="container">
+    <span>Mamas</span><span>Abdome</span><span>Glúteos</span><span>Lipoaspiração</span><span>Contorno corporal</span>
+  </div>
+</div>
+
+<section class="sobre">
+  <div class="container">
+    <div>
+      <div class="kicker">Conheça o seu cirurgião</div>
+      <h2>Transparência, segurança e cuidado — do primeiro encontro à alta</h2>
+      <p>Dr. Lauro Campos é cirurgião plástico, membro da Sociedade Brasileira de Cirurgia Plástica (SBCP), com atuação nas áreas Estética e Reparadora da especialidade.</p>
+      <p>Formação em Cirurgia Geral pela Santa Casa de Misericórdia da Bahia (Hospital Santa Izabel) e especialização em Cirurgia Plástica pelo Hospital das Clínicas de Salvador (HUPES).</p>
+      <div class="ficha">
+        <div class="l"><b>Formação · Cirurgia Geral</b><span>Santa Casa de Misericórdia da Bahia</span></div>
+        <div class="l"><b>Especialização · Cir. Plástica</b><span>Hospital das Clínicas (HUPES) · Salvador</span></div>
+        <div class="l"><b>Sociedade</b><span>Membro da SBCP</span></div>
+        <div class="l"><b>Atuação</b><span>Contorno corporal: mamas, abdome, glúteos e lipoaspiração</span></div>
+      </div>
+    </div>
+    <div class="pilares">
+      <div class="pilar"><h3>Segurança</h3><p>Avaliação individual e conduta técnica voltada para um processo cirúrgico seguro e bem orientado.</p></div>
+      <div class="pilar"><h3>Naturalidade</h3><p>Resultados pensados para valorizar a harmonia corporal, respeitando proporções e anatomia.</p></div>
+      <div class="pilar"><h3>Acompanhamento</h3><p>Suporte no pré e no pós-operatório, com orientações claras em todas as etapas da jornada.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="procedimentos" id="procedimentos">
+  <div class="container">
+    <div class="kicker">Principais procedimentos</div>
+    <h2>Contorno corporal com planejamento individualizado</h2>
+    <div class="proc-g">
+      <div class="proc"><div class="g">i.</div><h3>Lipoabdominoplastia</h3><p>Para quem deseja diminuir a cintura, eliminar o excesso de gordura e corrigir a sobra de pele e flacidez.</p></div>
+      <div class="proc"><div class="g">ii.</div><h3>Lipoescultura de definição 360˚</h3><p>Para quem deseja esculpir o corpo, realçando o contorno muscular com naturalidade e precisão.</p></div>
+      <div class="proc"><div class="g">iii.</div><h3>Mastopexia com prótese</h3><p>Para quem deseja eliminar a flacidez e a queda das mamas e aumentar o volume mamário.</p></div>
+      <div class="proc"><div class="g">iv.</div><h3>Mamoplastia de aumento</h3><p>Ganho de volume e projeção com planejamento respeitando proporções e expectativa realista.</p></div>
+      <div class="proc"><div class="g">v.</div><h3>Mamoplastia redutora</h3><p>Redução do volume mamário com foco em conforto e harmonia corporal.</p></div>
+      <div class="proc"><div class="g">vi.</div><h3>Cirurgia pós-bariátrica</h3><p>Correção de sobras de pele após grande perda de peso, em etapas planejadas.</p></div>
+    </div>
+    <p style="margin-top:22px;font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:var(--cinza);">Cada indicação cirúrgica é definida em consulta, após avaliação médica individualizada.</p>
+  </div>
+</section>
+
+<section class="caminho">
+  <div class="container">
+    <div class="kicker" style="color:var(--dourado)">O caminho da transformação</div>
+    <h2>Como a jornada funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Consulta de avaliação</h3><p>Primeiro encontro: escuta dos objetivos, avaliação e apresentação do plano de tratamento.</p></div>
+      <div class="step"><div class="n">02</div><h3>Preparo</h3><p>Exames pré-operatórios, definição dos detalhes da cirurgia e orientações do que vem depois.</p></div>
+      <div class="step"><div class="n">03</div><h3>Cirurgia e pós</h3><p>Internamento hospitalar e acompanhamento nas revisões, do curativo da 1ª semana até a alta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="google">
+  <div class="container">
+    <div class="kicker">Avaliações no Google</div>
+    <div class="nota">4,9</div>
+    <div class="estrelas">★★★★★</div>
+    <p>229 avaliações no Google · <a href="https://www.google.com/maps/place/Dr.+Lauro+Campos+%7C+Cirurgia+Pl%C3%A1stica+em+Salvador+%7C+Mamas,+Abdominoplastia+e+LipoHD/data=!4m7!3m6!1s0x7161b2c766659c7:0xcb75345e56e59946!8m2!3d-12.9823005!4d-38.458913" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
+  </div>
+</section>
+
+<section class="local">
+  <div class="container">
+    <div class="ender">
+      <div class="r">Onde atendo</div>
+      <p><strong>Alameda das Espatódeas, 567</strong></p>
+      <p>Caminho das Árvores</p>
+      <p>Salvador · BA · CEP 41820-460</p>
+      <p style="margin-top:14px;color:var(--cinza);">Atendimento em dias de semana, com agenda definida na consulta.</p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Alameda+das+Espatodeas,+567+-+Caminho+das+Arvores,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contato">
+  <div class="container">
+    <div class="kicker" style="color:var(--branco)">Próximo passo</div>
+    <h2>Seu sonho começa com uma conversa</h2>
+    <p>Agende sua consulta e entenda o plano mais adequado para o seu caso.</p>
+    <a class="btn" href="https://wa.me/5571996018224">Chamar no WhatsApp · (71) 99601-8224</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="disc">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui o site oficial e não foi publicada pelo Dr. Lauro Campos. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
+    <p class="cred">Dr. Lauro Campos · CRM-BA 28689 · RQE 23414 · Salvador, BA</p>
+  </div>
+</footer>
+
+</body>
+</html>
