@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dr. Vinício Moitinho · Cirurgia Plástica em Salvador</title>
+<style>
+  /* Direção: CIRURGIA CLÁSSICA E SÓLIDA. O Dr. Vinício é cirurgião plástico veterano (RQE 5456,
+     CRM desde 1998, clínica no mesmo endereço desde 2001). O site atual dele é Wix básico com
+     fotos de banco — esta prévia substitui por direção própria: azul-marinho cirúrgico + branco,
+     tom "operação bem feita, alta no mesmo dia" (o discurso real dele). Sem foto de banco. */
+  :root {
+    --branco: #ffffff;
+    --gelo: #f2f5f8;
+    --marinho: #1c3350;
+    --marinho-claro: #dce6f0;
+    --aço: #46617e;
+    --dourado: #b9964f;
+    --tinta: #1d2a3a;
+    --cinza: #5d6c7c;
+    --linha: #d9e2ea;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: var(--gelo); color: var(--tinta); line-height: 1.62; }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: normal; }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 22px; }
+
+  .topbar { background: var(--marinho); color: var(--branco); }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; padding: 13px 22px; font-size: 13px; }
+  .topbar .nome { font-family: Georgia, serif; font-size: 16.5px; }
+
+  .hero { background: linear-gradient(168deg, var(--branco) 42%, var(--marinho-claro)); padding: 74px 0 60px; }
+  .hero .container { display: grid; grid-template-columns: 1.1fr .9fr; gap: 46px; align-items: center; }
+  .hero .tag { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--aço); margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(30px, 4.2vw, 44px); line-height: 1.16; margin-bottom: 18px; }
+  .hero h1 em { font-style: italic; color: var(--marinho); }
+  .hero .sub { font-size: 15.5px; color: var(--cinza); margin-bottom: 22px; max-width: 50ch; }
+  .hero .cred { background: var(--branco); border: 1px solid var(--linha); border-radius: 12px; padding: 13px 18px; font-size: 13.5px; display: inline-block; margin-bottom: 26px; }
+  .hero .cred b { color: var(--marinho); }
+  .botoes { display: flex; gap: 13px; flex-wrap: wrap; }
+  .botoes a { text-decoration: none; padding: 14px 30px; border-radius: 8px; font-size: 15px; transition: .2s; }
+  .botoes .p { background: var(--marinho); color: var(--branco); }
+  .botoes .p:hover { background: #14263c; }
+  .botoes .s { border: 1px solid var(--marinho); color: var(--marinho); }
+  .hero .placa { background: var(--marinho); color: var(--branco); border-radius: 18px; padding: 36px 32px; }
+  .hero .placa .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: #9db6cf; margin-bottom: 12px; }
+  .hero .placa .grande { font-family: Georgia, serif; font-size: 40px; line-height: 1.1; }
+  .hero .placa p { margin-top: 10px; font-size: 14px; color: #c4d3e2; }
+  .hero .placa .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px; }
+  .hero .placa .st { border-top: 2px solid #3d5a7d; padding-top: 10px; }
+  .hero .placa .st .n { font-family: Georgia, serif; font-size: 22px; }
+  .hero .placa .st .l { font-size: 12px; color: #9db6cf; }
+
+  .faixa { background: var(--marinho); color: #c4d3e2; border-top: 1px solid #3d5a7d; }
+  .faixa .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; padding: 12px 22px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+
+  section { padding: 64px 0; }
+  .kicker { font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--aço); margin-bottom: 12px; }
+  h2 { font-size: clamp(25px, 3.2vw, 34px); margin-bottom: 24px; }
+
+  .sobre { background: var(--branco); }
+  .sobre .container { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .sobre p { margin-bottom: 14px; color: #3d4c5b; font-size: 15.5px; }
+  .fichas { border-top: 1px solid var(--linha); font-size: 14px; }
+  .fichas .l { display: grid; grid-template-columns: 190px 1fr; padding: 10px 0; border-bottom: 1px solid var(--linha); }
+  .fichas .l b { color: var(--cinza); font-weight: 500; }
+
+  .procs { background: var(--gelo); }
+  .proc-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .proc { background: var(--branco); border: 1px solid var(--linha); border-radius: 12px; padding: 24px; }
+  .proc h3 { font-size: 18px; margin-bottom: 8px; }
+  .proc p { font-size: 13.8px; color: var(--cinza); }
+  .proc .alta { margin-top: 12px; font-size: 12px; color: var(--marinho); border-top: 1px dashed var(--linha); padding-top: 10px; }
+
+  .pos { background: var(--marinho); color: var(--branco); }
+  .pos h2 { color: var(--branco); }
+  .pos .kicker { color: #9db6cf; }
+  .pos-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .pos-item { border-left: 3px solid #3d5a7d; padding-left: 16px; }
+  .pos-item .n { font-family: Georgia, serif; font-style: italic; font-size: 24px; color: #9db6cf; }
+  .pos-item h3 { font-size: 16.5px; color: var(--branco); margin: 4px 0 6px; }
+  .pos-item p { font-size: 13.5px; color: #c4d3e2; }
+
+  .google { background: var(--branco); text-align: center; }
+  .google .nota { font-family: Georgia, serif; font-size: 54px; font-style: italic; }
+  .google .estrelas { color: #e2a33c; font-size: 21px; letter-spacing: 7px; margin: 6px 0; }
+  .google p { font-size: 14px; color: var(--cinza); }
+  .google a { color: var(--marinho); }
+
+  .local .container { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .ender { background: var(--branco); border: 1px solid var(--linha); border-radius: 16px; padding: 30px; }
+  .ender .r { font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--aço); margin-bottom: 10px; }
+  .ender p { margin: 7px 0; font-size: 15px; }
+  .mapa { border-radius: 16px; overflow: hidden; border: 1px solid var(--linha); }
+  .mapa iframe { width: 100%; height: 330px; border: 0; }
+
+  .contato { background: var(--gelo); text-align: center; }
+  .contato .caixa { background: var(--branco); border: 1px solid var(--linha); border-radius: 20px; padding: 48px 32px; }
+  .contato h2 { margin-bottom: 8px; }
+  .contato p { margin-bottom: 24px; color: var(--cinza); }
+  .contato a.btn { background: var(--marinho); color: var(--branco); text-decoration: none; font-weight: 600; padding: 16px 34px; border-radius: 8px; font-size: 15px; display: inline-block; }
+
+  footer { background: #14263c; color: #8fa5ba; padding: 30px 0; font-size: 12.5px; text-align: center; }
+  footer .disc { max-width: 700px; margin: 0 auto 10px; color: #748aa0; line-height: 1.55; }
+  footer .cred { color: var(--branco); }
+
+  @media (max-width: 780px) {
+    .hero .container, .sobre .container, .local .container, .proc-g, .pos-g { grid-template-columns: 1fr; }
+    .faixa .container { gap: 12px; font-size: 10.5px; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="nome">Dr. Vinício Moitinho</div>
+    <div>CRM-BA 13286 · RQE 5456</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div>
+      <div class="tag">Cirurgia Plástica · Pituba, Salvador</div>
+      <h1>Cirurgia plástica com previsão de alta <em>no mesmo dia</em>.</h1>
+      <p class="sub">Lipoaspiração, prótese mamária, abdominoplastia e cirurgia facial — técnicas estruturadas, anestesia planejada e recuperação orientada passo a passo.</p>
+      <div class="cred"><b>Dr. Vinício Moitinho do Carmo</b><br>CRM-BA 13286 · RQE 5456 (Cirurgia Plástica)</div>
+      <div class="botoes">
+        <a class="p" href="https://wa.me/5571999031460">Agendar consulta</a>
+        <a class="s" href="#procedimentos">Ver procedimentos</a>
+      </div>
+    </div>
+    <div class="placa">
+      <div class="r">Experiência</div>
+      <div class="grande">Consultório na Pituba<br>desde 2001.</div>
+      <p>Especialista em Cirurgia Plástica pelo CFM, com clínica no mesmo endereço do Complexo Odonto-Médico Louis Pasteur há mais de duas décadas.</p>
+      <div class="stats">
+        <div class="st"><div class="n">1998</div><div class="l">CRM desde</div></div>
+        <div class="st"><div class="n">RQE 5456</div><div class="l">Cirurgia Plástica</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="faixa">
+  <div class="container">
+    <span>Lipoaspiração</span><span>Prótese mamária</span><span>Abdominoplastia</span><span>Cirurgia facial</span><span>Rinoplastia</span>
+  </div>
+</div>
+
+<section class="sobre">
+  <div class="container">
+    <div>
+      <div class="kicker">Sobre o cirurgião</div>
+      <h2>Técnicas estruturadas, recuperação planejada</h2>
+      <p>O Dr. Vinício Moitinho é cirurgião plástico com título de especialista registrado no CFM, atendendo em Salvador desde o fim dos anos 1990, com consultório na Pituba.</p>
+      <p>Cada procedimento é feito com técnica estruturada — do plano cirúrgico à anestesia — e com previsão de alta no mesmo dia, acompanhada das orientações de pós-operatório: drenagens linfáticas, cintas modeladoras e revisões programadas.</p>
+    </div>
+    <div class="fichas">
+      <div class="l"><b>Registro</b><span>CRM-BA 13286 · RQE 5456 (Cirurgia Plástica)</span></div>
+      <div class="l"><b>Especialidade</b><span>Cirurgia Plástica — título CFM</span></div>
+      <div class="l"><b>Consultório</b><span>Complexo Odonto-Médico Louis Pasteur · Pituba</span></div>
+      <div class="l"><b>Atuação</b><span>Contorno corporal e cirurgia facial</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="procs" id="procedimentos">
+  <div class="container">
+    <div class="kicker">Procedimentos</div>
+    <h2>Os mais procurados do consultório</h2>
+    <div class="proc-g">
+      <div class="proc"><h3>Lipoaspiração</h3><p>Retira gordura localizada com lipo de definição e uso de tecnologia; inclui orientação de drenagens e cintas no pós.</p><div class="alta">Alta prevista: mesmo dia</div></div>
+      <div class="proc"><h3>Prótese mamária</h3><p>Colocação de implantes com técnica estruturada nos diversos planos, conforme o quadro clínico; sutiã pós-cirúrgico.</p><div class="alta">Alta prevista: mesmo dia</div></div>
+      <div class="proc"><h3>Abdominoplastia</h3><p>Retira pele abdominal e trata a diástase dos músculos, normalmente associando lipoaspiração dos flancos.</p><div class="alta">Alta prevista: mesmo dia</div></div>
+      <div class="proc"><h3>Ritidoplastia</h3><p>Lifting facial com reposicionamento dos tecidos profundos e correção da flacidez da face e do pescoço.</p><div class="alta">Anestesia local e sedação</div></div>
+      <div class="proc"><h3>Mamoplastia</h3><p>Redução e elevação das mamas, com redução das aréolas e correção da queda mamária.</p><div class="alta">Anestesia peridural</div></div>
+      <div class="proc"><h3>Rinoplastia</h3><p>Cirurgia do nariz com técnica aberta estruturada e enxertos, conforme o caso.</p><div class="alta">Alta prevista: mesmo dia</div></div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--cinza);">Cada indicação cirúrgica é definida em consulta, após avaliação médica individualizada.</p>
+  </div>
+</section>
+
+<section class="pos">
+  <div class="container">
+    <div class="kicker">O pós-operatório</div>
+    <h2>Você não vai para casa sem saber o que vem depois</h2>
+    <div class="pos-g">
+      <div class="pos-item"><div class="n">01</div><h3>Drenagens linfáticas</h3><p>Protocolo de sessões programadas para reduzir o inchaço e acelerar a recuperação.</p></div>
+      <div class="pos-item"><div class="n">02</div><h3>Cintas modeladoras</h3><p>Orientação do uso correto e da duração, conforme o procedimento realizado.</p></div>
+      <div class="pos-item"><div class="n">03</div><h3>Revisões programadas</h3><p>Consultas de acompanhamento com curativos e retirada de pontos no ritmo da sua evolução.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="google">
+  <div class="container">
+    <div class="kicker">Avaliações no Google</div>
+    <div class="nota">5,0</div>
+    <div class="estrelas">★★★★★</div>
+    <p>160 avaliações no Google · <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Dr+Vin%C3%ADcio+Moitinho/data=!4m7!3m6!1s0x7161b69cc769237:0x396a36df3565a13e!8m2!3d-12.997762!4d-38.4637518" target="_blank" rel="nofollow">ver perfil no Google Maps</a></p>
+  </div>
+</section>
+
+<section class="local">
+  <div class="container">
+    <div class="ender">
+      <div class="r">Onde atendo</div>
+      <p><strong>Ed. Louis · Complexo Odonto-Médico</strong></p>
+      <p>Av. Antônio Carlos Magalhães, 585 · Salas 1403 e 1404</p>
+      <p>Pituba · Salvador · BA · 41800-700</p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Av.+Ant%C3%B4nio+Carlos+Magalh%C3%A3es,+585+-+Pituba,+Salvador+-+BA&output=embed" loading="lazy" title="Mapa do consultório"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contato">
+  <div class="container">
+    <div class="caixa">
+      <div class="kicker">Próximo passo</div>
+      <h2>Agende sua consulta</h2>
+      <p>Fale com a clínica e reserve o seu horário de avaliação.</p>
+      <a class="btn" href="https://wa.me/5571999031460">Chamar no WhatsApp · (71) 99903-1460</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="disc">Prévia de demonstração não oficial, montada pela AVIXco para apresentar uma proposta de site. Não substitui o site oficial e não foi publicada pelo Dr. Vinício Moitinho. Conteúdo informativo; nenhuma promessa de resultado; conduta definida em avaliação médica individualizada.</p>
+    <p class="cred">Dr. Vinício Moitinho do Carmo · CRM-BA 13286 · RQE 5456 · Salvador, BA</p>
+  </div>
+</footer>
+
+</body>
+</html>
