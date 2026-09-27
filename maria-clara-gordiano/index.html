@@ -4,230 +4,77 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Dra. Maria Clara Gordiano · Dermatologista em Salvador</title>
-<meta name="description" content="Dra. Maria Clara Gordiano, dermatologista em Salvador e presidente da SBD-BA. Dermatologia clínica e cirúrgica, mapeamento corporal digital. Alphaville, Paralela.">
-<meta property="og:title" content="Dra. Maria Clara Gordiano · Dermatologista em Salvador">
-<meta property="og:description" content="Uma dermatologista que cuida das doenças da sua pele. Mapeamento corporal digital e dermatologia para todas as idades.">
+<title>Dra. Maria Clara Gordiano · Dermatologista em Salvador · Presidente da SBD-BA</title>
+<meta name="description" content="Dra. Maria Clara Gordiano, dermatologista em Salvador e presidente da SBD-BA. Dermatologia clínica e cirúrgica, mapeamento corporal e câncer de pele. CITT Alphaville.">
+<meta property="og:title" content="Dra. Maria Clara Gordiano · Dermatologista em Salvador · Presidente da SBD-BA">
+<meta property="og:description" content="Dra. Maria Clara Gordiano, dermatologista em Salvador e presidente da SBD-BA. Dermatologia clínica e cirúrgica, mapeamento corporal e câncer de pele. CITT Alphaville.">
 <meta property="og:image" content="retrato.jpg">
 <meta name="theme-color" content="#FBF8F5">
 <link rel="icon" href="marca.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.replace('js-pending','js')</script>
-<style>
-:root{--cream:#FBF8F5;--white:#fff;--forest:#21473A;--green:#3F7652;--mint:#E4EFE8;--rose:#A85A66;--rose2:#C98B93;--blush:#F7E3E6;--ink:#1D2A24;--ink2:#4C5A53;--muted:#7F8B85;--line:rgba(29,42,36,.1);
-  --sans:"Albert Sans",system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.1,1)}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;overflow-x:hidden;font-variant-numeric:lining-nums}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1160px,100% - 48px);margin-inline:auto}
-section{position:relative;scroll-margin-top:84px}
-.pad{padding:clamp(4.5rem,9vw,7rem) 0}
-.tag{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--rose)}
-h2{font-weight:600;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:1.14;letter-spacing:-.02em;margin-top:.6rem}
-h2 span{color:var(--green)}
-.lead{color:var(--ink2);font-size:1.08rem;max-width:58ch}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:999px;padding:.95rem 1.5rem;font-weight:600;font-size:.95rem;transition:background .3s,color .3s,transform .3s}
-.btn svg{width:18px;height:18px}
-.btn-rose{background:var(--rose);color:#fff}
-.btn-rose:hover{background:#914A56}
-.btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.1)}
-.btn-line{border:1.5px solid rgba(33,71,58,.3);color:var(--forest)}
-.btn-line:hover{background:var(--mint)}
-
-.nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(251,248,245,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:1rem}
-.nav .logo{height:46px;width:auto}
-.nav ul{display:flex;gap:1.8rem;list-style:none;font-size:.93rem;color:var(--ink2);font-weight:500}
-.nav ul a:hover{color:var(--rose)}
-.nav .btn{padding:.65rem 1.15rem;font-size:.88rem}
-.burger{display:none;background:none;border:0;width:44px;height:44px;color:var(--ink)}
-.drawer{position:fixed;inset:78px 0 auto;z-index:49;background:var(--white);padding:1.2rem 24px 1.8rem;display:none;flex-direction:column;gap:1rem;font-size:1.3rem;font-weight:600;box-shadow:0 20px 40px -24px rgba(29,42,36,.35)}
-.drawer.open{display:flex}
-
-.hero{margin-top:78px;display:grid;grid-template-columns:1fr 1fr;min-height:calc(100svh - 78px);max-height:880px;background:var(--forest)}
-.hero .copy{color:#fff;display:flex;flex-direction:column;justify-content:center;padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4.5rem) clamp(3rem,6vw,5rem) max(24px,calc((100vw - 1160px)/2))}
-.ribbon{align-self:flex-start;display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:.45rem .95rem .45rem .5rem;font-size:.85rem;font-weight:500}
-.ribbon i{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--rose2);color:var(--forest);font-style:normal;font-weight:700;font-size:.66rem;letter-spacing:.02em}
-.hero h1{font-weight:600;font-size:clamp(2.3rem,4.4vw,3.6rem);line-height:1.06;letter-spacing:-.025em;margin:1.4rem 0 1.2rem;max-width:15ch}
-.hero .lead{color:#CFE0D6}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-.hero .reg{margin-top:2.2rem;font-size:.86rem;color:#A9C4B5}
-.hero .photo{position:relative;overflow:hidden;background:#9B4A3F}
-.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
-
-.strip{background:var(--white);border-bottom:1px solid var(--line)}
-.strip .row{display:grid;grid-template-columns:repeat(4,1fr)}
-.strip .row>div{padding:1.5rem 1.4rem;border-right:1px solid var(--line)}
-.strip .row>div:last-child{border-right:0}
-.strip b{display:block;font-size:1.25rem;font-weight:700;color:var(--forest);line-height:1.2}
-.strip span{display:block;font-size:.85rem;color:var(--ink2);margin-top:.25rem}
-.stars{color:#D29A2A;letter-spacing:.05em}
-
-.map-sec .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.who{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem .9rem;margin-top:1.4rem}
-.who li{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:.75rem .9rem;font-size:.9rem;color:var(--ink2);line-height:1.4}
-.how{margin-top:1.6rem;display:grid;gap:.7rem}
-.how div{display:flex;gap:.8rem;font-size:.95rem;color:var(--ink2)}
-.how b{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--forest);font-size:.82rem}
-.map-sec .pic{position:relative}
-.map-sec .pic img{border-radius:26px;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:40% 45%}
-.map-sec .pic figcaption{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(255,255,255,.94);border-radius:16px;padding:.9rem 1.1rem;font-size:.88rem;color:var(--ink2)}
-.map-sec .pic figcaption b{color:var(--forest)}
-
-.treat{background:var(--white)}
-.treat .top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:end}
-.quote{font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:500;line-height:1.4;color:var(--forest);border-left:3px solid var(--rose2);padding-left:1.2rem}
-.quote small{display:block;margin-top:.6rem;font-size:.85rem;font-weight:500;color:var(--muted)}
-.groups{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.6rem}
-.group{background:var(--cream);border-radius:20px;padding:1.4rem}
-.group h3{font-size:1.02rem;font-weight:700;color:var(--forest);margin-bottom:.8rem}
-.chips{display:flex;flex-wrap:wrap;gap:.4rem}
-.chips span{font-size:.84rem;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.32rem .7rem;color:var(--ink2)}
-
-.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.about .pic img{border-radius:26px;width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:50% 40%}
-.about p{color:var(--ink2);margin-top:1rem}
-.press{margin-top:1.8rem}
-.press small{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.press ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:.7rem;font-weight:700;color:var(--forest);font-size:.98rem}
-
-.rev .top{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap}
-.big{display:flex;align-items:center;gap:1rem}
-.big b{font-size:3.6rem;font-weight:700;line-height:1;color:var(--forest)}
-.big span{font-size:.9rem;color:var(--ink2);line-height:1.4}
-.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;margin-top:2.4rem}
-.review{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:1.7rem;display:flex;flex-direction:column;gap:1rem}
-.review q{font-size:1.06rem;line-height:1.6;color:var(--ink)}
-.review footer{margin-top:auto;display:flex;align-items:center;gap:.7rem;font-size:.86rem;color:var(--muted)}
-.review .av{width:36px;height:36px;border-radius:50%;background:var(--blush);color:var(--rose);display:grid;place-items:center;font-weight:700;font-size:.8rem}
-.review footer b{display:block;color:var(--ink)}
-.gl{display:inline-block;margin-top:1.4rem;font-weight:600;color:var(--rose);border-bottom:1.5px solid var(--rose2)}
-
-.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:1.2rem;margin-top:2.4rem}
-.card{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:1.9rem}
-.status{display:inline-flex;align-items:center;gap:.5rem;font-size:.86rem;font-weight:600;padding:.4rem .9rem;border-radius:999px;background:var(--mint);color:var(--forest)}
-.status i{width:8px;height:8px;border-radius:50%;background:var(--green)}
-.status.closed{background:var(--blush);color:#8A3F4A}.status.closed i{background:var(--rose)}
-.hours{margin-top:1.2rem}
-.hours div{display:flex;justify-content:space-between;padding:.62rem 0;border-bottom:1px solid var(--line);color:var(--ink2);font-size:.95rem}
-.hours div.today{color:var(--ink);font-weight:700}
-.hours div.today span:first-child::after{content:" · hoje";color:var(--rose);font-weight:600;font-size:.8rem}
-.addr{margin-top:1.4rem;color:var(--ink2)}
-.addr b{display:block;color:var(--ink);font-size:1.1rem}
-.card .btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
-.mapbox{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:460px;background:#E5ECE8}
-.mapbox iframe{width:100%;height:100%;min-height:460px;border:0}
-
-.faq{max-width:820px;margin:2.2rem auto 0}
-.faq details{background:var(--white);border:1px solid var(--line);border-radius:16px;margin-bottom:.7rem;padding:0 1.4rem}
-.faq summary{list-style:none;cursor:pointer;padding:1.15rem 0;font-weight:600;font-size:1.05rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";flex:none;color:var(--rose);font-size:1.4rem;transition:transform .35s var(--ease)}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq p{color:var(--ink2);padding-bottom:1.2rem}
-
-.final{background:var(--forest);color:#fff;text-align:center}
-.final h2{max-width:20ch;margin:.6rem auto 0;color:#fff}
-.final p{color:#CFE0D6;margin:1rem auto 2rem;max-width:52ch}
-footer.site{background:var(--forest);border-top:1px solid rgba(255,255,255,.1);padding:2rem 0 2.6rem;color:#A9C4B5;font-size:.84rem}
-footer.site .row{display:flex;justify-content:space-between;gap:1rem 2rem;flex-wrap:wrap}
-footer.site .disc{margin-top:1rem;font-size:.74rem;color:#8FAD9D;max-width:95ch}
-
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
-.js .rv.in{opacity:1;transform:none}
-.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
-.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35);transition:transform .35s,opacity .35s}
-.wa:hover{transform:scale(1.06)}
-.wa.hide{opacity:0;transform:scale(.8);pointer-events:none}
-.wa svg{width:28px;height:28px}
-.hello{position:fixed;left:20px;bottom:20px;z-index:65;width:min(360px,calc(100vw - 110px));background:#fff;color:#1d1d1f;border-radius:14px;padding:1rem 1.1rem;box-shadow:0 18px 50px -18px rgba(0,0,0,.45);font:400 .86rem/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transform:translateY(16px);opacity:0;pointer-events:none;transition:opacity .5s,transform .5s}
-.hello.show{opacity:1;transform:none;pointer-events:auto}
-.hello b{display:block;font-size:.92rem;margin-bottom:.2rem;padding-right:1.6rem;color:#111}
-.hello p{margin:0;color:#4a4a50}
-.hello small{display:block;margin-top:.45rem;color:#8a8a90;font-size:.72rem}
-.hello button{position:absolute;top:.45rem;right:.5rem;width:28px;height:28px;border:0;border-radius:50%;background:#f1f1f3;color:#555;cursor:pointer;font-size:1rem;line-height:1}
-.hello button:hover{background:#e4e4e8}
-.hello-pill{position:fixed;left:20px;bottom:20px;z-index:64;display:none;align-items:center;gap:.5rem;border:0;border-radius:999px;padding:.6rem 1rem .6rem .8rem;background:#fff;color:#1d1d1f;box-shadow:0 10px 30px -12px rgba(0,0,0,.4);font:600 .8rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;cursor:pointer}
-.hello-pill.show{display:inline-flex}
-.hello-pill i{width:8px;height:8px;border-radius:50%;background:#25D366}
-@media (max-width:640px){.hello-pill{left:12px;bottom:18px;font-size:.76rem;max-width:calc(100vw - 100px)}.hello{left:12px;right:84px;bottom:14px;width:auto;font-size:.8rem;padding:.8rem .9rem}.hello small{display:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
-span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
-
-
-@media (max-width:980px){
-  .nav ul,.nav .btn{display:none}
-  .burger{display:grid;place-items:center}
-  .nav .logo{height:38px}
-  .hero{grid-template-columns:1fr;max-height:none;min-height:0}
-  .hero .photo{order:-1;height:min(56vh,460px)}
-  .hero .copy{padding:2.4rem 24px 3rem}
-  .strip .row{grid-template-columns:1fr 1fr}
-  .strip .row>div:nth-child(2){border-right:0}
-  .strip .row>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .map-sec .grid,.treat .top,.about,.visit{grid-template-columns:1fr}
-  .groups{grid-template-columns:1fr 1fr}
-  .reviews{grid-template-columns:1fr}
-}
-@media (max-width:600px){
-  .wrap{width:calc(100% - 32px)}
-  .hero .copy{padding:2rem 16px 2.6rem}
-  .hero h1{font-size:2.15rem}
-  .hero .ctas .btn{flex:1}
-  .who,.groups{grid-template-columns:1fr}
-  .strip .row>div{padding:1.1rem 1rem}
-  .strip b{font-size:1.05rem}
-  .mapbox,.mapbox iframe{min-height:320px}
-}
-</style>
 </head>
 <body>
-
+<div class="progress" aria-hidden="true"></div>
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="#inicio" aria-label="Maria Clara Dermatologista, início"><img class="logo" src="logo.png" alt="Maria Clara Dermatologista"></a>
-    <ul>
-      <li><a href="#mapeamento">Mapeamento corporal</a></li>
-      <li><a href="#tratamentos">O que eu trato</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#contato">Consultório</a></li>
+    <a href="./" aria-label="Maria Clara Dermatologista, início"><img class="logo" src="logo.png" alt="Maria Clara Dermatologista"></a>
+    <ul class="menu">
+      <li><a href="mapeamento-corporal/">Mapeamento corporal</a></li>
+      <li class="has"><a href="cancer-de-pele/">Tratamentos</a><div class="sub"><ul><li><a href="mapeamento-corporal/">Mapeamento corporal<small>Acompanhamento das pintas com dermatoscopia digital</small></a></li><li><a href="cancer-de-pele/">Câncer de pele e pintas<small>Prevenção, sinais de alerta e cirurgia</small></a></li><li><a href="acne-e-manchas/">Acne, manchas e melasma<small>Pele do rosto e fotoproteção</small></a></li><li><a href="doencas-da-pele/">Doenças da pele<small>Psoríase, dermatites, vitiligo e outras</small></a></li><li><a href="unhas-cabelos-e-suor/">Unhas, cabelos e suor<small>Unha encravada, queda de cabelo, suor excessivo</small></a></li></ul></div></li>
+      <li><a href="sobre/">Sobre</a></li>
+      <li><a href="consultorio/">Consultório</a></li>
     </ul>
     <a class="btn btn-rose" href="https://wa.me/5571993059220?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Maria%20Clara." target="_blank" rel="noopener">Marcar consulta</a>
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
-<nav class="drawer" id="drawer" aria-label="Menu"><a href="#mapeamento">Mapeamento corporal</a><a href="#tratamentos">O que eu trato</a><a href="#sobre">Sobre</a><a href="#contato">Consultório</a></nav>
+<nav class="drawer" id="drawer" aria-label="Menu"><a href="./">Início</a><a class="subl" href="mapeamento-corporal/">Mapeamento corporal</a><a class="subl" href="cancer-de-pele/">Câncer de pele e pintas</a><a class="subl" href="acne-e-manchas/">Acne, manchas e melasma</a><a class="subl" href="doencas-da-pele/">Doenças da pele</a><a class="subl" href="unhas-cabelos-e-suor/">Unhas, cabelos e suor</a><a href="sobre/">Sobre a Dra. Maria Clara</a><a href="consultorio/">Consultório e horários</a></nav>
 
 <main>
+
 <section class="hero" id="inicio">
   <div class="copy">
     <p class="ribbon rv"><i>SBD</i>Presidente da Sociedade Brasileira de Dermatologia · Bahia</p>
-    <h1 class="rv d1">Uma dermatologista que cuida das doenças da sua pele.</h1>
-    <p class="lead rv d2">Dermatologia clínica e cirúrgica para todas as idades, com mapeamento corporal digital para acompanhar pintas e prevenir o melanoma.</p>
+    <h1 class="rv d1">Uma dermatologista que cuida das <span>doenças da sua pele.</span></h1>
+    <p class="lead rv d2">Dermatologia clínica e cirúrgica para todas as idades, com mapeamento corporal digital para acompanhar pintas e encontrar o melanoma cedo.</p>
     <div class="ctas rv d3">
       <a class="btn btn-rose" href="https://wa.me/5571993059220?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Maria%20Clara." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Marcar consulta</a>
-      <a class="btn btn-ghost" href="#mapeamento">Mapeamento corporal</a>
+      <a class="btn btn-ghost" href="mapeamento-corporal/">Mapeamento corporal</a>
     </div>
     <p class="reg rv d4">Dra. Maria Clara Dultra Gordiano · CRM-BA 16201 · RQE 10889</p>
   </div>
-  <div class="photo"><img src="retrato.jpg" alt="Dra. Maria Clara Gordiano, dermatologista" fetchpriority="high"></div>
+  <div class="photo">
+    <img src="retrato.jpg" alt="Dra. Maria Clara Gordiano, dermatologista" fetchpriority="high">
+    <div class="floating"><span><b>5,0 <span class="stars">★★★★★</span></b>124 avaliações no Google</span><span><b>Desde 2003</b>formada pela UFBA</span></div>
+  </div>
 </section>
 
 <div class="strip">
   <div class="wrap row rv">
     <div><b>Presidente da SBD-BA</b><span>Sociedade Brasileira de Dermatologia, regional Bahia</span></div>
-    <div><b>5,0 <span class="stars" style="display:inline;margin:0">★★★★★</span></b><span>124 avaliações no Google</span></div>
-    <div><b>Todas as idades</b><span>De bebês a idosos</span></div>
+    <div><b>Dermatologia oncológica</b><span>E cuidado da pele durante o tratamento do câncer</span></div>
+    <div><b>De bebês a idosos</b><span>Todas as idades, toda a família</span></div>
     <div><b>English spoken</b><span>Atendimento também em inglês</span></div>
   </div>
 </div>
 
-<section class="pad map-sec" id="mapeamento">
+<section class="pad" id="comecar">
+  <div class="wrap">
+    <p class="tag rv">Por onde começar</p>
+    <h2 class="rv d1">O que trouxe você até aqui?</h2>
+    <div class="start">
+      <a class="door rv" href="cancer-de-pele/"><small>Pintas e câncer de pele</small><h3>Uma pinta apareceu ou mudou de cor, tamanho ou forma</h3><p>Veja os sinais de alerta e como a consulta e o mapeamento ajudam a acompanhar.</p><span class="more">Sinais de alerta</span></a>
+      <a class="door rv d1" href="acne-e-manchas/"><small>Pele do rosto</small><h3>Acne, manchas, melasma ou sinais do sol</h3><p>Tratamento individual e a escolha certa do protetor solar para o seu tipo de pele.</p><span class="more">Acne e manchas</span></a>
+      <a class="door rv d2" href="unhas-cabelos-e-suor/"><small>Unhas, cabelos e suor</small><h3>Unha encravada que volta, queda de cabelo ou suor excessivo</h3><p>Da cirurgia definitiva da unha encravada ao cuidado do couro cabeludo.</p><span class="more">Unhas, cabelos e suor</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pad map-sec" id="mapeamento" style="padding-top:0">
   <div class="wrap grid">
     <div>
       <p class="tag rv">Mapeamento corporal</p>
@@ -239,17 +86,25 @@ span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
         <div><b>3</b><span>O acompanhamento, geralmente anual, mostra mudanças lentas que passariam despercebidas.</span></div>
         <div><b>4</b><span>Você recebe um laudo e todas as imagens em um pendrive.</span></div>
       </div>
-      <p class="tag rv" style="margin-top:2rem;color:var(--forest)">Para quem é indicado</p>
-      <ul class="who rv">
-        <li>Quem já teve melanoma ou tem familiar que teve</li>
-        <li>Quem tem muitas pintas (mais de 50)</li>
-        <li>Pintas grandes (maiores que 6 mm) ou irregulares</li>
-        <li>Quem tomou muito sol na infância e adolescência</li>
-        <li>Pele e olhos claros, ruivos</li>
-        <li>Quem já teve carcinoma de pele</li>
-      </ul>
+      <p class="rv d3" style="margin-top:1.6rem"><a class="more" href="mapeamento-corporal/">Tudo sobre o mapeamento corporal</a></p>
     </div>
-    <figure class="pic rv d1"><img src="dermatoscopio.jpg" alt="Dra. Maria Clara com o dermatoscópio" loading="lazy"><figcaption><b>Dermatoscopia digital</b> em cada pinta, com acompanhamento ao longo dos anos.</figcaption></figure>
+    <div class="layered rv d1">
+      <div class="front"><img src="retrato2.jpg" alt="Dra. Maria Clara Gordiano" loading="lazy" style="object-position:50% 18%"></div>
+      <div class="back"><img src="dermatoscopio.jpg" alt="Dra. Maria Clara com o dermatoscópio" loading="lazy"></div>
+      <span class="chip">Dermatoscopia digital</span>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="anual" style="padding-top:0">
+  <div class="wrap">
+    <p class="tag rv">Por que ir todo ano</p>
+    <h2 class="rv d1">A pele é o maior órgão do corpo. <span>E também adoece.</span></h2>
+    <div class="facts3">
+      <div class="rv"><b>3.000+</b><span>doenças de pele existem, e o dermatologista é o especialista para cuidar delas.</span></div>
+      <div class="rv d1"><b>1 vez</b><span>por ano, pelo menos: a consulta anual ajuda a manter a pele saudável e a prevenir doenças graves, como o melanoma.</span></div>
+      <div class="rv d2"><b>0 a 100</b><span>anos: o dermatologista atende todas as idades e também cuida dos cabelos e das unhas.</span></div>
+    </div>
   </div>
 </section>
 
@@ -260,40 +115,73 @@ span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
       <p class="quote rv d2">“A pele é o maior órgão do nosso corpo. Ela nos protege e também nos conecta com o mundo.”<small>Dra. Maria Clara</small></p>
     </div>
     <div class="groups">
-      <div class="group rv"><h3>Pele</h3><div class="chips"><span>Acne</span><span>Manchas e melasma</span><span>Psoríase</span><span>Dermatites</span><span>Vitiligo</span><span>Micoses</span><span>Herpes</span><span>Verrugas</span><span>Hidradenite</span><span>Dermatoses graves</span></div></div>
-      <div class="group rv d1"><h3>Câncer de pele e pintas</h3><div class="chips"><span>Mapeamento corporal</span><span>Monitoramento e retirada de sinais</span><span>Ceratoses pré-câncer</span><span>Cirurgia do câncer de pele</span></div></div>
-      <div class="group rv d2"><h3>Cabelos, unhas e suor</h3><div class="chips"><span>Queda e inflamação do cabelo</span><span>Unha encravada</span><span>Micose de unha</span><span>Suor excessivo</span><span>Mau cheiro nas axilas e pés</span></div></div>
-      <div class="group rv d3"><h3>Cuidados especiais</h3><div class="chips"><span>Reações à quimioterapia e imunoterapia</span><span>Cistos e milium</span><span>Escabiose</span><span>Fotoenvelhecimento</span></div></div>
+      <div class="group rv"><h3>Câncer de pele e pintas</h3><div class="chips"><span>Mapeamento corporal</span><span>Monitoramento e retirada de sinais</span><span>Ceratoses pré-câncer</span><span>Cirurgia do câncer de pele</span><span>Reações à quimio e imunoterapia</span></div><a class="more" href="cancer-de-pele/">Ver página</a></div>
+      <div class="group rv d1"><h3>Pele do rosto</h3><div class="chips"><span>Acne</span><span>Manchas e melasma</span><span>Rugas e fotoenvelhecimento</span></div><a class="more" href="acne-e-manchas/">Ver página</a></div>
+      <div class="group rv d2"><h3>Doenças da pele</h3><div class="chips"><span>Psoríase</span><span>Dermatites</span><span>Vitiligo</span><span>Hidradenite</span><span>Micoses</span><span>Herpes</span><span>Verrugas</span><span>Escabiose</span><span>Cistos e milium</span></div><a class="more" href="doencas-da-pele/">Ver página</a></div>
+      <div class="group rv d3"><h3>Unhas, cabelos e suor</h3><div class="chips"><span>Unha encravada</span><span>Micose de unha</span><span>Queda de cabelo</span><span>Suor excessivo</span><span>Mau cheiro</span></div><a class="more" href="unhas-cabelos-e-suor/">Ver página</a></div>
     </div>
   </div>
 </section>
 
-<section class="pad" id="sobre">
+<section class="pad" id="consulta">
+  <div class="wrap">
+    <p class="tag rv">Como é a consulta</p>
+    <h2 class="rv d1">Tempo para ouvir, <span>clareza para explicar.</span></h2>
+    <p class="lead rv d2" style="margin-top:1rem">É o que os pacientes mais destacam nas avaliações: diagnóstico explicado sem pressa e pouco tempo de espera.</p>
+    <div class="steps">
+      <div class="step rv"><h3>Conversa</h3><p>Você conta o que está sentindo, seu histórico e sua rotina.</p></div>
+      <div class="step rv d1"><h3>Exame da pele</h3><p>Avaliação da pele, e das unhas e do couro cabeludo quando necessário.</p></div>
+      <div class="step rv d2"><h3>Dermatoscopia</h3><p>Quando indicado, as lesões são vistas com aumento, sem dor.</p></div>
+      <div class="step rv d3"><h3>Diagnóstico e plano</h3><p>O diagnóstico é explicado com clareza e o tratamento é definido com você.</p></div>
+      <div class="step rv d4"><h3>Acompanhamento</h3><p>Retornos e, se indicado, o mapeamento corporal anual.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="sobre" style="padding-top:0">
   <div class="wrap about">
-    <figure class="pic rv"><img src="consultorio.jpg" alt="Dra. Maria Clara em seu consultório" loading="lazy"></figure>
+    <figure class="pic rv"><img src="consultorio.jpg" alt="Dra. Maria Clara em seu consultório" loading="lazy"><div class="badge"><b>Presidente da SBD-BA</b>Sociedade Brasileira de Dermatologia</div></figure>
     <div>
       <p class="tag rv">Sobre a Dra. Maria Clara</p>
-      <h2 class="rv d1">Referência da dermatologia na Bahia.</h2>
-      <p class="rv d2">A Dra. Maria Clara Gordiano é dermatologista e preside a Sociedade Brasileira de Dermatologia, regional Bahia. No consultório, atende de bebês a idosos, de doenças comuns da pele às cirurgias dermatológicas.</p>
-      <p class="rv d2">Leva informação sobre saúde da pele a quem está fora do consultório, em entrevistas para a imprensa baiana e nacional.</p>
-      <div class="press rv d3"><small>Entrevistas sobre saúde da pele</small><ul><li>TV Bahia</li><li>TV Record</li><li>TV Câmara</li><li>TV CNT</li><li>A Tarde</li><li>Jornal É Massa</li><li>Saúde e Bem-Estar</li></ul></div>
+      <h2 class="rv d1">Referência da dermatologia <span>na Bahia.</span></h2>
+      <p class="rv d2">Formada em Medicina pela Universidade Federal da Bahia em 2003, a Dra. Maria Clara Gordiano é dermatologista e preside a Sociedade Brasileira de Dermatologia, regional Bahia.</p>
+      <p class="rv d2">Atua na dermatologia clínica e cirúrgica, com atenção especial à dermatologia oncológica: do mapeamento das pintas ao cuidado da pele de pacientes em tratamento de câncer e de pacientes transplantados.</p>
+      <p class="rv d3" style="margin-top:1.4rem"><a class="more" href="sobre/">Conhecer a trajetória</a></p>
     </div>
   </div>
 </section>
 
-<section class="pad rev" id="avaliacoes" style="padding-top:0">
+<section class="pad press" id="imprensa">
+  <div class="wrap">
+    <p class="tag rv">Na imprensa</p>
+    <h2 class="rv d1">Informação sobre pele, <span>para quem está fora do consultório.</span></h2>
+    <div class="plist"><a class="pcard rv" href="https://atarde.com.br/saude/veja-como-escolher-o-protetor-solar-ideal-para-seu-tipo-de-pele-1303706" target="_blank" rel="noopener"><small>A Tarde · janeiro de 2025</small><b>Veja como escolher o protetor solar ideal para seu tipo de pele</b><span>Ler matéria →</span></a><a class="pcard rv" href="https://jornalmassa.com.br/viver-bem/saiba-como-escolher-o-protetor-solar-ideal-para-seu-tipo-de-pele-1278883" target="_blank" rel="noopener"><small>Jornal Massa · janeiro de 2025</small><b>Saiba como escolher o protetor solar ideal para seu tipo de pele</b><span>Ler matéria →</span></a><a class="pcard rv" href="https://globoplay.globo.com/v/14058549/" target="_blank" rel="noopener"><small>TV Bahia · Jornal da Manhã · outubro de 2025</small><b>Anvisa proíbe substâncias em produtos de unhas em gel</b><span>Assistir →</span></a><a class="pcard rv" href="https://noticias.r7.com/jr-na-tv/video/pesquisa-da-oms-mostra-que-a-produtividade-diminui-ate-3-para-cada-grau-acima-dos-20-graus-22082025/" target="_blank" rel="noopener"><small>TV Record · JR na TV · agosto de 2025</small><b>Calor e produtividade: pesquisa da OMS</b><span>Assistir →</span></a><a class="pcard rv" href="https://deolhonoradio.com.br/podcast/saude-e-bem-estar-20-07-2022/" target="_blank" rel="noopener"><small>De Olho no Rádio · Saúde e Bem-Estar · julho de 2022</small><b>Vitiligo: o que é e como cuidar</b><span>Ouvir →</span></a><a class="pcard rv" href="https://www.facebook.com/saorafaelbahia/videos/357630878242076/" target="_blank" rel="noopener"><small>Hospital São Rafael · vídeo</small><b>Dicas: cuidando da sua pele</b><span>Assistir →</span></a></div>
+  </div>
+</section>
+
+<section class="pad rev" id="avaliacoes">
   <div class="wrap">
     <div class="top">
-      <div><p class="tag rv">Avaliações no Google</p><h2 class="rv d1">Quem é paciente, <span>recomenda.</span></h2></div>
-      <div class="big rv d2"><b>5,0</b><span><span class="stars">★★★★★</span><br>124 avaliações públicas<br>no Google</span></div>
+      <div><p class="tag rv">Avaliações</p><h2 class="rv d1">Quem é paciente, <span>recomenda.</span></h2></div>
+      <div style="display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap">
+        <div class="big rv d2"><b>5,0</b><span><span class="stars">★★★★★</span><br>124 avaliações<br>públicas no Google</span></div>
+        <div class="arrows rv d2"><button type="button" id="prev" aria-label="Avaliação anterior">←</button><button type="button" id="next" aria-label="Próxima avaliação">→</button></div>
+      </div>
     </div>
-    <div class="reviews">
-      <figure class="review rv"><q>Ela é uma excelente dermatologista e o consultório é muito bem organizado. O tempo de espera também é muito curto, apesar de ela dedicar bastante tempo aos pacientes.</q><footer><span class="av">MS</span><span><b>Matthias S.</b>há 4 meses · escrito em inglês e português</span></footer></figure>
-      <figure class="review rv d1"><q>É médica do meu filho, um ser humano incrível, uma profissional excelente e muito competente, transmite segurança explicando sem pressa o diagnóstico com clareza.</q><footer><span class="av">EP</span><span><b>Ezilda P.</b>há 4 meses</span></footer></figure>
-      <figure class="review rv"><q>Super atenciosa, simpática e muito competente. Me senti muito bem acolhido(a) durante a consulta e saí com toda confiança no tratamento.</q><footer><span class="av">AS</span><span><b>Andreia S.</b>há 4 meses</span></footer></figure>
-      <figure class="review rv d1"><q>Uma médica maravilhosa. Desde a recepção até o atendimento com ela, recomendo 100%.</q><footer><span class="av">IR</span><span><b>Isaque R.</b>há 4 meses</span></footer></figure>
+    <div class="scroller" id="scroller"><figure class="review"><span class="stars">★★★★★</span><q>Ela é uma excelente dermatologista e o consultório é muito bem organizado. O tempo de espera também é muito curto, apesar de ela dedicar bastante tempo aos pacientes.</q><footer><span class="av">MS</span><span><b>Matthias S.</b>Google · escrito em inglês e português</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>É médica do meu filho, um ser humano incrível, uma profissional excelente e muito competente, transmite segurança explicando sem pressa o diagnóstico com clareza.</q><footer><span class="av">EP</span><span><b>Ezilda P.</b>Google · há 4 meses</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>Atendimento humanizado, escuta ativa e domínio técnico de alto nível. Fui atendido com empatia, clareza e uma abordagem 100% personalizada.</q><footer><span class="av">•</span><span><b>Paciente</b>Depoimento publicado no site da médica</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>Super atenciosa, simpática e muito competente. Me senti muito bem acolhido(a) durante a consulta e saí com toda confiança no tratamento.</q><footer><span class="av">AS</span><span><b>Andreia S.</b>Google · há 4 meses</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>Queria te agradecer por todo o cuidado e atenção com a minha filha. […] Sua leveza, paciência e carinho nos deixaram super confiantes e tranquilos.</q><footer><span class="av">•</span><span><b>Mãe de paciente</b>Depoimento publicado no site da médica</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>Me atendeu prontamente, fiz uma cirurgia na unha encravada. Foi muito delicada e atenciosa. Solucionou meu problema.</q><footer><span class="av">WN</span><span><b>Walquiria N.</b>Google · há 4 meses</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>Chegamos até ela por indicação de dois outros médicos especialistas e desde então o acompanhamento com minha mãe vem sendo extremamente cuidadoso.</q><footer><span class="av">•</span><span><b>Filha de paciente</b>Depoimento publicado no site da médica</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>Uma médica maravilhosa. Desde a recepção até o atendimento com ela, recomendo 100%.</q><footer><span class="av">IR</span><span><b>Isaque R.</b>Google · há 4 meses</span></footer></figure><figure class="review"><span class="stars">★★★★★</span><q>Muito atenciosa, competente, esclareceu todas as minhas dúvidas. […] A recepcionista é muito educada e atenciosa, a clínica tem um espaço acolhedor.</q><footer><span class="av">•</span><span><b>Paciente</b>Depoimento publicado no site da médica</span></footer></figure></div>
+    <a class="more rv" href="https://www.google.com/maps?cid=6862927515245919494" target="_blank" rel="noopener">Ler todas as 124 avaliações no Google</a>
+  </div>
+</section>
+
+<section class="pad" id="conteudos" style="padding-top:0">
+  <div class="wrap">
+    <p class="tag rv">Conteúdos</p>
+    <h2 class="rv d1">Para entender melhor <span>a sua pele.</span></h2>
+    <div class="posts">
+      <a class="post rv" href="cancer-de-pele/#sinais"><small>Câncer de pele</small><h3>Pinta nova ou que mudou: quando procurar o dermatologista?</h3><p>A regra do ABCDE e outros sinais que merecem uma avaliação.</p><span class="more">Ler</span></a>
+      <a class="post rv d1" href="acne-e-manchas/#protetor"><small>Fotoproteção</small><h3>Protetor solar: como escolher o ideal para o seu tipo de pele</h3><p>Textura, fator de proteção, quantidade e reaplicação.</p><span class="more">Ler</span></a>
+      <a class="post rv d2" href="unhas-cabelos-e-suor/#unha"><small>Unhas</small><h3>Unha encravada que sempre volta tem tratamento definitivo?</h3><p>Quando a cirurgia é indicada e como ela funciona.</p><span class="more">Ler</span></a>
     </div>
-    <a class="gl rv" href="https://www.google.com/maps?cid=6862927515245919494" target="_blank" rel="noopener">Ler todas as 124 avaliações no Google</a>
   </div>
 </section>
 
@@ -304,19 +192,11 @@ span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
     <div class="visit">
       <div class="card rv">
         <span class="status" id="status"><i></i><span>Horário de atendimento</span></span>
-        <div class="hours" id="hours">
-          <div data-d="1" data-slots="07:30-19:00"><span>Segunda-feira</span><span>07:30 – 19:00</span></div>
-          <div data-d="2" data-slots="07:30-19:00"><span>Terça-feira</span><span>07:30 – 19:00</span></div>
-          <div data-d="3" data-slots="07:30-19:00"><span>Quarta-feira</span><span>07:30 – 19:00</span></div>
-          <div data-d="4" data-slots="07:30-19:00"><span>Quinta-feira</span><span>07:30 – 19:00</span></div>
-          <div data-d="5" data-slots="07:30-19:00"><span>Sexta-feira</span><span>07:30 – 19:00</span></div>
-          <div data-d="6" data-slots=""><span>Sábado</span><span>Fechado</span></div>
-          <div data-d="0" data-slots=""><span>Domingo</span><span>Fechado</span></div>
-        </div>
+        <div class="hours" id="hours"><div data-d="1" data-slots="07:30-19:00"><span>Segunda-feira</span><span>07:30 – 19:00</span></div><div data-d="2" data-slots="07:30-19:00"><span>Terça-feira</span><span>07:30 – 19:00</span></div><div data-d="3" data-slots="07:30-19:00"><span>Quarta-feira</span><span>07:30 – 19:00</span></div><div data-d="4" data-slots="07:30-19:00"><span>Quinta-feira</span><span>07:30 – 19:00</span></div><div data-d="5" data-slots="07:30-19:00"><span>Sexta-feira</span><span>07:30 – 19:00</span></div><div data-d="6" data-slots=""><span>Sábado</span><span>Fechado</span></div><div data-d="0" data-slots=""><span>Domingo</span><span>Fechado</span></div></div>
         <p class="addr"><b>Edf. Alpha Medical Center · salas 306 e 307</b>Av. Luís Viana Filho, 7416 · Alphaville I, Paralela<br>Salvador · BA · 41730-101</p>
         <div class="btns">
           <a class="btn btn-rose" href="https://wa.me/5571993059220?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Maria%20Clara." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(71) 99305-9220</a>
-          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Lu%C3%ADs+Viana+Filho,+7416,+Alphaville,+Salvador+-+BA" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn btn-line" href="consultorio/">Como chegar</a>
         </div>
       </div>
       <div class="mapbox rv d1"><iframe title="Mapa do consultório" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Alpha+Medical+Center,+Av.+Lu%C3%ADs+Viana+Filho,+7416,+Salvador+-+BA&output=embed"></iframe></div>
@@ -332,6 +212,8 @@ span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
       <details class="rv"><summary>Com que frequência devo ir ao dermatologista?</summary><p>Pelo menos uma vez ao ano. A visita anual ajuda a manter a pele saudável e a prevenir doenças graves, como o melanoma.</p></details>
       <details class="rv"><summary>O mapeamento corporal é para mim?</summary><p>Ele é indicado principalmente para quem já teve melanoma ou tem familiar que teve, para quem tem muitas pintas ou pintas grandes e irregulares, e para quem tomou muito sol na infância. A indicação é confirmada na consulta.</p></details>
       <details class="rv"><summary>Atende crianças?</summary><p>Sim. A dermatologia cuida de todas as idades, de bebês a idosos.</p></details>
+      <details class="rv"><summary>A consulta aceita convênio?</summary><p>O atendimento é particular. Para valores e horários, fale com a equipe pelo WhatsApp.</p></details>
+      <details class="rv"><summary>A Dra. Maria Clara faz cirurgias?</summary><p>Sim. A dermatologista realiza cirurgias dermatológicas, como a retirada de sinais, de cistos e do câncer de pele, e a cirurgia definitiva da unha encravada. O preparo é orientado em consulta.</p></details>
       <details class="rv"><summary>Do you speak English?</summary><p>Yes. A Dra. Maria Clara também atende em inglês.</p></details>
     </div>
   </div>
@@ -341,7 +223,7 @@ span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
   <div class="wrap">
     <p class="tag rv" style="color:var(--rose2)">Consulta anual</p>
     <h2 class="rv d1">Cuide da sua pele pelo menos uma vez por ano.</h2>
-    <p class="rv d2">Atendimento de segunda a sexta, das 7h30 às 19h, no CITT Alphaville.</p>
+    <p class="rv d2">Atendimento particular, de segunda a sexta, das 7h30 às 19h, no CITT Alphaville.</p>
     <a class="btn btn-rose rv d3" href="https://wa.me/5571993059220?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Maria%20Clara." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Marcar consulta pelo WhatsApp</a>
   </div>
 </section>
@@ -349,86 +231,23 @@ span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
 
 <footer class="site">
   <div class="wrap">
-    <div class="row"><span>Dra. Maria Clara Dultra Gordiano · Dermatologista · CRM-BA 16201 · RQE 10889</span><span>CITT Alphaville · Salvador</span></div>
-    <p class="disc">Prévia de demonstração criada pela AVIXco para a Dra. Maria Clara Gordiano, ainda não publicada oficialmente. Textos e fotos do site e de perfis públicos da própria médica; avaliações públicas do Google reproduzidas em trechos, com nome abreviado. Conteúdo informativo, sem promessa de resultado.</p>
+    <div class="cols">
+      <div><img class="logo" src="logo.png" alt="Maria Clara Dermatologista"><p style="margin-top:1rem">Dra. Maria Clara Dultra Gordiano<br>Dermatologista · CRM-BA 16201 · RQE 10889<br>Presidente da SBD-BA</p></div>
+      <div><h4>Tratamentos</h4><ul><li><a href="mapeamento-corporal/">Mapeamento corporal</a></li><li><a href="cancer-de-pele/">Câncer de pele e pintas</a></li><li><a href="acne-e-manchas/">Acne, manchas e melasma</a></li><li><a href="doencas-da-pele/">Doenças da pele</a></li><li><a href="unhas-cabelos-e-suor/">Unhas, cabelos e suor</a></li></ul></div>
+      <div><h4>A médica</h4><ul><li><a href="sobre/">Trajetória</a></li><li><a href="sobre/#imprensa">Na imprensa</a></li><li><a href="https://www.google.com/maps?cid=6862927515245919494" target="_blank" rel="noopener">Avaliações no Google</a></li><li><a href="https://www.instagram.com/mariaclara_dermato/" target="_blank" rel="noopener">@mariaclara_dermato</a></li></ul></div>
+      <div><h4>Consultório</h4><ul><li>CITT Alphaville · Paralela</li><li>Segunda a sexta, 7h30 às 19h</li><li><a href="https://wa.me/5571993059220?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Maria%20Clara." target="_blank" rel="noopener">(71) 99305-9220</a></li><li><a href="consultorio/">Como chegar</a></li></ul></div>
+    </div>
+    <p class="disc">Prévia de demonstração criada pela AVIXco para a Dra. Maria Clara Gordiano, ainda não publicada oficialmente. Textos e fotos do site, do Linktree e de perfis públicos da própria médica; avaliações públicas do Google e depoimentos do site dela reproduzidos em trechos. Conteúdo informativo, que não substitui a consulta e não promete resultado.</p>
   </div>
 </footer>
 
 <a class="wa" href="https://wa.me/5571993059220?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Maria%20Clara." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-<aside class="hello" id="hello" role="note" aria-label="Recado para a Dra. Maria Clara" data-pill="Recado para a Dra. Maria Clara">
+<aside class="hello" id="hello" role="note" aria-label="Recado para a Dra. Maria Clara" data-pill="Recado para a Dra. Maria Clara" data-scope="mariaclara">
   <button type="button" id="hello-x" aria-label="Fechar recado">×</button>
-  <b>Dra. Maria Clara, esta prévia foi feita a partir do seu trabalho.</b>
-  <p>Partimos das suas fotos, dos seus textos sobre mapeamento corporal e das avaliações dos seus pacientes. Tudo pode ser ajustado.</p>
+  <b>Dra. Maria Clara, este site foi feito a partir do seu trabalho.</b>
+  <p>Partimos dos seus textos, das suas fotos, das suas entrevistas e das avaliações dos seus pacientes. Páginas, textos e cores podem ser ajustados.</p>
   <small>João · AVIXco · prévia ainda não publicada oficialmente</small>
 </aside>
-<script>
-(() => {
-  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const nav = $(".nav");
-  const onScroll = () => nav && nav.classList.toggle("solid", scrollY > 24);
-  onScroll(); addEventListener("scroll", onScroll, { passive: true });
-
-  const burger = $("#burger"), drawer = $("#drawer");
-  if (burger && drawer) {
-    burger.addEventListener("click", () => burger.setAttribute("aria-expanded", drawer.classList.toggle("open")));
-    $$("a", drawer).forEach((a) => a.addEventListener("click", () => { drawer.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }));
-  }
-
-  const items = $$(".rv"), reveal = (el) => el.classList.add("in");
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); } }), { threshold: .12, rootMargin: "0px 0px -6% 0px" });
-    items.forEach((el) => io.observe(el));
-  }
-  const sweep = () => items.forEach((el) => !el.classList.contains("in") && el.getBoundingClientRect().top < innerHeight * .96 && reveal(el));
-  addEventListener("scroll", sweep, { passive: true }); addEventListener("load", sweep); setTimeout(sweep, 300);
-
-  // Horário: cada linha de #hours tem data-d (0=domingo) e data-slots="08:00-12:00,14:00-18:00" (vazio = fechado).
-  const hours = $("#hours"), status = $("#status");
-  if (hours && status) {
-    const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/Bahia", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
-    const g = (t) => parts.find((p) => p.type === t).value;
-    const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(g("weekday")), now = (+g("hour") % 24) * 60 + +g("minute");
-    const slots = (d) => { const row = $(`[data-d="${d}"]`, hours); return row && row.dataset.slots ? row.dataset.slots.split(",").map((s) => s.split("-").map((h) => { const [a, b] = h.split(":"); return +a * 60 + +b; })) : []; };
-    const fmt = (m) => `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
-    const names = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
-    $(`[data-d="${day}"]`, hours)?.classList.add("today");
-    const cur = slots(day).find(([a, b]) => now >= a && now < b);
-    let txt;
-    if (cur) txt = `Aberto agora · até ${fmt(cur[1])}`;
-    else {
-      let found = null;
-      for (let i = 0; i < 8 && !found; i++) { const d = (day + i) % 7; const s = slots(d).find(([a]) => i > 0 || a > now); if (s) found = [i, d, s[0]]; }
-      txt = found ? `Fechado agora · abre ${found[0] === 0 ? "hoje" : found[0] === 1 ? "amanhã" : names[found[1]]} às ${fmt(found[2])}` : "Atendimento com hora marcada";
-    }
-    status.querySelector("span").textContent = txt; status.classList.toggle("closed", !cur);
-  }
-
-  // Recado ao médico: aparece depois que ele já viu o topo, fica alguns segundos e vira um botão discreto.
-  const hello = $("#hello");
-  if (hello) {
-    const pill = document.createElement("button");
-    pill.type = "button"; pill.className = "hello-pill"; pill.innerHTML = "<i></i>" + (hello.dataset.pill || "Recado");
-    document.body.appendChild(pill);
-    let shown = false, timer = null;
-    const collapse = () => { clearTimeout(timer); hello.classList.remove("show"); pill.classList.add("show"); };
-    const open = () => { pill.classList.remove("show"); hello.classList.add("show"); clearTimeout(timer); timer = setTimeout(collapse, 14000); };
-    const first = () => { if (shown) return; shown = true; open(); };
-    const hero = $(".hero");
-    addEventListener("scroll", () => { if (scrollY > (hero ? hero.offsetHeight * .6 : 320)) first(); }, { passive: true });
-    setTimeout(first, 9000);
-    $("#hello-x").addEventListener("click", collapse);
-    pill.addEventListener("click", open);
-  }
-
-  // O botão flutuante some quando a própria seção de contato está na tela.
-  const wa = $(".wa"), zones = $$("[data-no-wa]");
-  if (wa && zones.length && "IntersectionObserver" in window) {
-    const vis = new Set();
-    const io2 = new IntersectionObserver((es) => { es.forEach((e) => e.isIntersecting ? vis.add(e.target) : vis.delete(e.target)); wa.classList.toggle("hide", vis.size > 0); }, { threshold: .15 });
-    zones.forEach((z) => io2.observe(z));
-  }
-})();
-
-</script>
+<script src="site.js"></script>
 </body>
 </html>
