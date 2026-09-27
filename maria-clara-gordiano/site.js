@@ -99,7 +99,7 @@
   }
 
   // Índice lateral: marca a seção que está na tela.
-  const links = [...document.querySelectorAll(".toc a[href^='#']")];
+  const links = [...document.querySelectorAll(".toc ol a[href^='#']")];
   if (links.length && "IntersectionObserver" in window) {
     const map = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
     const io = new IntersectionObserver((es) => es.forEach((e) => {

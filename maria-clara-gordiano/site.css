@@ -241,8 +241,8 @@ footer.site .disc{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid rgba
 .toc{position:sticky;top:110px;align-self:start}
 .toc small{display:block;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem}
 .toc ol{list-style:none;display:grid;gap:.15rem;border-left:2px solid var(--line)}
-.toc a{display:block;padding:.4rem 0 .4rem 1rem;margin-left:-2px;border-left:2px solid transparent;font-size:.92rem;color:var(--ink2)}
-.toc a.on{border-color:var(--rose);color:var(--ink);font-weight:600}
+.toc ol a{display:block;padding:.4rem 0 .4rem 1rem;margin-left:-2px;border-left:2px solid transparent;font-size:.92rem;color:var(--ink2)}
+.toc ol a.on{border-color:var(--rose);color:var(--ink);font-weight:600}
 .toc .btn{margin-top:1.4rem;width:100%;padding:.8rem 1rem;font-size:.88rem;white-space:nowrap}
 .content>section{padding-bottom:2.8rem;margin-bottom:2.8rem;border-bottom:1px solid var(--line)}
 .content>section:last-child{border-bottom:0;margin-bottom:0}
