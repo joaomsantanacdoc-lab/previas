@@ -74,8 +74,10 @@
 <!-- avix-visita:inicio --><script>(function(){
 var k='avix-interno',s=null;
 try{s=window.localStorage;}catch(e){}
-try{if(location.hash==='#avix'){if(s)s.setItem(k,'1');history.replaceState(null,'',location.pathname+location.search);return;}
-if(s&&s.getItem(k))return;}catch(e){}
+function interno(){try{if(location.hash!=='#avix')return false;if(s)s.setItem(k,'1');history.replaceState(null,'',location.pathname+location.search);return true;}catch(e){return true;}}
+window.addEventListener('hashchange',interno);
+if(interno())return;
+try{if(s&&s.getItem(k))return;}catch(e){}
 if(!/\.github\.io$/.test(location.hostname))return;
 var m=location.pathname.match(/\/previas\/([a-z0-9]+(?:-[a-z0-9]+)*)\/(.*)$/);
 if(!m)return;
