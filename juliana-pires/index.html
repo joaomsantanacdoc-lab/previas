@@ -216,5 +216,15 @@
   <small>João · AVIXco · prévia ainda não publicada oficialmente</small>
 </aside>
 <script src="site.js"></script>
+<!-- avix-visita:inicio --><script>(function(){
+var k='avix-interno',s=null;
+try{s=window.localStorage;}catch(e){}
+try{if(location.hash==='#avix'){if(s)s.setItem(k,'1');history.replaceState(null,'',location.pathname+location.search);return;}
+if(s&&s.getItem(k))return;}catch(e){}
+if(!/\.github\.io$/.test(location.hostname))return;
+var m=location.pathname.match(/\/previas\/([a-z0-9]+(?:-[a-z0-9]+)*)\/(.*)$/);
+if(!m)return;
+new Image().src='https://www.avixco.com/api/previa/visita?s='+m[1]+'&p='+encodeURIComponent(m[2])+'&t='+Date.now();
+})();</script><!-- avix-visita:fim -->
 </body>
 </html>
