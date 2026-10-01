@@ -313,9 +313,13 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 .r-step{display:none;border:0;grid-template-columns:1fr 1fr;gap:.9rem}
 .r-step.on{display:grid}
 .r-done.on{display:block}
-.r-field{display:grid;gap:.35rem;font-size:.84rem;font-weight:700;color:var(--x-ink2)}
+.r-field{display:grid;gap:.35rem;font-size:.84rem;font-weight:700;color:var(--x-ink2);min-width:0}
+/* iOS: o campo de data tem largura mínima e texto centralizado próprios; sem isto ele passa da borda. */
+.r-field input[type=date]{-webkit-appearance:none;appearance:none;display:block;min-width:0;max-width:100%;min-height:3rem;text-align:left}
+.r-field input[type=date]::-webkit-date-and-time-value{text-align:left}
 .r-full{grid-column:1/-1}
 .r-field input,.r-field select,.r-field textarea{width:100%;border:1.5px solid var(--x-line);border-radius:12px;background:var(--x-bg);padding:.75rem .85rem;font:500 .95rem var(--x-sans);color:var(--x-ink)}
+.r-field select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23777' stroke-width='1.6'%3E%3Cpath d='m1 1 5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.4rem}
 .r-field input:focus,.r-field select:focus,.r-field textarea:focus{outline:2px solid color-mix(in srgb,var(--x-accent) 45%,transparent);border-color:transparent}
 .r-slots{display:flex;flex-wrap:wrap;gap:.45rem}
 .r-slot{border:1.5px solid var(--x-line);background:var(--x-bg);border-radius:10px;padding:.55rem .85rem;font:700 .88rem var(--x-sans);color:var(--x-ink);cursor:pointer;transition:.2s}
