@@ -838,3 +838,9 @@ body:has(.ib-ratesec) .wa{display:none}
 .ib-callback b{font-size:1rem}
 .ib-callback p{margin:0;font-size:.88rem;line-height:1.5;color:#6B5647;text-wrap:pretty}
 .ib-callback .ib-field{margin-top:.2rem}
+.ib-hiltonbox{display:grid;gap:.4rem;justify-items:center;width:100%}
+.ib-hiltonbox[hidden]{display:none}
+.ib-wabtn{background:#25D366;color:#0B3B1F;min-height:54px;width:100%;justify-content:center;font-size:1rem;font-weight:700;gap:.55rem}
+.ib-wabtn:hover{background:#1EBE5A;color:#08301A}
+.ib-wabtn svg{width:22px;height:22px}
+.ib-hiltonbox small{color:var(--x-muted);font-size:.8rem}
