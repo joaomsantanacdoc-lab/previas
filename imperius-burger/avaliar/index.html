@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../site.css?v=202610081449">
+<link rel="stylesheet" href="../site.css?v=202610081522">
 <script>document.documentElement.classList.replace('js-pending','js')</script>
 </head>
 <body class="inner">
@@ -42,7 +42,7 @@
         <blockquote class="ib-ratequote">“Ótimo atendimento, o dono sempre esta no local recepcionando seus clientes com cuidado.”<small>Luz L. · avaliação no Google</small></blockquote>
         <ul class="ib-ratefacts">
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Leva menos de um minuto</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Só o primeiro nome, sem telefone</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Só o primeiro nome</li>
         </ul>
       </aside>
 
@@ -63,11 +63,17 @@
               <textarea name="comment" rows="3" maxlength="500" data-comentario placeholder="O burger, a entrega, o atendimento…"></textarea></label>
             <label class="ib-field"><span>Seu primeiro nome</span>
               <input name="name" maxlength="40" autocomplete="given-name" placeholder="Como podemos te chamar?"></label>
+            <div class="ib-callback" data-retorno hidden>
+              <b>Quer que o Hilton fale com você?</b>
+              <p>Deixe seu WhatsApp e ele entra em contato para resolver. O número vai só para ele e não aparece no site.</p>
+              <label class="ib-field"><span>Seu WhatsApp <small>opcional</small></span>
+                <input name="phone" type="tel" inputmode="tel" autocomplete="tel-national" maxlength="20" placeholder="(71) 99999-9999"></label>
+            </div>
             <label class="ib-hp" aria-hidden="true">Site<input name="website" tabindex="-1" autocomplete="off"></label>
             <button class="btn x-btn ib-ratesend" type="submit">Enviar avaliação</button>
             <p class="ib-formmsg" role="status" aria-live="polite"></p>
             <p class="ib-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-              <span>Guardamos só o primeiro nome, a nota e o comentário. A avaliação aparece no site depois que a casa confere.</span></p>
+              <span>Guardamos o primeiro nome, a nota e o comentário. A avaliação aparece no site depois que a casa confere. Se deixar o WhatsApp, ele vai só para o Hilton e é apagado em 30 dias.</span></p>
           </div>
         </form>
 
@@ -125,7 +131,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const rotulo = form.querySelector("[data-rotulo]"), mais = form.querySelector("[data-mais]"),
         chips = form.querySelector("[data-chips]"), chipsTitulo = form.querySelector("[data-chipstitulo]"),
         comentario = form.querySelector("[data-comentario]"), msg = form.querySelector(".ib-formmsg"),
-        btn = form.querySelector("button[type=submit]"), thanks = document.querySelector(".ib-thanks");
+        btn = form.querySelector("button[type=submit]"), thanks = document.querySelector(".ib-thanks"),
+        retorno = form.querySelector("[data-retorno]"), fone = form.querySelector("[name=phone]");
+  fone.addEventListener("input", () => {
+    let d = fone.value.replace(/\D/g, "").replace(/^55(?=\d{10,11}$)/, "").slice(0, 11);
+    fone.value = d.length > 6 ? "(" + d.slice(0, 2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4)
+      : d.length > 2 ? "(" + d.slice(0, 2) + ") " + d.slice(2) : d;
+  });
   let lista = null;
   const montaChips = (nota) => {
     const nova = nota >= 4 ? bom : ruim;
@@ -147,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rotulo.textContent = rotulos[nota];
     rotulo.dataset.nota = nota;
     montaChips(nota);
+    retorno.hidden = nota > 3;
     msg.textContent = "";
   }));
   form.addEventListener("submit", async (ev) => {
@@ -154,20 +167,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const d = new FormData(form), nota = Number(d.get("rating") || 0), nome = String(d.get("name") || "").trim();
     if (!nota) { msg.textContent = "Escolha de 1 a 5 estrelas."; return; }
     if (nome.length < 2) { msg.textContent = "Escreva seu primeiro nome."; form.querySelector("[name=name]").focus(); return; }
+    const telefone = nota <= 3 ? fone.value.replace(/\D/g, "") : "";
+    if (telefone && !/^(55)?[1-9]{2}9?\d{8}$/.test(telefone)) { msg.textContent = "Confira o WhatsApp: DDD e número, como (71) 99999-9999."; fone.focus(); return; }
     const marcados = [...chips.querySelectorAll("[aria-pressed=true]")].map((b) => b.textContent);
     const texto = [marcados.length ? (nota >= 4 ? "Gostei de: " : "Pode melhorar: ") + marcados.join(", ") + "." : "",
                    String(d.get("comment") || "").trim()].filter(Boolean).join("\n");
     btn.disabled = true; btn.textContent = "Enviando…"; msg.textContent = "";
     try {
       const r = await fetch(form.dataset.avaliar, { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: nome, rating: nota, comment: texto, website: d.get("website") || "" }) });
+        body: JSON.stringify({ name: nome, rating: nota, comment: texto, phone: telefone, website: d.get("website") || "" }) });
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(j.error || "Não deu para enviar agora. Tente de novo em instantes.");
       if (j.googleReviewUrl) thanks.querySelector("[data-google]").href = j.googleReviewUrl;
       thanks.querySelector("[data-nome]").textContent = nome.split(" ")[0];
       thanks.querySelector("[data-agradece]").textContent = nota >= 4
         ? "Que bom que você gostou! Sua avaliação já chegou para o Hilton."
-        : "Obrigado pela sinceridade. Sua avaliação já chegou para o Hilton, que vai ler com atenção.";
+        : (telefone ? "Obrigado pela sinceridade. Sua avaliação já chegou para o Hilton, e ele vai falar com você no WhatsApp."
+                    : "Obrigado pela sinceridade. Sua avaliação já chegou para o Hilton, que vai ler com atenção.");
       form.hidden = true; thanks.hidden = false; thanks.focus({ preventScroll: true });
       thanks.scrollIntoView({ behavior: "smooth", block: "center" });
     } catch (e) { msg.textContent = e.message; btn.disabled = false; btn.textContent = "Enviar avaliação"; }
@@ -193,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <p>Partimos do cardápio digital do OlaClick, do Instagram, das fotos da casa e das avaliações do Google. O pedido continua no seu OlaClick, que já calcula a taxa pelo endereço; o site é a vitrine e organiza seus links. Cardápio, fotos e cores podem ser ajustados, e o site fica no domínio próprio da hamburgueria.</p>
   <small>João · AVIXco · prévia ainda não publicada oficialmente</small>
 </aside>
-<script src="../site.js?v=202610081449"></script>
+<script src="../site.js?v=202610081522"></script>
 <!-- avix-visita:inicio --><script>(function(){
 var k='avix-interno',s=null;
 try{s=window.localStorage;}catch(e){}

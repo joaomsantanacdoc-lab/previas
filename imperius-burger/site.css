@@ -833,3 +833,8 @@ body:has(.ib-ratesec) .wa{display:none}
   .ib-starrow{justify-content:flex-end;gap:.5rem} /* row-reverse: flex-end fica à esquerda */
 }
 @media (max-width:480px){.ib-starrow{justify-content:space-between;gap:0}}
+.ib-callback{display:grid;gap:.55rem;background:var(--x-tint);border:1px solid color-mix(in srgb,var(--x-accent) 25%,transparent);border-radius:14px;padding:1rem 1.1rem;animation:ibin .35s ease}
+.ib-callback[hidden]{display:none}
+.ib-callback b{font-size:1rem}
+.ib-callback p{margin:0;font-size:.88rem;line-height:1.5;color:#6B5647;text-wrap:pretty}
+.ib-callback .ib-field{margin-top:.2rem}
