@@ -30,28 +30,61 @@
 <nav class="drawer" id="drawer" aria-label="Menu"><a href="../">Início</a><a href="../cardapio/">Cardápio</a><a href="../panteao/">Panteão</a><a href="../combos/">Combos</a><a href="../pedido/">Como pedir</a><a href="../entrega/">Entrega</a><span class="dlabel">A casa</span><a class="subl" href="../pub-bistro/">Pub Bistrô</a><a class="subl" href="../a-casa/">O dono e os clientes</a><a class="subl" href="../avaliar/">Avaliar a casa</a><a class="btn x-btn" href="https://imperiusburguer-bra.ola.click/products" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>Pedir agora</a></nav>
 
 <main>
-<section class="pad ib-ratesec"><div class="wrap ib-rate">
-  <svg class="ib-crest sm" viewBox="0 0 100 100" aria-hidden="true"><g class="ib-laurel"><ellipse cx="39.4" cy="89.6" rx="3.1" ry="7.4" transform="rotate(230 39.4 89.6)"/><ellipse cx="28.9" cy="85.1" rx="3.1" ry="7.4" transform="rotate(246 28.9 85.1)"/><ellipse cx="20.0" cy="78.0" rx="3.1" ry="7.4" transform="rotate(262 20.0 78.0)"/><ellipse cx="13.5" cy="68.6" rx="3.1" ry="7.4" transform="rotate(278 13.5 68.6)"/><ellipse cx="9.8" cy="57.8" rx="3.1" ry="7.4" transform="rotate(294 9.8 57.8)"/><ellipse cx="9.2" cy="46.4" rx="3.1" ry="7.4" transform="rotate(310 9.2 46.4)"/><ellipse cx="11.7" cy="35.3" rx="3.1" ry="7.4" transform="rotate(326 11.7 35.3)"/><ellipse cx="17.3" cy="25.3" rx="3.1" ry="7.4" transform="rotate(342 17.3 25.3)"/><ellipse cx="25.3" cy="17.3" rx="3.1" ry="7.4" transform="rotate(358 25.3 17.3)"/><ellipse cx="60.6" cy="89.6" rx="3.1" ry="7.4" transform="rotate(-50 60.6 89.6)"/><ellipse cx="71.1" cy="85.1" rx="3.1" ry="7.4" transform="rotate(-66 71.1 85.1)"/><ellipse cx="80.0" cy="78.0" rx="3.1" ry="7.4" transform="rotate(-82 80.0 78.0)"/><ellipse cx="86.5" cy="68.6" rx="3.1" ry="7.4" transform="rotate(-98 86.5 68.6)"/><ellipse cx="90.2" cy="57.8" rx="3.1" ry="7.4" transform="rotate(-114 90.2 57.8)"/><ellipse cx="90.8" cy="46.4" rx="3.1" ry="7.4" transform="rotate(-130 90.8 46.4)"/><ellipse cx="88.3" cy="35.3" rx="3.1" ry="7.4" transform="rotate(-146 88.3 35.3)"/><ellipse cx="82.7" cy="25.3" rx="3.1" ry="7.4" transform="rotate(-162 82.7 25.3)"/><ellipse cx="74.7" cy="17.3" rx="3.1" ry="7.4" transform="rotate(-178 74.7 17.3)"/></g><g class="ib-helm"><path d="M25 52C21 31 35 14 56 14C64 14 70 17 73 23C64 20 56 21 50 24C40 28 32 38 31 52Z"/><path fill-rule="evenodd" d="M34 54C34 37 45 28 57 28C69 28 76 37 76 50V57H67C65 57 64 59 64 61V70L71 78L55 82C51 77 47 73 43 71H37C35 66 34 60 34 54ZM58 44H75V49H58Z"/><path d="M35 62L26 71H38Z"/></g></svg>
-  <p class="x-tag">Avaliar a Imperius</p>
-  <h1>Como foi o seu pedido?</h1>
-  <p class="lead">Sua opinião chega para o Hilton e ajuda a casa a melhorar. Leva menos de um minuto.</p>
-  <form class="ib-rateform" data-avaliar="https://www.avixco.com/api/avaliacoes?site=imperius-burger" novalidate>
-    <fieldset class="ib-stars"><legend>Sua nota</legend><div><input type="radio" id="nota5" name="rating" value="5"><label for="nota5" title="5 de 5"><span class="sr">5 de 5</span>★</label><input type="radio" id="nota4" name="rating" value="4"><label for="nota4" title="4 de 5"><span class="sr">4 de 5</span>★</label><input type="radio" id="nota3" name="rating" value="3"><label for="nota3" title="3 de 5"><span class="sr">3 de 5</span>★</label><input type="radio" id="nota2" name="rating" value="2"><label for="nota2" title="2 de 5"><span class="sr">2 de 5</span>★</label><input type="radio" id="nota1" name="rating" value="1"><label for="nota1" title="1 de 5"><span class="sr">1 de 5</span>★</label></div></fieldset>
-    <label class="ib-field"><span>Seu primeiro nome</span><input name="name" maxlength="40" autocomplete="given-name" required></label>
-    <label class="ib-field"><span>Conte como foi <small>(opcional)</small></span><textarea name="comment" rows="4" maxlength="600" placeholder="O burger, a entrega, o atendimento…"></textarea></label>
-    <label class="ib-hp" aria-hidden="true">Site<input name="website" tabindex="-1" autocomplete="off"></label>
-    <p class="ib-small">Pedimos só o primeiro nome. A avaliação aparece no site depois que a casa aprova.</p>
-    <button class="btn x-btn" type="submit">Enviar avaliação</button>
-    <p class="ib-formmsg" role="status" aria-live="polite"></p>
-  </form>
-  <div class="ib-thanks" hidden>
-    <h2>Obrigado, <span data-nome></span>!</h2>
-    <p>Sua avaliação chegou para a Imperius.</p>
-    <p>Se puder, deixe também a sua avaliação no Google. É o que mais ajuda outras pessoas a encontrar a casa.</p>
-    <a class="btn x-btn" href="https://www.google.com/maps?cid=2693109252954740099" target="_blank" rel="noopener" data-google>Avaliar no Google</a>
-    <a class="x-more" href="../">Voltar ao site</a>
-  </div>
-  <div class="ib-sitereviews" data-avaliacoes="https://www.avixco.com/api/avaliacoes?site=imperius-burger" hidden><h3>O que os clientes contaram por aqui</h3><p class="ib-avg" data-media></p><div class="ib-revlist" data-lista></div></div><script>
+<section class="ib-ratesec">
+  <img class="ib-ratebg" src="../burger-no-toco.jpg" alt="" aria-hidden="true">
+  <div class="wrap ib-ratewrap">
+    <div class="ib-ratecard">
+      <aside class="ib-rateside">
+        <svg class="ib-crest sm" viewBox="0 0 100 100" aria-hidden="true"><g class="ib-laurel"><ellipse cx="39.4" cy="89.6" rx="3.1" ry="7.4" transform="rotate(230 39.4 89.6)"/><ellipse cx="28.9" cy="85.1" rx="3.1" ry="7.4" transform="rotate(246 28.9 85.1)"/><ellipse cx="20.0" cy="78.0" rx="3.1" ry="7.4" transform="rotate(262 20.0 78.0)"/><ellipse cx="13.5" cy="68.6" rx="3.1" ry="7.4" transform="rotate(278 13.5 68.6)"/><ellipse cx="9.8" cy="57.8" rx="3.1" ry="7.4" transform="rotate(294 9.8 57.8)"/><ellipse cx="9.2" cy="46.4" rx="3.1" ry="7.4" transform="rotate(310 9.2 46.4)"/><ellipse cx="11.7" cy="35.3" rx="3.1" ry="7.4" transform="rotate(326 11.7 35.3)"/><ellipse cx="17.3" cy="25.3" rx="3.1" ry="7.4" transform="rotate(342 17.3 25.3)"/><ellipse cx="25.3" cy="17.3" rx="3.1" ry="7.4" transform="rotate(358 25.3 17.3)"/><ellipse cx="60.6" cy="89.6" rx="3.1" ry="7.4" transform="rotate(-50 60.6 89.6)"/><ellipse cx="71.1" cy="85.1" rx="3.1" ry="7.4" transform="rotate(-66 71.1 85.1)"/><ellipse cx="80.0" cy="78.0" rx="3.1" ry="7.4" transform="rotate(-82 80.0 78.0)"/><ellipse cx="86.5" cy="68.6" rx="3.1" ry="7.4" transform="rotate(-98 86.5 68.6)"/><ellipse cx="90.2" cy="57.8" rx="3.1" ry="7.4" transform="rotate(-114 90.2 57.8)"/><ellipse cx="90.8" cy="46.4" rx="3.1" ry="7.4" transform="rotate(-130 90.8 46.4)"/><ellipse cx="88.3" cy="35.3" rx="3.1" ry="7.4" transform="rotate(-146 88.3 35.3)"/><ellipse cx="82.7" cy="25.3" rx="3.1" ry="7.4" transform="rotate(-162 82.7 25.3)"/><ellipse cx="74.7" cy="17.3" rx="3.1" ry="7.4" transform="rotate(-178 74.7 17.3)"/></g><g class="ib-helm"><path d="M25 52C21 31 35 14 56 14C64 14 70 17 73 23C64 20 56 21 50 24C40 28 32 38 31 52Z"/><path fill-rule="evenodd" d="M34 54C34 37 45 28 57 28C69 28 76 37 76 50V57H67C65 57 64 59 64 61V70L71 78L55 82C51 77 47 73 43 71H37C35 66 34 60 34 54ZM58 44H75V49H58Z"/><path d="M35 62L26 71H38Z"/></g></svg>
+        <p class="ib-ratekicker">Imperius Burger · Vila Laura</p>
+        <h1>Obrigado por pedir na Imperius.</h1>
+        <p>Conte para a gente como foi. Quem lê cada avaliação é o Hilton, dono da casa.</p>
+        <blockquote class="ib-ratequote">“Ótimo atendimento, o dono sempre esta no local recepcionando seus clientes com cuidado.”<small>Luz L. · avaliação no Google</small></blockquote>
+        <ul class="ib-ratefacts">
+          <li><b>1 minuto</b><span>é o que leva</span></li>
+          <li><b>Só o nome</b><span>sem telefone nem e-mail</span></li>
+        </ul>
+      </aside>
+
+      <div class="ib-ratemain">
+        <form class="ib-rateform" data-avaliar="https://www.avixco.com/api/avaliacoes?site=imperius-burger" novalidate>
+          <fieldset class="ib-stars">
+            <legend>Que nota você dá para o seu pedido?</legend>
+            <div class="ib-starrow"><input type="radio" id="nota5" name="rating" value="5"><label for="nota5"><span class="sr">5 de 5 estrelas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8L12 2.8Z"/></svg></label><input type="radio" id="nota4" name="rating" value="4"><label for="nota4"><span class="sr">4 de 5 estrelas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8L12 2.8Z"/></svg></label><input type="radio" id="nota3" name="rating" value="3"><label for="nota3"><span class="sr">3 de 5 estrelas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8L12 2.8Z"/></svg></label><input type="radio" id="nota2" name="rating" value="2"><label for="nota2"><span class="sr">2 de 5 estrelas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8L12 2.8Z"/></svg></label><input type="radio" id="nota1" name="rating" value="1"><label for="nota1"><span class="sr">1 de 5 estrelas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8L12 2.8Z"/></svg></label></div>
+            <p class="ib-starlabel" data-rotulo aria-live="polite">Toque nas estrelas</p>
+          </fieldset>
+
+          <div class="ib-more" data-mais hidden>
+            <fieldset class="ib-chips">
+              <legend data-chipstitulo>O que mais marcou?</legend>
+              <div data-chips></div>
+            </fieldset>
+            <label class="ib-field"><span>Quer contar mais? <small>opcional</small></span>
+              <textarea name="comment" rows="3" maxlength="500" data-comentario placeholder="O burger, a entrega, o atendimento…"></textarea></label>
+            <label class="ib-field"><span>Seu primeiro nome</span>
+              <input name="name" maxlength="40" autocomplete="given-name" placeholder="Como podemos te chamar?"></label>
+            <label class="ib-hp" aria-hidden="true">Site<input name="website" tabindex="-1" autocomplete="off"></label>
+            <button class="btn x-btn ib-ratesend" type="submit">Enviar avaliação</button>
+            <p class="ib-formmsg" role="status" aria-live="polite"></p>
+            <p class="ib-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+              Guardamos só o primeiro nome, a nota e o comentário. A avaliação aparece no site depois que a casa confere.</p>
+          </div>
+        </form>
+
+        <div class="ib-thanks" hidden tabindex="-1">
+          <svg class="ib-crest ib-thankscrest" viewBox="0 0 100 100" aria-hidden="true"><g class="ib-laurel"><ellipse cx="39.4" cy="89.6" rx="3.1" ry="7.4" transform="rotate(230 39.4 89.6)"/><ellipse cx="28.9" cy="85.1" rx="3.1" ry="7.4" transform="rotate(246 28.9 85.1)"/><ellipse cx="20.0" cy="78.0" rx="3.1" ry="7.4" transform="rotate(262 20.0 78.0)"/><ellipse cx="13.5" cy="68.6" rx="3.1" ry="7.4" transform="rotate(278 13.5 68.6)"/><ellipse cx="9.8" cy="57.8" rx="3.1" ry="7.4" transform="rotate(294 9.8 57.8)"/><ellipse cx="9.2" cy="46.4" rx="3.1" ry="7.4" transform="rotate(310 9.2 46.4)"/><ellipse cx="11.7" cy="35.3" rx="3.1" ry="7.4" transform="rotate(326 11.7 35.3)"/><ellipse cx="17.3" cy="25.3" rx="3.1" ry="7.4" transform="rotate(342 17.3 25.3)"/><ellipse cx="25.3" cy="17.3" rx="3.1" ry="7.4" transform="rotate(358 25.3 17.3)"/><ellipse cx="60.6" cy="89.6" rx="3.1" ry="7.4" transform="rotate(-50 60.6 89.6)"/><ellipse cx="71.1" cy="85.1" rx="3.1" ry="7.4" transform="rotate(-66 71.1 85.1)"/><ellipse cx="80.0" cy="78.0" rx="3.1" ry="7.4" transform="rotate(-82 80.0 78.0)"/><ellipse cx="86.5" cy="68.6" rx="3.1" ry="7.4" transform="rotate(-98 86.5 68.6)"/><ellipse cx="90.2" cy="57.8" rx="3.1" ry="7.4" transform="rotate(-114 90.2 57.8)"/><ellipse cx="90.8" cy="46.4" rx="3.1" ry="7.4" transform="rotate(-130 90.8 46.4)"/><ellipse cx="88.3" cy="35.3" rx="3.1" ry="7.4" transform="rotate(-146 88.3 35.3)"/><ellipse cx="82.7" cy="25.3" rx="3.1" ry="7.4" transform="rotate(-162 82.7 25.3)"/><ellipse cx="74.7" cy="17.3" rx="3.1" ry="7.4" transform="rotate(-178 74.7 17.3)"/></g><g class="ib-helm"><path d="M25 52C21 31 35 14 56 14C64 14 70 17 73 23C64 20 56 21 50 24C40 28 32 38 31 52Z"/><path fill-rule="evenodd" d="M34 54C34 37 45 28 57 28C69 28 76 37 76 50V57H67C65 57 64 59 64 61V70L71 78L55 82C51 77 47 73 43 71H37C35 66 34 60 34 54ZM58 44H75V49H58Z"/><path d="M35 62L26 71H38Z"/></g></svg>
+          <h2>Obrigado, <span data-nome></span>!</h2>
+          <p data-agradece></p>
+          <div class="ib-googlebox">
+            <b>Quer ajudar ainda mais a Imperius?</b>
+            <p>Conte também no Google. É assim que outras pessoas da Vila Laura encontram a casa.</p>
+            <a class="btn x-btn" href="https://www.google.com/maps?cid=2693109252954740099" target="_blank" rel="noopener" data-google>Avaliar no Google</a>
+          </div>
+          <div class="ib-thanksnav"><a class="x-more" href="https://imperiusburguer-bra.ola.click/products" target="_blank" rel="noopener">Pedir de novo</a><a class="x-more" href="../">Voltar ao site</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="ib-sitereviews" data-avaliacoes="https://www.avixco.com/api/avaliacoes?site=imperius-burger" hidden><h3>O que outros clientes contaram</h3><p class="ib-avg" data-media></p><div class="ib-revlist" data-lista></div></div><script>
 if (!window.ibAvaliacoes) {
   window.ibAvaliacoes = true;
   document.addEventListener("DOMContentLoaded", () => {
@@ -80,28 +113,64 @@ if (!window.ibAvaliacoes) {
   });
 }
 </script>
-</div></section>
+  </div>
+</section>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("[data-avaliar]");
   if (!form) return;
-  const msg = form.querySelector(".ib-formmsg"), thanks = document.querySelector(".ib-thanks"), btn = form.querySelector("button");
+  const rotulos = ["", "Não foi bom", "Poderia ser melhor", "Foi ok", "Muito bom!", "Digno de um imperador!"];
+  const bom = ["O sabor", "O tamanho", "A batata", "A entrega rápida", "O atendimento", "O preço justo"];
+  const ruim = ["A demora", "Chegou frio", "Veio errado", "O atendimento", "O preço", "A embalagem"];
+  const rotulo = form.querySelector("[data-rotulo]"), mais = form.querySelector("[data-mais]"),
+        chips = form.querySelector("[data-chips]"), chipsTitulo = form.querySelector("[data-chipstitulo]"),
+        comentario = form.querySelector("[data-comentario]"), msg = form.querySelector(".ib-formmsg"),
+        btn = form.querySelector("button[type=submit]"), thanks = document.querySelector(".ib-thanks");
+  let lista = null;
+  const montaChips = (nota) => {
+    const nova = nota >= 4 ? bom : ruim;
+    if (nova === lista) return;
+    lista = nova;
+    chipsTitulo.textContent = nota >= 4 ? "O que mais marcou?" : "O que podemos melhorar?";
+    comentario.placeholder = nota >= 4 ? "O burger, a entrega, o atendimento…" : "Conte o que aconteceu. O Hilton vai ler com atenção.";
+    chips.innerHTML = "";
+    nova.forEach((t) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "ib-chip"; b.textContent = t; b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", () => b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true"));
+      chips.append(b);
+    });
+  };
+  form.querySelectorAll("input[name=rating]").forEach((r) => r.addEventListener("change", () => {
+    const nota = Number(r.value);
+    rotulo.textContent = rotulos[nota];
+    rotulo.dataset.nota = nota;
+    montaChips(nota);
+    if (mais.hidden) { mais.hidden = false; requestAnimationFrame(() => mais.classList.add("on")); }
+    msg.textContent = "";
+  }));
   form.addEventListener("submit", async (ev) => {
     ev.preventDefault();
-    const d = new FormData(form);
-    if (!d.get("rating")) { msg.textContent = "Escolha de 1 a 5 estrelas."; return; }
-    const nome = String(d.get("name") || "").trim();
-    if (nome.length < 2) { msg.textContent = "Escreva seu primeiro nome."; return; }
-    btn.disabled = true; msg.textContent = "Enviando…";
+    const d = new FormData(form), nota = Number(d.get("rating") || 0), nome = String(d.get("name") || "").trim();
+    if (!nota) { msg.textContent = "Escolha de 1 a 5 estrelas."; return; }
+    if (nome.length < 2) { msg.textContent = "Escreva seu primeiro nome."; form.querySelector("[name=name]").focus(); return; }
+    const marcados = [...chips.querySelectorAll("[aria-pressed=true]")].map((b) => b.textContent);
+    const texto = [marcados.length ? (nota >= 4 ? "Gostei de: " : "Pode melhorar: ") + marcados.join(", ") + "." : "",
+                   String(d.get("comment") || "").trim()].filter(Boolean).join("\n");
+    btn.disabled = true; btn.textContent = "Enviando…"; msg.textContent = "";
     try {
       const r = await fetch(form.dataset.avaliar, { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: nome, rating: Number(d.get("rating")), comment: d.get("comment") || "", website: d.get("website") || "" }) });
+        body: JSON.stringify({ name: nome, rating: nota, comment: texto, website: d.get("website") || "" }) });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok) throw new Error(j.error || "Não deu para enviar agora. Tente de novo.");
+      if (!r.ok) throw new Error(j.error || "Não deu para enviar agora. Tente de novo em instantes.");
       if (j.googleReviewUrl) thanks.querySelector("[data-google]").href = j.googleReviewUrl;
       thanks.querySelector("[data-nome]").textContent = nome.split(" ")[0];
-      form.hidden = true; thanks.hidden = false; thanks.scrollIntoView({ behavior: "smooth", block: "center" });
-    } catch (e) { msg.textContent = e.message; btn.disabled = false; }
+      thanks.querySelector("[data-agradece]").textContent = nota >= 4
+        ? "Que bom que você gostou! Sua avaliação já chegou para o Hilton."
+        : "Obrigado pela sinceridade. Sua avaliação já chegou para o Hilton, que vai ler com atenção.";
+      form.hidden = true; thanks.hidden = false; thanks.focus({ preventScroll: true });
+      thanks.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch (e) { msg.textContent = e.message; btn.disabled = false; btn.textContent = "Enviar avaliação"; }
   });
 });
 </script>
