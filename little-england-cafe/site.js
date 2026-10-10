@@ -272,4 +272,50 @@
     $(".r-lbx", lb).addEventListener("click", () => lb.close());
     lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
   }
+  // ---------- Painel do dono (quadro #57) ----------
+  // Aberto dentro do painel de teste da Central (iframe), o site recebe preço, esgotado e foto do
+  // teste e mostra na hora. Nada é gravado aqui: fora do painel o site continua igual.
+  if (window.parent !== window) {
+    const origens = ["https://www.avixco.com", "https://avixco.com"];
+    if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) origens.push("http://localhost:3000", "http://127.0.0.1:3000");
+    let foco = 0;
+    const ids = (id) => $$(`.r-item[data-item-id="${CSS.escape(id)}"]`);
+    window.addEventListener("message", (e) => {
+      if (!origens.includes(e.origin) || !e.data || e.data.type !== "avix-painel") return;
+      document.documentElement.classList.add("in-painel");
+      Object.entries(e.data.itens || {}).forEach(([id, d]) => ids(id).forEach((li) => {
+        if (d.preco && typeof d.preco === "object") {
+          $$(".r-price[data-unit]", li).forEach((s) => { s.textContent = d.preco[s.dataset.unit] || "consulte"; });
+        } else if (typeof d.preco === "string") {
+          const s = $(".r-price", li);
+          if (s) { s.textContent = d.preco; s.classList.remove("none"); }
+        }
+        const add = $(".r-add", li);
+        if (add) {
+          try { const it = JSON.parse(add.dataset.item); if (d.preco) it.p = d.preco; add.dataset.item = JSON.stringify(it); } catch { /* mantém o item como estava */ }
+          add.disabled = !!d.esgotado;
+        }
+        li.classList.toggle("r-out", !!d.esgotado);
+        let tag = $(".r-outtag", li);
+        if (d.esgotado && !tag) { tag = document.createElement("i"); tag.className = "r-outtag"; tag.textContent = "Esgotado hoje"; $(".r-iname b", li)?.after(tag); }
+        if (!d.esgotado && tag) tag.remove();
+        let img = $(".r-thumb", li);
+        if (typeof d.foto === "string" && /^data:image\/(jpeg|png|webp);base64,/.test(d.foto)) {
+          if (!img) { img = document.createElement("img"); img.className = "r-thumb"; img.alt = ""; $(".r-iname", li)?.prepend(img); }
+          if (img.src !== d.foto) img.src = d.foto;
+        } else if (img) img.remove();
+      }));
+      if (e.data.foco && e.data.foco.n !== foco) {
+        foco = e.data.foco.n;
+        const li = ids(e.data.foco.id).find((x) => x.offsetParent !== null) || ids(e.data.foco.id)[0];
+        if (li) {
+          li.hidden = false; li.closest(".r-cat")?.removeAttribute("hidden");
+          li.scrollIntoView({ behavior: "smooth", block: "center" });
+          li.classList.remove("r-flash"); void li.offsetWidth; li.classList.add("r-flash");
+        }
+      }
+      renderCart();
+    });
+    window.parent.postMessage({ type: "avix-painel-pronto" }, "*");
+  }
 })();
