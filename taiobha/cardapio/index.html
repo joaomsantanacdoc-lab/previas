@@ -45,7 +45,7 @@
   <div class="tb-menutips rv">
     <p><b>P/1 · P/2</b> pratos mineiros para um ou para dois</p><p><b>Consulte</b> pratos do dia, preço no salão</p><p><b>MG</b> porco “vindo de MG”, diz o cardápio</p><p><b>+</b> monta o pré-pedido da mesa</p>
   </div>
-  <div class="r-painel"><p><b>Peça pelo cardápio digital.</b> O pedido chega pronto no WhatsApp e no painel da casa, com Pix, cupom e acompanhamento pelo link.</p><a class="btn x-btn r-painel-btn" href="https://www.oicomanda.com/taiobha/cardapio" target="_blank" rel="noopener">Abrir o cardápio digital</a></div>
+  <div class="r-painel"><p><b>Peça pelo cardápio digital.</b> O pedido cai no painel da casa, com Pix, cupom e acompanhamento pelo link, e você ainda manda pronto no WhatsApp.</p><a class="btn x-btn r-painel-btn" href="https://www.oicomanda.com/taiobha/cardapio" target="_blank" rel="noopener">Abrir o cardápio digital</a></div>
 <div class="r-menu" data-cardapio>
   <div class="r-menubar">
     <div class="r-tabs" role="tablist"><button type="button" class="r-tab on" data-cat="petiscos">Petiscos e bolinhos</button><button type="button" class="r-tab" data-cat="tradicionais">Pratos mineiros</button><button type="button" class="r-tab" data-cat="classicos">Clássicos para dois</button><button type="button" class="r-tab" data-cat="executivos">Executivos</button><button type="button" class="r-tab" data-cat="do-dia">Pratos do dia</button><button type="button" class="r-tab" data-cat="extras">Porção extra</button><button type="button" class="r-tab" data-cat="doces-cafe">Doces e café</button><button type="button" class="r-tab" data-cat="picoles">Picolés</button><button type="button" class="r-tab" data-cat="cachaca">Cachaça mineira</button><button type="button" class="r-tab" data-cat="drinks">Drinks e caipirinhas</button><button type="button" class="r-tab" data-cat="cervejas">Cervejas e doses</button><button type="button" class="r-tab" data-cat="sem-alcool">Sucos e sem álcool</button><button type="button" class="r-tab" data-cat="vendinha">Vendinha (para levar)</button></div>
@@ -104,10 +104,47 @@
 <aside class="hello" id="hello" role="note" aria-label="Recado para a equipe do Taiobha" data-pill="Recado para a equipe do Taiobha" data-scope="taiobha">
   <button type="button" id="hello-x" aria-label="Fechar recado">×</button>
   <b>Para a equipe do Taiobha: este site foi feito a partir da casa.</b>
-  <p>Partimos do cardápio do Saipos que está na ficha do Google, do Instagram @taiobha, das fotos que a casa publicou, do “Quem somos” do site antigo no Wix e das avaliações. Junto vem o painel da OiComanda: o pedido feito pelo cardápio digital chega pronto no WhatsApp e no painel, e preço, foto, horário e cupom mudam pelo celular.</p>
+  <p>Partimos do cardápio do Saipos que está na ficha do Google, do Instagram @taiobha, das fotos que a casa publicou, do “Quem somos” do site antigo no Wix e das avaliações. Junto vem o painel da OiComanda: o pedido feito pelo cardápio digital cai no painel, com aviso no celular, e o cliente ainda manda pronto no WhatsApp da casa; preço, foto, horário e cupom mudam pelo celular.</p>
   <a class="r-painel-go" href="https://www.oicomanda.com/entrar" target="_blank" rel="noopener">Abrir meu painel</a>
   <small>João · OiComanda · prévia ainda não publicada oficialmente</small>
 </aside>
 <script src="../site.js"></script>
+
+<script>
+(function () {
+  var CARDAPIO = "https://www.oicomanda.com/taiobha/cardapio";
+  var pedido = /pedido|pedir|quero|encomend|reserv/i;
+  function deWhats(a) {
+    if (!a || !a.href || a.classList.contains("wa")) return false;
+    if (!/wa\.me\/|api\.whatsapp\.com/.test(a.href)) return false;
+    var t = "";
+    try { t = decodeURIComponent((a.href.split("text=")[1] || "").replace(/\+/g, " ")); } catch (e) {}
+    return pedido.test(t) || pedido.test(a.textContent || "");
+  }
+  document.addEventListener("click", function (e) {
+    var alvo = e.target.closest && e.target.closest(".r-add, .r-cartsend, .r-send, [data-item], a");
+    if (!alvo) return;
+    var compra = alvo.matches(".r-add, .r-cartsend, .r-send, [data-item]") || (alvo.tagName === "A" && deWhats(alvo));
+    if (!compra) return;
+    e.preventDefault();
+    e.stopPropagation();
+    window.location.href = CARDAPIO;
+  }, true);
+  function rotular() {
+    document.querySelectorAll(".r-cartsend, .r-send").forEach(function (b) { b.textContent = "Finalizar no cardápio digital"; });
+    document.querySelectorAll("a").forEach(function (a) {
+      if (deWhats(a) && /whatsapp/i.test(a.textContent || "")) {
+        a.childNodes.forEach(function (n) { if (n.nodeType === 3 && /whatsapp/i.test(n.textContent)) n.textContent = n.textContent.replace(/pelo whatsapp|no whatsapp|whatsapp/i, "pelo cardápio digital"); });
+      }
+    });
+    var cards = document.querySelectorAll(".ocj-card");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (en, i) { if (en.isIntersecting) { setTimeout(function () { en.target.classList.add("on"); }, i * 60); io.unobserve(en.target); } }); }, { threshold: 0.15 });
+      cards.forEach(function (c) { io.observe(c); });
+    } else cards.forEach(function (c) { c.classList.add("on"); });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", rotular); else rotular();
+})();
+</script>
 </body>
 </html>
