@@ -41,7 +41,7 @@
     <div class="x-who rv d2"><img src="../avatar.jpg" alt="La Strada Pizzaria"><div><b>La Strada Pizzaria</b><span>Pizzaria de forno a lenha · Buraquinho, Lauro de Freitas</span></div></div>
   </div>
 </section>
-<section class="pad ls-menupage" id="cardapio-completo"><div class="wrap"><div class="r-painel"><p><b>Peça pelo cardápio digital.</b> O pedido chega pronto no WhatsApp e no painel da casa, com Pix, cupom e acompanhamento pelo link.</p><a class="btn x-btn r-painel-btn" href="https://www.oicomanda.com/la-strada-pizzaria/cardapio" target="_blank" rel="noopener">Abrir o cardápio digital</a></div>
+<section class="pad ls-menupage" id="cardapio-completo"><div class="wrap"><div class="r-painel"><p><b>Peça pelo cardápio digital.</b> O pedido cai no painel da casa, com Pix, cupom e acompanhamento pelo link, e você ainda manda pronto no WhatsApp.</p><a class="btn x-btn r-painel-btn" href="https://www.oicomanda.com/la-strada-pizzaria/cardapio" target="_blank" rel="noopener">Abrir o cardápio digital</a></div>
 <div class="r-menu" data-cardapio>
   <div class="r-menubar">
     <div class="r-tabs" role="tablist"><button type="button" class="r-tab on" data-cat="pz-classicas">Clássicas</button><button type="button" class="r-tab" data-cat="pz-catupiry">Com catupiry</button><button type="button" class="r-tab" data-cat="pz-completas">Especiais e completas</button><button type="button" class="r-tab" data-cat="pz-mar">Do mar</button><button type="button" class="r-tab" data-cat="pz-verdes">Verdes, búfala e cogumelos</button><button type="button" class="r-tab" data-cat="pz-doces">Pizzas doces</button><button type="button" class="r-tab" data-cat="bordas">Bordas</button><button type="button" class="r-tab" data-cat="adicionais">Adicionais extras</button><button type="button" class="r-tab" data-cat="petiscos">Petiscos</button><button type="button" class="r-tab" data-cat="doces">Doces</button><button type="button" class="r-tab" data-cat="bebidas">Bebidas sem álcool</button><button type="button" class="r-tab" data-cat="cervejas">Bebidas alcoólicas</button></div>
@@ -117,10 +117,47 @@
 <aside class="hello" id="hello" role="note" aria-label="Recado para a equipe da La Strada" data-pill="Recado para a La Strada" data-scope="la-strada-pizzaria">
   <button type="button" id="hello-x" aria-label="Fechar recado">×</button>
   <b>Para a equipe da La Strada</b>
-  <p>Esta prévia partiu dos cardápios da casa na Saipos e no CardápioWeb, do Instagram @lastradapizza, das fotos que a La Strada publicou no Google e das avaliações dos clientes. Hoje o pedido se divide entre dois links; aqui ele vira uma comanda só, com sabores, borda, bairro e taxa, direto no WhatsApp. Junto vem o painel da OiComanda: o pedido feito pelo cardápio digital chega pronto no WhatsApp e no painel, e preço, foto, horário e cupom mudam pelo celular.</p>
+  <p>Esta prévia partiu dos cardápios da casa na Saipos e no CardápioWeb, do Instagram @lastradapizza, das fotos que a La Strada publicou no Google e das avaliações dos clientes. Hoje o pedido se divide entre dois links; aqui ele vira uma comanda só, com sabores, borda, bairro e taxa pelo cardápio digital. Junto vem o painel da OiComanda: o pedido feito pelo cardápio digital cai no painel, com aviso no celular, e o cliente ainda manda pronto no WhatsApp da casa; preço, foto, horário e cupom mudam pelo celular.</p>
   <a class="r-painel-go" href="https://www.oicomanda.com/entrar" target="_blank" rel="noopener">Abrir meu painel</a>
   <small>João · OiComanda · prévia ainda não publicada oficialmente</small>
 </aside>
 <script src="../site.js"></script>
+
+<script>
+(function () {
+  var CARDAPIO = "https://www.oicomanda.com/la-strada-pizzaria/cardapio";
+  var pedido = /pedido|pedir|quero|encomend|reserv/i;
+  function deWhats(a) {
+    if (!a || !a.href || a.classList.contains("wa")) return false;
+    if (!/wa\.me\/|api\.whatsapp\.com/.test(a.href)) return false;
+    var t = "";
+    try { t = decodeURIComponent((a.href.split("text=")[1] || "").replace(/\+/g, " ")); } catch (e) {}
+    return pedido.test(t) || pedido.test(a.textContent || "");
+  }
+  document.addEventListener("click", function (e) {
+    var alvo = e.target.closest && e.target.closest(".r-add, .r-cartsend, .r-send, [data-item], a");
+    if (!alvo) return;
+    var compra = alvo.matches(".r-add, .r-cartsend, .r-send, [data-item]") || (alvo.tagName === "A" && deWhats(alvo));
+    if (!compra) return;
+    e.preventDefault();
+    e.stopPropagation();
+    window.location.href = CARDAPIO;
+  }, true);
+  function rotular() {
+    document.querySelectorAll(".r-cartsend, .r-send").forEach(function (b) { b.textContent = "Finalizar no cardápio digital"; });
+    document.querySelectorAll("a").forEach(function (a) {
+      if (deWhats(a) && /whatsapp/i.test(a.textContent || "")) {
+        a.childNodes.forEach(function (n) { if (n.nodeType === 3 && /whatsapp/i.test(n.textContent)) n.textContent = n.textContent.replace(/pelo whatsapp|no whatsapp|whatsapp/i, "pelo cardápio digital"); });
+      }
+    });
+    var cards = document.querySelectorAll(".ocj-card");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (en, i) { if (en.isIntersecting) { setTimeout(function () { en.target.classList.add("on"); }, i * 60); io.unobserve(en.target); } }); }, { threshold: 0.15 });
+      cards.forEach(function (c) { io.observe(c); });
+    } else cards.forEach(function (c) { c.classList.add("on"); });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", rotular); else rotular();
+})();
+</script>
 </body>
 </html>
