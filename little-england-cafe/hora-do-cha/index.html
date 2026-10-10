@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../site.css?v=202610101559">
+<link rel="stylesheet" href="../site.css?v=202610102102">
 <script>document.documentElement.classList.replace('js-pending','js')</script>
 </head>
 <body class="inner">
@@ -80,10 +80,47 @@
 <aside class="hello" id="hello" role="note" aria-label="Recado para a equipe do Little England Café" data-pill="Recado para a equipe" data-scope="little-england-cafe">
   <button type="button" id="hello-x" aria-label="Fechar recado">×</button>
   <b>Para a equipe do Little England Café</b>
-  <p>Esta prévia partiu do que vocês já publicam: as 7 artes do cardápio na pasta do Drive, o Instagram, as fotos da casa e as avaliações do Google. Junto vem o painel da OiComanda: o pedido feito pelo cardápio digital chega pronto no WhatsApp e no painel, e preço, foto, horário e cupom mudam pelo celular.</p>
+  <p>Esta prévia partiu do que vocês já publicam: as 7 artes do cardápio na pasta do Drive, o Instagram, as fotos da casa e as avaliações do Google. Junto vem o painel da OiComanda: o pedido feito pelo cardápio digital cai no painel, com aviso no celular, e o cliente ainda manda pronto no WhatsApp da casa; preço, foto, horário e cupom mudam pelo celular.</p>
   <a class="r-painel-go" href="https://www.oicomanda.com/entrar" target="_blank" rel="noopener">Abrir meu painel</a>
   <small>João · OiComanda · prévia ainda não publicada oficialmente</small>
 </aside>
-<script src="../site.js?v=202610101559"></script>
+<script src="../site.js?v=202610102102"></script>
+
+<script>
+(function () {
+  var CARDAPIO = "https://www.oicomanda.com/little-england-cafe/cardapio";
+  var pedido = /pedido|pedir|quero|encomend|reserv/i;
+  function deWhats(a) {
+    if (!a || !a.href || a.classList.contains("wa")) return false;
+    if (!/wa\.me\/|api\.whatsapp\.com/.test(a.href)) return false;
+    var t = "";
+    try { t = decodeURIComponent((a.href.split("text=")[1] || "").replace(/\+/g, " ")); } catch (e) {}
+    return pedido.test(t) || pedido.test(a.textContent || "");
+  }
+  document.addEventListener("click", function (e) {
+    var alvo = e.target.closest && e.target.closest(".r-add, .r-cartsend, .r-send, [data-item], a");
+    if (!alvo) return;
+    var compra = alvo.matches(".r-add, .r-cartsend, .r-send, [data-item]") || (alvo.tagName === "A" && deWhats(alvo));
+    if (!compra) return;
+    e.preventDefault();
+    e.stopPropagation();
+    window.location.href = CARDAPIO;
+  }, true);
+  function rotular() {
+    document.querySelectorAll(".r-cartsend, .r-send").forEach(function (b) { b.textContent = "Finalizar no cardápio digital"; });
+    document.querySelectorAll("a").forEach(function (a) {
+      if (deWhats(a) && /whatsapp/i.test(a.textContent || "")) {
+        a.childNodes.forEach(function (n) { if (n.nodeType === 3 && /whatsapp/i.test(n.textContent)) n.textContent = n.textContent.replace(/pelo whatsapp|no whatsapp|whatsapp/i, "pelo cardápio digital"); });
+      }
+    });
+    var cards = document.querySelectorAll(".ocj-card");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (en, i) { if (en.isIntersecting) { setTimeout(function () { en.target.classList.add("on"); }, i * 60); io.unobserve(en.target); } }); }, { threshold: 0.15 });
+      cards.forEach(function (c) { io.observe(c); });
+    } else cards.forEach(function (c) { c.classList.add("on"); });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", rotular); else rotular();
+})();
+</script>
 </body>
 </html>
