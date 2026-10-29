@@ -108,3 +108,33 @@
     map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
   }
 })();
+
+/* Camada do João (camada.py). A pílula aparece depois do topo; o recado abre com um toque.
+   No computador o recado abre sozinho uma vez por visita; no celular, nunca (não pode cobrir a tela). */
+(() => {
+  const recado = document.getElementById("jm-recado"), pilula = document.getElementById("jm-pilula");
+  if (!recado || !pilula) return;
+  const chave = "jm-recado-visto-" + location.pathname.split("/").filter(Boolean)[0];
+  let visto = false;
+  try { visto = sessionStorage.getItem(chave) === "1"; } catch (e) {}
+  const celular = matchMedia("(max-width: 640px)").matches;
+  let mostrou = false, timer = null;
+  const abrir = () => { pilula.classList.remove("on"); recado.classList.add("on"); pilula.setAttribute("aria-expanded", "true"); clearTimeout(timer); if (!celular) timer = setTimeout(fechar, 15000); };
+  const fechar = () => { clearTimeout(timer); recado.classList.remove("on"); pilula.classList.add("on"); pilula.setAttribute("aria-expanded", "false"); try { sessionStorage.setItem(chave, "1"); } catch (e) {} };
+  const primeira = () => { if (mostrou) return; mostrou = true; if (!celular && !visto) abrir(); else pilula.classList.add("on"); };
+  const topo = document.querySelector(".hero") || document.querySelector(".x-phero");
+  addEventListener("scroll", () => { if (scrollY > (topo ? topo.offsetHeight * .6 : 320)) primeira(); }, { passive: true });
+  setTimeout(primeira, 8000);
+  pilula.addEventListener("click", abrir);
+  recado.querySelector(".jm-fechar").addEventListener("click", fechar);
+  recado.querySelector(".jm-ir")?.addEventListener("click", fechar);
+  addEventListener("keydown", (e) => { if (e.key === "Escape" && recado.classList.contains("on")) fechar(); });
+  // Quando o bloco "Este site pode ser seu" está na tela, a pílula e o recado saem da frente.
+  const oferta = document.getElementById("jm-oferta");
+  if (oferta && "IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => {
+      document.documentElement.classList.toggle("jm-na-oferta", e.isIntersecting);
+      if (e.isIntersecting && recado.classList.contains("on")) fechar();
+    }, { threshold: .2 }).observe(oferta);
+  }
+})();
