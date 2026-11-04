@@ -635,3 +635,4 @@ body.inner{background:var(--a-gesso)}
 
 /* Revisor, 04/11/2026: no celular a linha acima do nome quebrava em duas colunas, com o ponto solto. */
 @media (max-width:560px){.g-over{display:block;line-height:1.7}.g-over span{display:block}.g-over span+span:before{display:none}.g-over span:before,.g-over span:after{display:none}}
+/* nova versão: 04/11 */
