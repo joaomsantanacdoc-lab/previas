@@ -129,6 +129,16 @@
   recado.querySelector(".jm-fechar").addEventListener("click", fechar);
   recado.querySelector(".jm-ir")?.addEventListener("click", fechar);
   addEventListener("keydown", (e) => { if (e.key === "Escape" && recado.classList.contains("on")) fechar(); });
+  // No celular, a pílula sai da frente das seções de contato e do pedido (as mesmas [data-no-wa] que escondem o botão do WhatsApp).
+  const zonas = document.querySelectorAll("[data-no-wa]");
+  if (celular && zonas.length && "IntersectionObserver" in window) {
+    const vis = new Set();
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => e.isIntersecting ? vis.add(e.target) : vis.delete(e.target));
+      document.documentElement.classList.toggle("jm-no-wa", vis.size > 0);
+    }, { threshold: .15 });
+    zonas.forEach((z) => io.observe(z));
+  }
   // Quando o bloco "Este site pode ser seu" está na tela, a pílula e o recado saem da frente.
   const oferta = document.getElementById("jm-oferta");
   if (oferta && "IntersectionObserver" in window) {
