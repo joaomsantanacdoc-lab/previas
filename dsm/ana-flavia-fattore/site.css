@@ -632,3 +632,6 @@ body.inner{background:var(--a-gesso)}
 .jm-assina{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin:22px 0 0;font-size:.88rem;color:#5B6B73}
 .jm-assina a{color:#0F3A44;font-weight:600}
 .jm-mono{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#0F3A44;color:#fff;font:600 .8rem Fraunces,Georgia,serif}
+
+/* Revisor, 04/11/2026: no celular a linha acima do nome quebrava em duas colunas, com o ponto solto. */
+@media (max-width:560px){.g-over{display:block;line-height:1.7}.g-over span{display:block}.g-over span+span:before{display:none}.g-over span:before,.g-over span:after{display:none}}
