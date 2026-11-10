@@ -19,7 +19,7 @@
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
 span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
 
-/* ===== estrutura comum (tokens definidos no skin de cada médico) ===== */
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--x-bg);color:var(--x-ink);font-family:var(--x-sans);line-height:1.66;overflow-x:hidden;font-variant-numeric:lining-nums}
@@ -43,10 +43,10 @@ h2{font-family:var(--x-head);font-weight:var(--x-head-w);font-size:clamp(1.9rem,
 .x-more::after{content:"→";transition:transform .3s}
 a:hover .x-more::after,.x-more:hover::after{transform:translateX(4px)}
 
-/* barra de leitura */
+
 .progress{position:fixed;left:0;top:0;height:3px;width:0;background:var(--x-accent);z-index:70}
 
-/* navegação com submenu */
+
 .nav{position:fixed;inset:0 0 auto;z-index:50;background:color-mix(in srgb,var(--x-bg) 94%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--x-line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--x-navh);gap:1rem}
 .brand{display:flex;align-items:center;gap:.7rem;min-width:0}
@@ -71,7 +71,7 @@ a:hover .x-more::after,.x-more:hover::after{transform:translateX(4px)}
 .drawer .dlabel{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--x-muted);padding:.9rem 0 .2rem}
 .drawer .btn{margin-top:1.2rem;border:0}
 
-/* portas de entrada */
+
 .x-doors{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.6rem}
 .x-doors.c4{grid-template-columns:repeat(4,1fr)}
 .x-door{position:relative;display:flex;flex-direction:column;gap:.6rem;background:var(--x-surface);border:1px solid var(--x-line);border-radius:var(--x-r);padding:1.8rem;overflow:hidden;transition:transform .45s cubic-bezier(.2,.7,.1,1),box-shadow .45s}
@@ -85,7 +85,7 @@ a:hover .x-more::after,.x-more:hover::after{transform:translateX(4px)}
 .x-door p{color:var(--x-ink2);font-size:.94rem}
 .x-door .x-more{margin-top:auto;align-self:flex-start}
 
-/* avaliações em carrossel */
+
 .x-revtop{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap}
 .x-arrows{display:flex;gap:.5rem}
 .x-arrows button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--x-line);background:var(--x-surface);cursor:pointer;font-size:1.1rem;color:var(--x-ink);transition:.3s}
@@ -98,7 +98,7 @@ a:hover .x-more::after,.x-more:hover::after{transform:translateX(4px)}
 .x-review .av{flex:none;width:36px;height:36px;border-radius:50%;background:var(--x-tint);color:var(--x-accent);display:grid;place-items:center;font-weight:700;font-size:.8rem}
 .x-review footer b{display:block;color:var(--x-ink)}
 
-/* faixa de credenciais */
+
 .x-strip{background:var(--x-surface);border-block:1px solid var(--x-line)}
 .x-strip .row{display:grid;grid-template-columns:repeat(4,1fr)}
 .x-strip .row>div{padding:1.5rem 1.4rem;border-right:1px solid var(--x-line)}
@@ -106,7 +106,7 @@ a:hover .x-more::after,.x-more:hover::after{transform:translateX(4px)}
 .x-strip b{display:block;font-size:1.12rem;font-weight:700;color:var(--x-ink);line-height:1.25}
 .x-strip span{display:block;font-size:.85rem;color:var(--x-ink2);margin-top:.25rem}
 
-/* imprensa / trabalhos */
+
 .x-plist{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.4rem}
 .x-pcard{display:flex;flex-direction:column;gap:.6rem;background:var(--x-surface);border:1px solid var(--x-line);border-radius:var(--x-r);padding:1.5rem;transition:transform .35s,box-shadow .35s}
 a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0,0,.45)}
@@ -114,7 +114,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 .x-pcard b{font-size:1.05rem;font-weight:600;line-height:1.4}
 .x-pcard span{margin-top:auto;font-size:.85rem;color:var(--x-muted)}
 
-/* páginas internas */
+
 .x-phero{margin-top:var(--x-navh);background:var(--x-phero-bg);color:var(--x-phero-ink);position:relative;overflow:hidden}
 .x-phero::after{content:"";position:absolute;right:-120px;bottom:-160px;width:420px;height:420px;border-radius:50%;background:var(--x-phero-hi);opacity:.12;pointer-events:none}
 .x-phero .wrap{display:grid;grid-template-columns:1.45fr .55fr;gap:2rem;align-items:center;padding:clamp(2.8rem,6vw,4.4rem) 0 clamp(3rem,6vw,4.4rem);position:relative;z-index:1}
@@ -180,7 +180,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 .x-final .x-btn{background:var(--x-final-btn,#fff);color:var(--x-final-btn-ink,var(--x-dark))}
 .x-final .x-btn:hover{opacity:.9}
 
-/* rodapé */
+
 .ft{background:var(--x-dark);color:var(--x-on-dark2);padding:3.2rem 0 2.6rem;font-size:.88rem;border-top:1px solid color-mix(in srgb,var(--x-on-dark) 10%,transparent)}
 .ft .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem}
 .ft h4{color:var(--x-on-dark);font-size:.95rem;margin-bottom:.8rem}
@@ -191,7 +191,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 .ft .fbrand p{margin-top:1rem;line-height:1.55}
 .ft .disc{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid color-mix(in srgb,var(--x-on-dark) 10%,transparent);font-size:.76rem;opacity:.85;max-width:100ch}
 
-/* horário (usado no consultório) */
+
 .x-status{display:inline-flex;align-items:center;gap:.5rem;font-size:.86rem;font-weight:700;padding:.4rem .9rem;border-radius:999px;background:var(--x-tint);color:var(--x-ink)}
 .x-status i{width:8px;height:8px;border-radius:50%;background:#2E9E5B}
 .x-status.closed i{background:#C0564B}
@@ -232,7 +232,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
   .x-steps li::before{width:34px;height:34px}
 }
 
-/* resposta publicada pelo médico */
+
 .x-qa{margin-top:1.1rem;background:var(--x-surface);border:1px solid var(--x-line);border-left:3px solid var(--x-accent);border-radius:calc(var(--x-r) - 6px);padding:1.2rem 1.4rem}
 .x-qa b{display:block;font-family:var(--x-head);font-weight:var(--x-head-w);font-size:1.08rem;color:var(--x-ink);line-height:1.35}
 .x-content .x-qa p{margin-top:.5rem;font-style:italic}
@@ -246,15 +246,15 @@ html{scroll-padding-top:100px}body{font-size:17px}h1,h2,h3{font-family:var(--x-h
 .publication .text-link{display:block;width:fit-content}
 @media(max-width:700px){.x-toc ol{display:grid!important;margin-bottom:18px}.x-toc small{display:block!important}.x-toc{padding:20px;background:var(--x-tint);border-radius:14px}}
 @media(max-width:700px){.hero-grid{min-height:calc(100svh - var(--x-navh))}.hero-copy{padding-bottom:112px!important}}
-/* Correções locais de contraste, sem alterar texto, destino ou comportamento da camada do motor. */
+
 body .jm-recado .jm-rot,body .jm-oferta h2 em{color:#8b4b27}body .jm-btn-zap{background:#176d40;color:#fff}body .jm-btn-zap:hover{background:#125531;color:#fff}
 @media(max-width:1080px){.menu,.nav .x-navbtn{display:none}.hero-copy{padding:45px 32px}.hero-grid{min-height:560px}.hero h1{font-size:3.3rem}.hero .ctas{flex-direction:column;align-items:flex-start}.portrait{padding:24px}.cards:has(>article:nth-child(4)){grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){:root{--x-navh:72px}.wrap{width:calc(100% - 40px)}body{font-size:16px}.section{padding:48px 0}.brand b{font-size:1.1rem}.brand small{font-size:.62rem}.monogram{width:36px;height:36px;font-size:1.1rem}.hero-grid{display:flex;flex-direction:column;min-height:0}.portrait{padding:0;height:min(46svh,390px);width:100%;display:block;background:#4a2a1e}.portrait img{width:100%;height:100%;max-width:529px;max-height:none;object-fit:contain;border-radius:0;box-shadow:none;margin:auto}.portrait:before,.portrait:after{display:none}.hero-copy{padding:25px 20px 30px;display:block}.hero .eyebrow{font-size:.66rem;margin-bottom:12px}.hero h1{font-size:2.55rem;line-height:1.06;margin-bottom:13px}.hero-role{font-size:1.1rem;line-height:1.45}.hero-note{display:none}.hero .ctas{flex-direction:row;gap:10px;align-items:stretch;margin-top:20px;flex-wrap:nowrap}.hero .btn{font-size:.72rem;padding:12px 10px;flex:1;min-width:0;text-align:center;justify-content:center;min-height:48px}.credentials{padding:20px 0}.credentials .wrap{grid-template-columns:1fr 1fr;gap:16px}.credentials .wrap>div{border:0;padding:0}.credentials .wrap>div:last-child{grid-column:1/-1;border-top:1px solid #6c7075;padding-top:14px;display:flex;gap:16px;align-items:center}.credentials b{font-size:1rem}.credentials span{font-size:.7rem}.cards,.cards:has(>article:nth-child(2):last-child),.cards:has(>article:nth-child(4)){grid-template-columns:1fr;gap:15px}.cards article{padding:23px}.card-icon{margin-bottom:15px}.cards h3{font-size:1.22rem}.cards p{margin-top:9px}.cards .text-link{padding-top:15px}.section-head{margin-bottom:25px}h2{font-size:2rem}.steps{grid-template-columns:1fr;gap:15px}.steps li{padding:24px}.steps li:before{font-size:2rem}.profile-grid,.location-grid,.request-grid{grid-template-columns:1fr;gap:30px}.profile-mark{min-height:210px;font-size:70px}.fact-stack article{padding:19px 0}.publication{grid-template-columns:1fr;gap:22px;padding:25px}.year{font-size:2.7rem}.year small{display:inline-block;margin:0 0 0 14px;font-size:.7rem;max-width:130px}.location-grid address{font-size:1.1rem}.route-panel{padding:26px}.request h2{font-size:2rem}.pref-form{padding:23px}.fields{grid-template-columns:1fr;gap:16px}.final-box{display:block}.final-box .btn{margin-top:25px}.final-box h3{font-size:1.3rem}.page-head{padding:38px 0}.page-head h1{font-size:2.5rem}.page-head .lead{font-size:1rem}.crumbs{font-size:.75rem;margin-bottom:20px}.page-head .eyebrow{font-size:.65rem}.reading-grid{grid-template-columns:1fr;gap:35px;padding-top:35px;padding-bottom:20px}.x-toc{position:relative;top:auto}.x-content>section{padding-bottom:30px;margin-bottom:35px}.x-content>section>h2{font-size:1.75rem}.x-content .cards{grid-template-columns:1fr}.x-content .publication{grid-template-columns:1fr}.x-content .year small{display:block;margin:8px 0 0}.inner .wa{display:none}.home .wa{bottom:90px;width:46px;height:46px;right:16px}.ft{padding-bottom:110px}.x-faqsec{padding:48px 0}}
 @media(max-width:370px){.hero h1{font-size:2.35rem}.hero .btn{font-size:.68rem}.brand b{font-size:1rem}.brand small{font-size:.58rem}}
-/* Fallback oficial: origem abaixo de 800 px, sem foto de ambiente aprovada. */
+
 .portrait.brand-panel{flex-direction:column;gap:22px;color:#fff;background:#4a2a1e}.hero-monogram{position:relative;z-index:1;font:800 clamp(150px,16vw,230px)/1 var(--x-head);letter-spacing:-.09em;padding-right:.09em}.brand-caption{position:relative;z-index:1;font:700 .82rem/1.5 var(--x-sans);letter-spacing:.05em;color:#fff}.profile-photo{margin:0;justify-self:center;width:230px}.profile-photo img{display:block;width:230px;max-width:100%;height:auto;border-radius:90px 90px 16px 16px}
 @media(max-width:700px){.portrait.brand-panel{display:flex;align-items:center;justify-content:center;height:min(46svh,390px);gap:18px}.hero-monogram{font-size:160px}.brand-caption{font-size:.72rem}.profile-photo,.profile-photo img{width:160px}}
-/* 03/11/2026: topo com a foto real do Dr. Gustavo e o placar de credenciais, no padrão da prévia do Bruno Rudolph */
+
 .portrait.foto{padding:0;background:#3a241b;display:block}
 .portrait.foto:before,.portrait.foto:after{display:none}
 .portrait.foto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:88% 18%;border-radius:0;box-shadow:none;position:absolute;inset:0}
@@ -272,7 +272,7 @@ body .jm-recado .jm-rot,body .jm-oferta h2 em{color:#8b4b27}body .jm-btn-zap{bac
 .fachada{margin:0}.fachada img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 18px 40px #00000030}
 @media(max-width:700px){.portrait.foto{height:min(58svh,470px);position:relative}.placar{display:none}.profile-photo,.profile-photo img{width:100%!important}}
 
-/* 03/11/2026, revisor: FAQ no padrão do Bruno, ícones de linha, placar menor colado no pé da foto */
+
 .x-faqsec .faq{max-width:780px;margin:2rem auto 0;display:grid;gap:.6rem}
 .faq details{background:#fff;border:1px solid var(--x-line);border-radius:12px;padding:0 1.3rem}
 .faq summary{cursor:pointer;list-style:none;padding:1.15rem 2.2rem 1.15rem 0;font-weight:700;position:relative;color:var(--x-ink)}
@@ -286,7 +286,7 @@ body .jm-recado .jm-rot,body .jm-oferta h2 em{color:#8b4b27}body .jm-btn-zap{bac
 .placar .prow{grid-template-columns:22px 6.6rem 1fr;gap:.6rem;padding:.34rem 0;font-size:.8rem}
 .placar .prow b{font-size:.95rem}
 .credentials b{font-size:1.2rem}
-/* 03/11/2026, revisor 2: no celular o placar some, então a faixa mostra as credenciais */
+
 .credentials .cred-cel{display:none}
 @media(max-width:700px){.credentials .cred-pc{display:none}
 .credentials .cred-cel{display:grid}
@@ -294,7 +294,7 @@ body .jm-recado .jm-rot,body .jm-oferta h2 em{color:#8b4b27}body .jm-btn-zap{bac
 .faq summary::after{right:8px}
 }
 
-/* ===== 03/11/2026: home "viva" (João: "queria uma coisa que ele abrisse e falasse: que foda") ===== */
+
 :root{--g-deep:#21130e;--g-deep2:#3a241b;--g-mint:#d9b27a;--g-mint2:#c49a5c;--g-glow:#b8863e;--g-paper:#f8f2ea}
 .home .nav:not(.solid){background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
 .home .nav:not(.solid) .brand b,.home .nav:not(.solid) .menu a,.home .nav:not(.solid) .menu button{color:#fff}
@@ -513,7 +513,7 @@ body .jm-recado .jm-rot,body .jm-oferta h2 em{color:#8b4b27}body .jm-btn-zap{bac
 .g-stats b{white-space:nowrap}
 @media(max-width:480px){.g-stats{grid-template-columns:1fr 1fr}.g-stats li:last-child{grid-column:1/-1}.g-stats small{font-size:.66rem}}
 
-/* ===== 03/11/2026, refino de autoridade (João: "de outro mundo, de profissional de respeito, autoridade e confiança") ===== */
+
 :root{--g-serif:'Cormorant Garamond',Georgia,serif;--g-ivory:#f8f2ea;--g-ivory2:#f0e4d3;--g-brass:#c49a5c;--g-brass2:#d9b27a;--g-deep:#21130e;--g-deep2:#3a241b}
 .home{background:var(--g-ivory)}
 .home h1,.home h2,.g-card h3,.g-panel h3,.g-steps b,.g-quote p,.g-final h2{font-family:var(--g-serif);font-weight:400;letter-spacing:-.025em;font-variation-settings:"opsz" 144}
@@ -644,7 +644,7 @@ body .jm-recado .jm-rot,body .jm-oferta h2 em{color:#8b4b27}body .jm-btn-zap{bac
 @media(prefers-reduced-motion:reduce){.g-seal text{animation:none}}
 .g-seal text{font-size:10px;letter-spacing:1.6px}
 @media(max-width:700px){.g-hero .g-ctas{flex-direction:column}.g-hero .g-ctas .g-btn{width:100%;flex:none;font-size:.92rem;min-height:54px}}
-/* revisor 03/11 (autoridade): títulos de cartão respirando, numeração contínua, páginas internas na mesma linguagem */
+
 .g-card h3,.g-panel h3,.g-steps b,.g-facts b,.g-trust b{font-optical-sizing:auto;font-variation-settings:normal;letter-spacing:-.01em}
 .g-doc .g-eyebrow,.g-qsec .g-eyebrow{counter-increment:gsec}
 .g-doc .g-eyebrow:before,.g-qsec .g-eyebrow:before{content:counter(gsec,decimal-leading-zero);width:auto;height:auto;background:none;font:400 1rem var(--g-serif);color:#c47a54;padding-right:12px;border-right:1px solid #c49a5c}
@@ -668,7 +668,7 @@ body.inner{background:#f8f2ea}
 .inner .checklist li,.inner .info-card{background:#f6efe6}
 @media(max-width:700px){.g-inset{width:52%;right:-8px;bottom:-22px}}
 
-/* 05/11/2026 Dra. Rossana: serifa editorial e tom quente do Instagram dela */
+
 h1,h2,h3,.g-hero h1,.g-sec h2,.g-final h2{font-weight:500;letter-spacing:-.02em}
 .g-hero h1{font-size:clamp(3.8rem,8.4vw,7.4rem);line-height:.98}
 .g-hero h1 em{font-style:italic}
@@ -691,7 +691,7 @@ h1,h2,h3,.g-hero h1,.g-sec h2,.g-final h2{font-weight:500;letter-spacing:-.02em}
 .inner .ft .monogram{color:#d9b27a;border-color:#c49a5c}
 .g-note .text-link{display:inline;margin-top:0;padding:0}
 
-/* 05/11/2026, refinamento (João: "deixa bem profissional") */
+
 body,h1,h2,h3,b,small,.g-rating,.g-trust,.placar{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
 .g-hero .g-waves{opacity:.45;-webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 52%,#000 78%);mask-image:linear-gradient(90deg,transparent 0,transparent 52%,#000 78%)}
 .g-final .g-waves{opacity:.35}
@@ -729,8 +729,7 @@ body,h1,h2,h3,b,small,.g-rating,.g-trust,.placar{font-variant-numeric:lining-num
 .g-big:after{box-shadow:none;border-color:#d9b27a2e;width:300px;height:300px;right:-70px;top:-70px}
 .g-big:before{content:"";position:absolute;right:-20px;top:-20px;width:200px;height:200px;border-radius:50%;border:1px solid #d9b27a26;background:none;opacity:1;pointer-events:none;z-index:0}
 
-/* Camada do João (camada.py): recado em pílula e bloco "Este site pode ser seu", no visual do Doutor Sob Medida.
-   Prefixo jm- para não conflitar com o visual de cada profissional. */
+
 .jm-pilula{position:fixed;left:16px;bottom:18px;z-index:66;display:inline-flex;align-items:center;gap:.5rem;border:0;border-radius:999px;padding:.62rem 1rem .62rem .8rem;background:#FFFEFB;color:#04232A;font:600 .82rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 10px 30px -10px rgba(4,35,42,.45),0 0 0 1px rgba(4,35,42,.08);cursor:pointer;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .35s,transform .35s}
 .jm-pilula.on{opacity:1;transform:none;pointer-events:auto}
 .jm-no-wa .jm-pilula,.jm-na-oferta .jm-pilula,.jm-na-oferta .jm-recado{opacity:0;transform:translateY(10px);pointer-events:none}
