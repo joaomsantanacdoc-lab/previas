@@ -765,7 +765,7 @@ h1,h2,h3,.g-hero h1,.g-sec h2,.g-final h2{font-weight:600;letter-spacing:-.025em
 .r-place p,a[href^="tel:"]{white-space:normal}
 .r-place p{word-break:normal}
 
-.r-places{grid-template-columns:repeat(2,1fr)}
+@media(min-width:901px){.r-places{grid-template-columns:repeat(2,1fr)}}
 .g-doc{grid-template-columns:1fr!important}
 .g-eyebrow:before,.g-num{color:#1f5fbf}
 
