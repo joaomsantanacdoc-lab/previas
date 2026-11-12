@@ -852,3 +852,5 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .jm-assina{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin:22px 0 0;font-size:.88rem;color:#5B6B73}
 .jm-assina a{color:#0F3A44;font-weight:600}
 .jm-mono{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#0F3A44;color:#fff;font:600 .8rem Fraunces,Georgia,serif}
+
+/* v 1849 */
