@@ -9,13 +9,13 @@
 <meta property="og:title" content="Como é a consulta · Dra. Clara Salles · Cardiologista em Salvador">
 <meta property="og:description" content="A consulta de cardiologia com a Dra. Clara Salles em Salvador: o que levar, a conversa, o exame, os exames quando indicados e o plano.">
 <meta property="og:image" content="https://doutorsobmedida.com.br/dra-clara-salles/og.jpg">
-<meta name="theme-color" content="#7A1835">
+<meta name="theme-color" content="#2A0A16">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2718%27%20fill%3D%27%237A1835%27/%3E%3Cpath%20d%3D%27M6%2038h14l4-9%206%2018%205-26%204%2017h19%27%20fill%3D%27none%27%20stroke%3D%27%23FF7A6B%27%20stroke-width%3D%273.4%27%20stroke-linejoin%3D%27round%27%20stroke-linecap%3D%27round%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../site.css?v=6ed9b42a4f">
+<link rel="stylesheet" href="../site.css?v=92d8471f4a">
 <script>document.documentElement.classList.replace('js-pending','js')</script>
 </head>
 <body class="inner">
@@ -99,10 +99,23 @@
   <button type="button" class="jm-fechar" aria-label="Fechar recado">×</button>
   <small class="jm-rot">Recado do João</small>
   <b>Dra. Clara, esta prévia partiu da sua ficha no Google, do seu currículo e das suas fotos de aula.</b>
-  <p>Usei a sua formação (UFBA, UNICAMP, Sírio-Libanês, ICESP/USP), a coordenação da residência no Ana Nery, os seus artigos no ORCID, as fotos de palestra e o retrato de jaleco da ficha, e a nota 5,0 das avaliações. A ideia é reunir num site só, com uma página para cada assunto, o que hoje está espalhado. As cores seguem o vinho do coração e o traçado do ECG. Os botões levam ao WhatsApp da ficha. Páginas, textos e cores são ajustáveis como preferir.</p>
+  <p>Usei a sua formação (UFBA, UNICAMP, Sírio-Libanês, ICESP/USP), a coordenação da residência no Ana Nery, os seus artigos no ORCID, as fotos de palestra e o retrato de jaleco da ficha, e a nota 5,0 das avaliações. A ideia é reunir num site só, com uma página para cada assunto, o que hoje está espalhado. As cores seguem o vinho do coração, num visual de monitor cardíaco, com o traçado do ECG desenhado enquanto a página rola. Os botões levam ao WhatsApp da ficha. Páginas, textos e cores são ajustáveis como preferir.</p>
   <a class="jm-ir" href="#jm-oferta">Como ficar com este site</a>
 </aside>
 <button type="button" class="jm-pilula" id="jm-pilula" aria-controls="jm-recado" aria-expanded="false" data-camada-dsm><i></i>Prévia feita para você</button>
-<script src="../site.js?v=8f4fab4fcf"></script>
+<script src="../site.js?v=f3cc9c194f"></script>
+<!-- avix-visita:inicio --><script>(function(){
+var k='avix-interno',s=null;
+try{s=window.localStorage;}catch(e){}
+function interno(){try{if(location.hash!=='#avix')return false;if(s)s.setItem(k,'1');history.replaceState(null,'',location.pathname+location.search);return true;}catch(e){return true;}}
+window.addEventListener('hashchange',interno);
+if(interno())return;
+try{if(s&&s.getItem(k))return;}catch(e){}
+var h=location.hostname,m=null;
+if(/\.github\.io$/.test(h))m=location.pathname.match(/\/previas\/(?:dsm\/)?([a-z0-9]+(?:-[a-z0-9]+)*)\/(.*)$/);
+else if(/(^|\.)doutorsobmedida\.com\.br$/.test(h))m=location.pathname.match(/^\/([a-z0-9]+(?:-[a-z0-9]+)*)\/(.*)$/);
+if(!m)return;
+new Image().src='https://www.avixco.com/api/previa/visita?s='+m[1]+'&p='+encodeURIComponent(m[2])+'&t='+Date.now();
+})();</script><!-- avix-visita:fim -->
 </body>
 </html>

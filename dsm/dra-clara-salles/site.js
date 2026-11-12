@@ -57,7 +57,8 @@
     pill.addEventListener("click", open);
   }
 
-  const wa = $(".wa"), zones = $$("[data-no-wa]");
+  const wa = $(".wa"), topo = $(".hero") || $(".x-phero");
+  const zones = $$("[data-no-wa]").concat(topo ? [topo] : []);
   if (wa && zones.length && "IntersectionObserver" in window) {
     const vis = new Set();
     const io2 = new IntersectionObserver((es) => { es.forEach((e) => e.isIntersecting ? vis.add(e.target) : vis.delete(e.target)); wa.classList.toggle("hide", vis.size > 0); }, { threshold: .15 });
@@ -135,4 +136,136 @@
       if (e.isIntersecting && recado.classList.contains("on")) fechar();
     }, { threshold: .2 }).observe(oferta);
   }
+})();
+
+(() => {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const NS = "http://www.w3.org/2000/svg";
+  const clamp = (v) => Math.max(0, Math.min(1, v));
+
+  const tracado = (w, h, periodo) => {
+    const k = h / 170, u = periodo / 400;
+    let d = `M0 ${(100 * k).toFixed(1)}`;
+    for (let x = 0; x < w + periodo; x += periodo) {
+      const P = (a, b) => `${(x + a * u).toFixed(1)} ${(b * k).toFixed(1)}`;
+      d += ` L${P(120, 100)} Q${P(136, 84)} ${P(152, 100)} L${P(176, 100)} L${P(188, 112)} L${P(204, 22)} L${P(222, 150)} L${P(236, 100)} L${P(272, 100)} Q${P(300, 70)} ${P(328, 100)} L${P(400, 100)}`;
+    }
+    return d;
+  };
+
+  const ajustar = (svg, periodo) => {
+    const w = Math.max(1, Math.round(svg.clientWidth)), h = Math.max(1, Math.round(svg.clientHeight));
+    svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+    svg.setAttribute("preserveAspectRatio", "none");
+    svg.querySelectorAll("path").forEach((p) => p.setAttribute("d", tracado(w, h, periodo(w, h))));
+  };
+
+  const novoEcg = (classe, pai) => {
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("class", "ecg " + classe);
+    svg.setAttribute("aria-hidden", "true");
+    svg.appendChild(document.createElementNS(NS, "path"));
+    pai.prepend(svg);
+    return svg;
+  };
+  const phero = document.querySelector(".x-phero");
+  if (phero && !phero.querySelector(".ecg")) novoEcg("pecg", phero);
+  const fim = document.querySelector(".x-final");
+  if (fim && !fim.querySelector(".ecg")) novoEcg("fecg", fim);
+
+  const linhas = [...document.querySelectorAll("svg.ecg")].map((svg) => ({ svg, path: svg.querySelector("path"), len: 0, heroi: svg.classList.contains("hecg") && matchMedia("(min-width: 1081px)").matches }));
+  const periodoSecao = (w, h) => Math.max(200, Math.min(420, h * 2.6));
+
+  const topo = document.createElement("div");
+  topo.className = "ecg-top";
+  topo.setAttribute("aria-hidden", "true");
+  topo.innerHTML = `<svg xmlns="${NS}"><path class="base"/><path class="live"/><circle r="2.6"/></svg>`;
+  document.body.appendChild(topo);
+  const tSvg = topo.firstElementChild, tBase = tSvg.querySelector(".base"), tLive = tSvg.querySelector(".live"), tDot = tSvg.querySelector("circle");
+  let tLen = 0;
+
+  const medir = () => {
+    linhas.forEach((l) => { ajustar(l.svg, periodoSecao); l.len = l.path.getTotalLength(); l.path.style.strokeDasharray = `${l.len} ${l.len}`; });
+    ajustar(tSvg, (w) => (w < 700 ? 150 : 210));
+    tLen = tLive.getTotalLength();
+    tLive.style.strokeDasharray = `${tLen} ${tLen}`;
+  };
+
+  let heroiP = reduce ? 1 : 0;
+  const pintar = () => {
+    const vh = innerHeight;
+    linhas.forEach((l) => {
+      let p;
+      if (reduce) p = 1;
+      else if (l.heroi) p = heroiP;
+      else { const r = l.svg.getBoundingClientRect(); p = clamp((vh - r.top) / (vh * 0.75)); }
+      l.path.style.strokeDashoffset = l.len * (1 - p);
+    });
+    const H = document.documentElement.scrollHeight - vh;
+    const q = H > 0 ? clamp(scrollY / H) : 0;
+    tLive.style.strokeDashoffset = tLen * (1 - q);
+    const pt = tLive.getPointAtLength(Math.max(0.01, tLen * q));
+    tDot.setAttribute("cx", pt.x.toFixed(1));
+    tDot.setAttribute("cy", pt.y.toFixed(1));
+    tDot.style.opacity = q > 0.002 ? 1 : 0;
+  };
+
+  let pedido = false;
+  const agendar = () => { if (!pedido) { pedido = true; requestAnimationFrame(() => { pedido = false; pintar(); }); } };
+  medir(); pintar();
+  addEventListener("scroll", agendar, { passive: true });
+  let rt;
+  addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { medir(); pintar(); }, 150); });
+
+  if (!reduce && linhas.some((l) => l.heroi)) {
+    const t0 = performance.now(), D = 2400;
+    const passo = (t) => { const x = clamp((t - t0) / D); heroiP = 1 - Math.pow(1 - x, 3); pintar(); if (x < 1) requestAnimationFrame(passo); };
+    setTimeout(() => requestAnimationFrame(passo), 250);
+  }
+
+  const rolar = (el) => {
+    const fin = el.textContent;
+    const total = (fin.match(/\d/g) || []).length;
+    if (!total || reduce) return;
+    el.classList.add("roll");
+    const t0 = performance.now(), D = 1100 + total * 60;
+    const passo = (t) => {
+      const q = clamp((t - t0) / D);
+      let n = 0;
+      el.textContent = [...fin].map((c) => { if (!/\d/.test(c)) return c; n++; return n / total <= q ? c : String(Math.floor(Math.random() * 10)); }).join("");
+      if (q < 1) requestAnimationFrame(passo); else el.textContent = fin;
+    };
+    requestAnimationFrame(passo);
+  };
+  const numeros = [...document.querySelectorAll(".monitor b, .monitor .mbpm, .traj .t, .frente .big, .nota .num")].filter((el) => !el.children.length && /\d/.test(el.textContent));
+  numeros.forEach((el) => el.classList.add("roll"));
+  if ("IntersectionObserver" in window && !reduce) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { io.unobserve(e.target); setTimeout(() => rolar(e.target), 200); } }), { threshold: 0.6 });
+    numeros.forEach((el) => io.observe(el));
+  }
+})();
+
+(() => {
+  const pil = document.getElementById("jm-pilula");
+  if (!pil) return;
+  const raiz = document.documentElement;
+  const alvos = [...document.querySelectorAll("a.btn, button:not(.jm-pilula):not(.jm-fechar), .crumbs a, .x-toc a")];
+  let pedido = false;
+  const checar = () => {
+    pedido = false;
+    const r = pil.getBoundingClientRect(), m = 10;
+    const bate = r.width > 0 && alvos.some((a) => {
+      const q = a.getBoundingClientRect();
+      return q.width > 0 && q.height > 0 && !(q.right < r.left - m || q.left > r.right + m || q.bottom < r.top - m || q.top > r.bottom + m);
+    });
+    raiz.classList.toggle("jm-sem-pilula", bate);
+  };
+  const agendar = () => { if (!pedido) { pedido = true; requestAnimationFrame(checar); } };
+  let ate = 0, rodando = false;
+  const laco = () => { checar(); if (performance.now() < ate) requestAnimationFrame(laco); else rodando = false; };
+  addEventListener("scroll", () => { ate = performance.now() + 1400; if (!rodando) { rodando = true; requestAnimationFrame(laco); } }, { passive: true });
+  addEventListener("resize", agendar);
+  document.addEventListener("transitionend", agendar, true);
+  new MutationObserver(agendar).observe(pil, { attributes: true, attributeFilter: ["class"] });
+  setTimeout(agendar, 300);
 })();
