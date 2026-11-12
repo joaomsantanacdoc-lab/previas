@@ -776,6 +776,7 @@ span.stars{color:#FFD58A!important}
   .monitor{order:4}
 }
 @media (max-width:640px){
+  .x-phero .wrap{padding-top:calc(clamp(2.8rem,6vw,4.4rem) + 34px)}
   .jm-muro{width:calc(100% - 32px)}
   .jm-recado{width:auto}
   .hero h1{font-size:3rem;margin:.7rem 0 .8rem}
@@ -793,4 +794,5 @@ span.stars{color:#FFD58A!important}
   .x-door,.x-pcard,.x-review,.x-tile,.faq details,.local,.traj li,.batidas li,.fase,.frente,.x-post{box-shadow:none}
   .ecg-top .live,.hero .hecg path{filter:none}
 }
+html.jm-sem-pilula body .jm-pilula{opacity:0!important;pointer-events:none!important;transition-duration:.12s}
 @media (prefers-reduced-motion:reduce){.x-door:hover,a.x-pcard:hover,.x-post:hover{transform:none}}

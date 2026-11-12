@@ -243,3 +243,28 @@
     numeros.forEach((el) => io.observe(el));
   }
 })();
+
+(() => {
+  const pil = document.getElementById("jm-pilula");
+  if (!pil) return;
+  const raiz = document.documentElement;
+  const alvos = [...document.querySelectorAll("a.btn, button:not(.jm-pilula):not(.jm-fechar), .crumbs a, .x-toc a")];
+  let pedido = false;
+  const checar = () => {
+    pedido = false;
+    const r = pil.getBoundingClientRect(), m = 10;
+    const bate = r.width > 0 && alvos.some((a) => {
+      const q = a.getBoundingClientRect();
+      return q.width > 0 && q.height > 0 && !(q.right < r.left - m || q.left > r.right + m || q.bottom < r.top - m || q.top > r.bottom + m);
+    });
+    raiz.classList.toggle("jm-sem-pilula", bate);
+  };
+  const agendar = () => { if (!pedido) { pedido = true; requestAnimationFrame(checar); } };
+  let ate = 0, rodando = false;
+  const laco = () => { checar(); if (performance.now() < ate) requestAnimationFrame(laco); else rodando = false; };
+  addEventListener("scroll", () => { ate = performance.now() + 1400; if (!rodando) { rodando = true; requestAnimationFrame(laco); } }, { passive: true });
+  addEventListener("resize", agendar);
+  document.addEventListener("transitionend", agendar, true);
+  new MutationObserver(agendar).observe(pil, { attributes: true, attributeFilter: ["class"] });
+  setTimeout(agendar, 300);
+})();
