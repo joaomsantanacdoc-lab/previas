@@ -57,7 +57,8 @@
     pill.addEventListener("click", open);
   }
 
-  const wa = $(".wa"), zones = $$("[data-no-wa]");
+  const wa = $(".wa"), topo = $(".hero") || $(".x-phero");
+  const zones = $$("[data-no-wa]").concat(topo ? [topo] : []);
   if (wa && zones.length && "IntersectionObserver" in window) {
     const vis = new Set();
     const io2 = new IntersectionObserver((es) => { es.forEach((e) => e.isIntersecting ? vis.add(e.target) : vis.delete(e.target)); wa.classList.toggle("hide", vis.size > 0); }, { threshold: .15 });
