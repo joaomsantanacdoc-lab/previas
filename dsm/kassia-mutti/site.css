@@ -528,6 +528,270 @@ a.prow:hover b{color:var(--x-hi)}
 .placar .ln{border-radius:0}
 .ct,.local,.faq details{border-radius:0}
 
+/* ================= variante impacto ================= */
+/* herói ocupa a tela, tipografia enorme, malha de cor viva */
+.hero .hgrid{min-height:min(88svh,760px)}
+.hero{background:
+  radial-gradient(60ch 55ch at 92% 6%, color-mix(in srgb,var(--x-hi) 62%,transparent), transparent 58%),
+  radial-gradient(46ch 46ch at 0% 12%, color-mix(in srgb,var(--x-accent) 34%,transparent), transparent 55%),
+  radial-gradient(70ch 60ch at 60% 118%, color-mix(in srgb,var(--x-accent) 22%,transparent), transparent 60%),
+  linear-gradient(165deg,#fff 0%,color-mix(in srgb,var(--x-hi) 22%,#fff) 42%,color-mix(in srgb,var(--x-hi) 34%,var(--x-bg)) 100%) !important}
+.hero::after{opacity:.9;background-size:46px 46px}
+.hero h1{font-size:clamp(3.4rem,7.6vw,7rem);line-height:.9;letter-spacing:-.035em}
+.hero .hsub{font-size:clamp(1.3rem,2.2vw,1.9rem);max-width:30ch}
+.hero .htxt{padding-top:clamp(2rem,4vw,3rem);padding-bottom:clamp(2rem,4vw,3rem)}
+.hero .lema{font-size:.82rem}
+
+/* foto maior, com anel e brilho */
+.hero .hfoto{transform:rotate(-.6deg)}
+.hero .hfoto figure{transform:rotate(.6deg)}
+
+/* seções com faixas de cor alternadas e cartões mais vivos */
+.pad:not(.escuro):not(.x-final):nth-of-type(odd){background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--x-hi) 10%,transparent) 40%,transparent)}
+h2{font-size:clamp(2.2rem,4.4vw,3.4rem)}
+.x-door,.x-pcard,.ct{box-shadow:0 30px 70px -40px color-mix(in srgb,var(--x-accent) 100%,transparent),
+  0 0 0 1px color-mix(in srgb,var(--x-accent) 26%,transparent), inset 0 1px 0 #fff !important}
+
+/* selo flutuante do lado da foto */
+.hero .placar{transform:translateY(-6px) rotate(.4deg)}
+
+
+/* ================= camada futurista (clara) ================= */
+body{background:var(--x-bg)}
+main,.site,.wrap,header.nav,footer.ft,section{position:relative}
+
+/* 1. herói: lavagem de cor + malha + orbes */
+.hero{background:
+  radial-gradient(80ch 60ch at 82% 12%, color-mix(in srgb,var(--x-hi) 26%,transparent), transparent 62%),
+  radial-gradient(70ch 60ch at 6% 4%, color-mix(in srgb,var(--x-accent) 14%,transparent), transparent 60%),
+  linear-gradient(180deg, #fff 0%, var(--x-bg) 58%, color-mix(in srgb,var(--x-hi) 12%,var(--x-bg)) 100%) !important;
+  isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;z-index:0;pointer-events:none;
+  top:-26%;right:-6%;width:62ch;height:62ch;border-radius:50%;
+  background:radial-gradient(circle, color-mix(in srgb,var(--x-accent) 20%,transparent), transparent 64%);
+  filter:blur(46px)}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.7;
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--x-accent) 12%,transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb,var(--x-accent) 12%,transparent) 1px, transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(85% 80% at 30% 20%, #000 0%, transparent 80%);
+  mask-image:radial-gradient(85% 80% at 30% 20%, #000 0%, transparent 80%)}
+.hero .hgrid{position:relative;z-index:1}
+.hero .htxt{z-index:2}
+
+/* 2. foto em moldura de vidro, com fio de luz e leitura de scanner */
+.hero .hfoto{overflow:visible}
+.hero .hfoto figure{border-radius:26px;overflow:hidden}
+.hero .hfoto{border-radius:26px;
+  box-shadow:0 50px 110px -55px color-mix(in srgb,var(--x-accent) 80%,#000),
+             0 0 0 1px color-mix(in srgb,#fff 55%,transparent),
+             inset 0 0 0 1px color-mix(in srgb,var(--x-accent) 18%,transparent)}
+.hero .hfoto::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;z-index:3;pointer-events:none;
+  background:linear-gradient(90deg,transparent, color-mix(in srgb,var(--x-hi) 90%,#fff), transparent);
+  box-shadow:0 0 20px 2px color-mix(in srgb,var(--x-hi) 60%,transparent);
+  animation:dsm-scanner 7.5s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes dsm-scanner{0%{top:0;opacity:0}8%{opacity:.9}48%{top:94%;opacity:.55}58%{opacity:0}100%{top:0;opacity:0}}
+
+/* 3. etiqueta da especialidade em pílula de vidro */
+.hero .lema{padding:.5rem .95rem .5rem .55rem;border-radius:999px;
+  background:color-mix(in srgb,#fff 72%,transparent);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1px solid color-mix(in srgb,var(--x-accent) 22%,#fff);
+  box-shadow:0 12px 26px -20px color-mix(in srgb,var(--x-accent) 80%,transparent)}
+.hero .lema::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--x-accent);
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--x-accent) 16%,transparent)}
+
+/* 4. o "monitor" de credenciais: vidro branco sobre a foto */
+.hero .placar{position:absolute;left:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);
+  bottom:1rem;z-index:4;
+  background:color-mix(in srgb,#fff 82%,transparent) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(1.25);backdrop-filter:blur(18px) saturate(1.25);
+  border:1px solid color-mix(in srgb,#fff 90%,transparent) !important;
+  border-radius:20px;padding:.85rem .95rem .7rem;
+  box-shadow:0 30px 70px -40px color-mix(in srgb,var(--x-accent) 90%,transparent),
+             0 0 0 1px color-mix(in srgb,var(--x-accent) 10%,transparent),
+             inset 0 1px 0 #fff !important}
+.hero .placar .ptop{color:var(--x-accent);font-size:.66rem;letter-spacing:.2em;padding-bottom:.5rem;
+  border-bottom:1px solid color-mix(in srgb,var(--x-accent) 14%,transparent)}
+.hero .placar .ptop .rec{background:var(--x-accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--x-accent) 14%,transparent);
+  animation:dsm-pulse 3.4s ease-in-out infinite}
+.hero .placar .crono{color:var(--x-ink2)}
+.hero .placar .prow{grid-template-columns:26px 1fr;gap:.15rem .6rem;align-items:start;
+  padding:.55rem 0 0;border:0;margin:0}
+.hero .placar .prow b{font-size:.98rem;color:var(--x-ink);letter-spacing:0;font-weight:700}
+.hero .placar .prow span:last-child{grid-column:2;color:var(--x-ink2);font-size:.78rem}
+.hero .placar .ln{background:color-mix(in srgb,var(--x-accent) 12%,#fff);color:var(--x-accent);
+  border-radius:9px;width:26px;height:26px;transform:none}
+.hero .placar .ln svg{color:var(--x-accent)}
+@media (min-width:760px){
+  .hero .placar{display:grid;grid-template-columns:1fr 1fr;gap:.15rem 1.4rem;align-items:start;padding:.8rem 1.1rem .55rem}
+  .hero .placar .ptop{grid-column:1/-1}
+  .hero .placar .prow{grid-column:span 1;padding-top:.45rem}
+  .hero .placar .prow span:last-child{font-size:.74rem;line-height:1.28}
+  .hero .placar .prow b{font-size:.9rem}
+}
+
+/* 5. cartões de vidro sobre a página */
+.x-door,.x-pcard,.x-post,.ct,.local,.x-tile,.pq,.x-steps li,.faq details{
+  background:color-mix(in srgb,#fff 68%,transparent) !important;
+  -webkit-backdrop-filter:blur(12px) saturate(1.15);backdrop-filter:blur(12px) saturate(1.15);
+  border:1px solid color-mix(in srgb,var(--x-accent) 16%,#fff) !important;
+  box-shadow:0 22px 48px -36px color-mix(in srgb,var(--x-accent) 80%,transparent),
+             inset 0 1px 0 rgba(255,255,255,.9);
+  transition:transform .45s cubic-bezier(.2,.7,.1,1), box-shadow .45s, border-color .45s}
+.x-door:hover,.x-pcard:hover,.x-post:hover,.ct:hover{
+  transform:translateY(-5px);
+  border-color:color-mix(in srgb,var(--x-accent) 42%,#fff) !important;
+  box-shadow:0 36px 72px -36px color-mix(in srgb,var(--x-accent) 90%,transparent),
+             inset 0 1px 0 rgba(255,255,255,.95)}
+
+
+/* seções escuras: vidro escuro, não branco */
+.escuro .x-pcard,.escuro .ct,.escuro .x-tile,.escuro .local,.escuro .x-steps li,.escuro .x-door,.escuro .pq,
+.x-final .x-pcard,.x-final .ct{
+  background:color-mix(in srgb,var(--x-navy2) 52%, transparent) !important;
+  border:1px solid color-mix(in srgb,var(--x-hi) 34%,transparent) !important;
+  box-shadow:0 24px 60px -40px rgba(0,0,0,.8), inset 0 1px 0 color-mix(in srgb,#fff 10%,transparent) !important}
+.escuro .x-pcard:hover,.escuro .ct:hover,.escuro .x-door:hover,.escuro .pq:hover{
+  border-color:color-mix(in srgb,var(--x-hi) 58%,transparent) !important;
+  box-shadow:0 30px 70px -40px rgba(0,0,0,.85) !important}
+.escuro .x-pcard h3,.escuro .ct b,.escuro .x-tile h3,.escuro .pq b{color:var(--x-on-dark)}
+.escuro .x-pcard p,.escuro .ct p,.escuro .x-tile p,.escuro .pq small,.escuro .pq p{color:var(--x-on-dark2)}
+
+/* 6. botões: degradê, brilho e varredura */
+.btn,.x-btn{border-radius:var(--x-rb)}
+.btn.x-btn,.x-btn:not(.x-btn-line):not(.x-navbtn){
+  background:linear-gradient(135deg,var(--x-accent) 0%, var(--x-accent-d) 100%);
+  box-shadow:0 18px 38px -18px color-mix(in srgb,var(--x-accent) 85%,transparent);
+  position:relative;overflow:hidden;isolation:isolate}
+.btn.x-btn::after,.x-btn:not(.x-btn-line):not(.x-navbtn)::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.4) 50%,transparent 66%);
+  transform:translateX(-130%);transition:transform .75s ease}
+.btn.x-btn:hover::after,.x-btn:not(.x-btn-line):hover::after{transform:translateX(130%)}
+
+/* 7. palavra de destaque em degradê */
+.hero h1 em,h2 em{background:linear-gradient(112deg,var(--x-accent) 0%, color-mix(in srgb,var(--x-accent) 52%,var(--x-hi)) 62%, color-mix(in srgb,var(--x-accent) 30%,var(--x-hi)) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.escuro h1 em,.escuro h2 em,.x-final h2 em,.x-phero h1 em,.x-phero h2 em,
+.hero h1 em:nth-of-type(2){background:none;color:var(--x-hi);-webkit-text-fill-color:currentColor}
+
+/* 8. etiquetas de seção */
+.x-tag::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--x-accent);vertical-align:middle;margin:0 .6rem .15rem 0;
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--x-accent) 14%,transparent);
+  animation:dsm-pulse 3.4s ease-in-out infinite}
+@keyframes dsm-pulse{0%,100%{box-shadow:0 0 0 4px color-mix(in srgb,var(--x-accent) 12%,transparent)}
+  50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--x-accent) 6%,transparent)}}
+
+/* 9. navegação de vidro */
+header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blur(16px) saturate(1.25);
+  background:color-mix(in srgb,var(--x-bg) 74%,transparent) !important;
+  border-bottom:1px solid color-mix(in srgb,var(--x-accent) 10%,transparent);
+  box-shadow:0 12px 32px -28px color-mix(in srgb,var(--x-accent) 80%,transparent)}
+.brand .mark{box-shadow:0 8px 20px -12px color-mix(in srgb,var(--x-accent) 90%,transparent)}
+
+/* 10. entrada dos blocos */
+.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
+.js .rv:not(.in){filter:blur(7px)}
+
+/* 11. celular: texto primeiro (nome, CRM, botão) e monitor como faixa sob a foto */
+@media (max-width:900px){
+  .hero .hgrid{display:block}
+  .hero .htxt{order:1;padding-top:1.4rem}
+  .hero .hfoto{order:2;margin-top:1.4rem;border-radius:0;background:transparent}
+  .hero .hfoto figure{aspect-ratio:4/3.6;border-radius:22px}
+  .hero .placar{position:relative;left:auto;right:auto;bottom:auto;margin:.9rem .9rem 0;
+    border-radius:18px;display:block;padding:.8rem .95rem .6rem}
+  .hero .placar .prow{grid-template-columns:24px 1fr;padding-top:.5rem}
+  .hero .placar .prow span:last-child{font-size:.78rem}
+}
+@media (max-width:480px){
+  .hero .placar .ptop{font-size:.6rem;letter-spacing:.16em}
+}
+
+/* 12. menos movimento, mesma beleza */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js .rv:not(.in){filter:none}
+}
+
+.x-final .btn.x-btn,.x-final .x-btn,.x-final .btn{
+  background:var(--x-hi) !important;color:var(--x-navy2) !important;
+  box-shadow:0 20px 44px -22px color-mix(in srgb,var(--x-hi) 90%,transparent) !important}
+.x-final .btn.x-btn::after,.x-final .x-btn::after{display:none}
+
+@property --dsm-ang{syntax:"<angle>";initial-value:0deg;inherits:false}
+.hero{background:
+  radial-gradient(70ch 60ch at 88% 10%, color-mix(in srgb,var(--x-hi) 42%,transparent), transparent 60%),
+  radial-gradient(60ch 55ch at 2% 0%, color-mix(in srgb,var(--x-accent) 26%,transparent), transparent 58%),
+  radial-gradient(90ch 70ch at 50% 108%, color-mix(in srgb,var(--x-accent) 16%,transparent), transparent 60%),
+  linear-gradient(180deg,#fff 0%,var(--x-bg) 55%,color-mix(in srgb,var(--x-hi) 16%,var(--x-bg)) 100%) !important}
+/* duas auras que respiram devagar */
+.hero::before{width:70ch;height:70ch;top:-30%;right:-10%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--x-accent) 34%,transparent),transparent 62%);
+  filter:blur(52px);animation:dsm-aura 26s ease-in-out infinite alternate}
+.hero .hgrid::before{content:"";position:absolute;z-index:0;pointer-events:none;left:-14%;bottom:-24%;
+  width:56ch;height:56ch;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--x-hi) 46%,transparent),transparent 62%);
+  filter:blur(60px);animation:dsm-aura 32s ease-in-out infinite alternate-reverse}
+@keyframes dsm-aura{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-4%,5%,0) scale(1.12)}}
+
+/* anel de degradê girando em volta da foto */
+.hero .hfoto{position:relative}
+.hero .hfoto::before{content:"";position:absolute;inset:-2px;z-index:0;border-radius:28px;padding:2px;
+  background:conic-gradient(from var(--dsm-ang),
+    color-mix(in srgb,var(--x-accent) 0%,transparent) 0deg,
+    var(--x-accent) 40deg,
+    color-mix(in srgb,var(--x-hi) 90%,#fff) 120deg,
+    color-mix(in srgb,var(--x-accent) 0%,transparent) 200deg,
+    color-mix(in srgb,var(--x-hi) 90%,#fff) 300deg,
+    color-mix(in srgb,var(--x-accent) 0%,transparent) 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  animation:dsm-girar 14s linear infinite;
+  box-shadow:0 0 34px -6px color-mix(in srgb,var(--x-accent) 45%,transparent)}
+@keyframes dsm-girar{to{--dsm-ang:360deg}}
+.hero .hfoto figure{z-index:1}
+
+/* vidro mais denso e com fio de degradê nos cartões */
+.x-door,.x-pcard,.x-post,.ct,.local,.x-tile,.pq,.x-steps li,.faq details{
+  background:linear-gradient(155deg,
+    color-mix(in srgb,#fff 82%,transparent) 0%,
+    color-mix(in srgb,#fff 58%,transparent) 100%) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);
+  border:1px solid transparent !important;
+  background-clip:padding-box !important;
+  box-shadow:0 26px 60px -40px color-mix(in srgb,var(--x-accent) 90%,transparent),
+             0 0 0 1px color-mix(in srgb,var(--x-accent) 22%,transparent),
+             inset 0 1px 0 rgba(255,255,255,.95),
+             inset 0 -18px 30px -24px color-mix(in srgb,var(--x-accent) 30%,transparent) !important}
+
+/* monitor com brilho e fio animado */
+.hero .placar{box-shadow:0 34px 80px -44px color-mix(in srgb,var(--x-accent) 100%,transparent),
+              0 0 0 1px color-mix(in srgb,var(--x-accent) 16%,transparent),
+              0 0 40px -18px color-mix(in srgb,var(--x-hi) 70%,transparent),
+              inset 0 1px 0 #fff !important}
+
+/* títulos de seção com traço de luz embaixo */
+
+
+/* botões maiores com halo */
+.btn.x-btn{padding:1.12rem 1.75rem;box-shadow:0 22px 44px -18px color-mix(in srgb,var(--x-accent) 90%,transparent),
+  0 0 0 1px color-mix(in srgb,#fff 28%,transparent) inset, 0 0 30px -14px color-mix(in srgb,var(--x-accent) 70%,transparent)}
+
+@media (prefers-reduced-motion:reduce){
+  .hero::before,.hero .hgrid::before,.hero .hfoto::before{animation:none !important}
+}
+
+.js .rv:not(.in){filter:none !important}
+@media (max-width:600px){
+  .hero .lema{white-space:nowrap;font-size:.68rem;letter-spacing:.1em;padding:.45rem .8rem .45rem .5rem}
+  .hero .lema::after{display:none}
+  .hero .lema .mark{width:26px;height:26px}
+}
+
 
 /* Camada do João (camada.py): recado em pílula e bloco "Este site pode ser seu", no visual do Doutor Sob Medida.
    Prefixo jm- para não conflitar com o visual de cada profissional. */
