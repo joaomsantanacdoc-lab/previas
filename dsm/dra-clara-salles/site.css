@@ -472,7 +472,7 @@ h2 em,h1 em{font-style:normal;color:var(--x-accent)}
 @media (max-width:640px){
   .pad{padding:3.4rem 0}
   .hero .hfoto figure{aspect-ratio:1/1.04}
-  .hero .hfoto img{object-position:50% 30%}
+  .hero .hfoto img{object-position:center 35%}
   .monitor{padding:.6rem 16px .7rem}
   .monitor .mtop{font-size:.62rem}
   .monitor .mgrid{grid-template-columns:repeat(4,1fr);gap:.3rem;margin-top:.45rem}
