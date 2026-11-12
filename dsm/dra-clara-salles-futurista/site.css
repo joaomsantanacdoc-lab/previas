@@ -778,7 +778,9 @@ span.stars{color:#FFD58A!important}
   .hero h1{font-size:3rem;margin:.7rem 0 .8rem}
   .hero .hsub{font-size:1.12rem}
   .hero .htxt{margin-top:-108px;padding-bottom:2.2rem}
-  .hero .hfoto figure{height:96vw}
+  .hero .hfoto figure{height:90vw}
+  .hero .lead{display:none}
+  .hero .ctas{margin-top:1.4rem}
   .hero .hecg{height:46px}
   .monitor .mgrid{grid-template-columns:1fr 1fr;gap:.4rem}
   .monitor .mgrid>*{padding:.55rem .65rem}
