@@ -243,7 +243,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 
 
 /* Dra. Kássia Mutti · dermatologia em Lauro de Freitas. Preto e branco dos posts dela, com o vermelho da foto de perfil (#B3263A). Tema: fios (tricologia) em linhas finas, cantos retos e editoriais. Archivo + Inter. */
-:root{--x-bg:#F7F6F4;--x-surface:#FFFFFF;--x-ink:#141414;--x-ink2:#4F4B48;--x-muted:#8A8580;--x-line:rgba(20,20,20,.12);--x-dark:#141414;--x-on-dark:#F5F3F1;--x-on-dark2:#BDB6B0;--x-hi:#E46A78;--x-accent:#B3263A;--x-accent-d:#921D2F;--x-tint:#F2ECE8;--x-tint2:#F7E9EA;--x-head:"Archivo",Arial,sans-serif;--x-head-w:700;--x-sans:"Inter",system-ui,sans-serif;--x-r:2px;--x-rb:0px;--x-navh:76px;--x-brand-w:700;--x-phero-bg:#141414;--x-phero-ink:#F5F3F1;--x-phero-ink2:#BDB6B0;--x-phero-hi:#E46A78;--x-grad:linear-gradient(135deg,#E46A78 0%,#B3263A 50%,#5E0F1B 100%);--x-navy2:#0B0B0B;--x-hero-pos:50% 12%;--x-voz-pos:50% 25%}
+:root{--x-bg:#F7F6F4;--x-surface:#FFFFFF;--x-ink:#141414;--x-ink2:#4F4B48;--x-muted:#8A8580;--x-line:rgba(20,20,20,.12);--x-dark:#141414;--x-on-dark:#F5F3F1;--x-on-dark2:#BDB6B0;--x-hi:#E46A78;--x-accent:#B3263A;--x-accent-d:#921D2F;--x-tint:#F2ECE8;--x-tint2:#F7E9EA;--x-head:"Archivo",Arial,sans-serif;--x-head-w:700;--x-sans:"Inter",system-ui,sans-serif;--x-r:2px;--x-rb:0px;--x-navh:76px;--x-brand-w:700;--x-phero-bg:#141414;--x-phero-ink:#F5F3F1;--x-phero-ink2:#BDB6B0;--x-phero-hi:#E46A78;--x-grad:linear-gradient(135deg,#E46A78 0%,#B3263A 50%,#5E0F1B 100%);--x-navy2:#0B0B0B;--x-hero-pos:50% 12%;--x-voz-pos:50% 25%;--x-mob-pos:50% 14%}
 
 body{font-size:1.04rem}
 h1,h2,h3{letter-spacing:-.01em}
@@ -793,6 +793,104 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 }
 
 
+/* ================= camada celular (o celular é o site) ================= */
+@media (max-width:900px){
+  /* o herói encosta na barra: o margin-top somava com a barra fixa */
+  /* faixa lisa na cor do profissional: a foto termina exatamente nesta cor, sem emenda */
+  .hero{margin-top:0;padding:0 0 20px;overflow:hidden;color:#fff;
+    background:var(--x-accent) !important;
+    background:linear-gradient(180deg, var(--x-accent) 0%, var(--x-accent) 58%, color-mix(in srgb,var(--x-accent) 86%,#000) 100%) !important}
+  .hero::before{top:-24%;right:-18%;width:56ch;height:56ch;filter:blur(52px);opacity:.9;
+    background:radial-gradient(circle,color-mix(in srgb,var(--x-hi) 55%,transparent),transparent 64%)}
+  .hero::after{opacity:.5;
+    background-image:
+      linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+    background-size:54px 54px;
+    -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 72%);
+    mask-image:linear-gradient(180deg,#000 0%,transparent 72%)}
+
+  /* foto no topo, de ponta a ponta, derretendo na faixa */
+  .hero .hgrid{display:flex;flex-direction:column;align-items:stretch;min-height:0;max-width:none}
+  .hero .hfoto{display:contents}
+  .hero .hfoto figure{order:1;position:relative;height:var(--x-mob-ph,clamp(290px,38vh,380px));height:var(--x-mob-ph,clamp(290px,38svh,380px));
+    aspect-ratio:auto;margin:0;border-radius:0;overflow:hidden;transform:none}
+  .hero .hfoto figure img{object-position:var(--x-mob-pos,50% 12%)}
+  .hero .hfoto figure::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(180deg,transparent 58%,color-mix(in srgb,var(--x-accent) 42%,transparent) 82%,var(--x-accent) 100%)}
+
+  /* texto na faixa */
+  .hero .htxt{order:2;padding:.95rem 20px 0;color:#fff}
+  .hero .lema{display:inline-flex;align-items:center;gap:.15rem;
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);
+    -webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);
+    color:#fff;font-size:.72rem;letter-spacing:.11em;padding:.4rem .85rem .4rem .45rem;
+    border-radius:999px}
+  .hero .lema::after{display:none}
+  .hero .lema .mark{width:26px;height:26px;box-shadow:0 0 0 1px rgba(255,255,255,.3)}
+
+  .hero h1{color:#fff;font-size:clamp(2.6rem,12.6vw,4rem);line-height:.9;letter-spacing:-.03em;
+    margin:.6rem 0 .45rem;text-shadow:0 12px 40px rgba(0,0,0,.28)}
+  .hero h1 em{background:none!important;color:color-mix(in srgb,var(--x-hi) 42%,#fff)!important;
+    -webkit-text-fill-color:currentColor!important;text-shadow:0 10px 34px rgba(0,0,0,.25)}
+
+  .hero .hcred{font-family:var(--x-sans);font-size:.78rem;font-weight:600;letter-spacing:.02em;
+    color:rgba(255,255,255,.9);margin:0 0 .4rem}
+  .hero .hsub{color:rgba(255,255,255,.86);font-size:.94rem;line-height:1.4;margin:0;max-width:none;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .hero .lead{display:none}
+
+  /* um botão só, branco e grande — o resto vira link discreto */
+  .hero .ctas{display:flex;flex-direction:column;align-items:stretch;gap:0;margin-top:.9rem}
+  .hero .ctas .btn{width:100%;justify-content:center;font-size:1rem;padding:.98rem 1.1rem}
+  .hero .ctas .btn.x-btn{background:#fff!important;
+    color:color-mix(in srgb,var(--x-accent) 84%,#000)!important;
+    box-shadow:0 18px 40px -18px rgba(0,0,0,.55),inset 0 1px 0 #fff!important;
+    animation:dsm-cta 3.8s ease-in-out infinite}
+  .hero .ctas .btn.x-btn::after{display:none}
+  .hero .ctas .x-btn-line{display:inline-flex;align-self:center;justify-content:center;
+    margin-top:.3rem;padding:.45rem 0;border:0;background:none!important;box-shadow:none!important;
+    color:rgba(255,255,255,.82)!important;font-size:.82rem;text-decoration:underline;text-underline-offset:4px}
+
+  /* credenciais em pílulas, na base da capa */
+  .hero .placar{order:3;margin:.95rem 12px 0;padding:.55rem .65rem .6rem;border-radius:18px;
+    background:color-mix(in srgb,#fff 94%,transparent)!important;
+    -webkit-backdrop-filter:blur(20px) saturate(1.35);backdrop-filter:blur(20px) saturate(1.35);
+    border:1px solid rgba(255,255,255,.9)!important;
+    box-shadow:0 26px 54px -26px rgba(0,0,0,.5),inset 0 1px 0 #fff!important}
+  .hero .placar .ptop{display:flex;align-items:center;gap:.4rem;font-size:.56rem;letter-spacing:.16em;
+    padding-bottom:.4rem;margin-bottom:.42rem}
+  .hero .placar .crono{display:none}
+  .hero .placar .prow{display:inline-flex;align-items:center;gap:.34rem;
+    padding:.3rem .6rem .3rem .32rem;margin:.14rem .18rem 0 0;border-radius:999px;
+    background:#fff;border:1px solid color-mix(in srgb,var(--x-accent) 20%,#fff);vertical-align:middle}
+  .hero .placar .prow b{font-size:.72rem;letter-spacing:.01em;white-space:nowrap}
+  .hero .placar .prow span:last-child{display:none}
+  .hero .placar .ln{width:20px;height:20px;border-radius:50%;flex:0 0 auto}
+  .hero .placar .ln svg{width:12px;height:12px}
+}
+
+@keyframes dsm-cta{
+  0%,100%{box-shadow:0 18px 40px -18px rgba(0,0,0,.55),0 0 0 0 color-mix(in srgb,var(--x-hi) 60%,transparent),inset 0 1px 0 #fff}
+  50%{box-shadow:0 18px 40px -18px rgba(0,0,0,.55),0 0 0 9px color-mix(in srgb,var(--x-hi) 0%,transparent),inset 0 1px 0 #fff}}
+
+/* telefone baixo (iPhone SE e afins): a primeira tela é curta, então fica só
+   nome, especialidade, registro e botão; a frase da médica aparece logo abaixo */
+@media (max-width:900px) and (max-height:720px){
+  .hero .hsub,.hero .ctas .x-btn-line{display:none}
+}
+
+@media (max-width:390px){
+  .hero .htxt{padding:.9rem 16px 0}
+  .hero h1{font-size:2.55rem}
+  .hero .hsub{font-size:.9rem}
+  .hero .placar .prow b{font-size:.68rem}
+}
+@media (min-width:901px){
+  .hero .hcred{display:none}
+}
+
+
 /* Camada do João (camada.py): recado em pílula e bloco "Este site pode ser seu", no visual do Doutor Sob Medida.
    Prefixo jm- para não conflitar com o visual de cada profissional. */
 .jm-pilula{position:fixed;left:16px;bottom:18px;z-index:66;display:inline-flex;align-items:center;gap:.5rem;border:0;border-radius:999px;padding:.62rem 1rem .62rem .8rem;background:#FFFEFB;color:#04232A;font:600 .82rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 10px 30px -10px rgba(4,35,42,.45),0 0 0 1px rgba(4,35,42,.08);cursor:pointer;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .35s,transform .35s}
@@ -830,5 +928,3 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .jm-assina{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin:22px 0 0;font-size:.88rem;color:#5B6B73}
 .jm-assina a{color:#0F3A44;font-weight:600}
 .jm-mono{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#0F3A44;color:#fff;font:600 .8rem Fraunces,Georgia,serif}
-
-/* v 1849 */
