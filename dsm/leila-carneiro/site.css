@@ -550,7 +550,7 @@ h2 em{font-weight:300}
   /* retrato fechado: no desktop ele vira um retrato emoldurado e o cartão de
      credenciais fica embaixo da foto, para não cobrir o rosto */
   .hero .hfoto{width:min(100%,430px);height:auto;justify-self:end;margin-right:clamp(1rem,3vw,3rem);
-    background:transparent;box-shadow:none}
+    background:transparent!important;box-shadow:none!important}
   .hero .hfoto::before{display:none}
   .hero .hfoto figure{height:520px;border-radius:24px;overflow:hidden;box-shadow:0 40px 90px -50px rgba(11,95,102,.55)}
   .hero .hfoto img{object-fit:cover;object-position:50% 0%}
