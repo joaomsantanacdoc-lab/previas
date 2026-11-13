@@ -21,3 +21,10 @@ Correções aplicadas:
 
 Resultado: nome, especialidade, CRM/RQE e botão na primeira tela em 360x740, 390x844 e 430x900;
 sem rolagem lateral; páginas internas com a barra fixa e botão legível; desktop conferido.
+
+## Ajuste 13/11 (pedido do João: "ficou feio aq né?")
+
+O cartão de credenciais cobria a boca dela no desktop. Refiz o herói: o retrato virou uma
+moldura de 430x520 e o cartão passou a ficar **embaixo** da foto, só encostando na borda
+(antes ficava por cima do rosto). Também recortei o retrato um pouco mais acima, para a coroa
+da cabeça aparecer inteira.
