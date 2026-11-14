@@ -977,3 +977,8 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
   .hero .hfoto figure img{height:100%!important;object-position:50% 16%}
   .hero .hfoto figure::after{background:linear-gradient(180deg,transparent 82%,color-mix(in srgb,var(--x-accent) 30%,transparent) 100%)}
 }
+
+/* legenda de foto com contraste melhor e impressão sem blocos invisíveis */
+.x-figure figcaption{color:#6F7B7E}
+@media print{.rv{opacity:1!important;transform:none!important;filter:none!important}
+  .jm-pilula,.jm-recado,.wa,.nav,.drawer{display:none!important}}
