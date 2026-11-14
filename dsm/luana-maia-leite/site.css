@@ -982,3 +982,20 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .x-figure figcaption{color:#6F7B7E}
 @media print{.rv{opacity:1!important;transform:none!important;filter:none!important}
   .jm-pilula,.jm-recado,.wa,.nav,.drawer{display:none!important}}
+
+/* respiro maior e letra um pouco maior: o site estava compacto demais */
+body{font-size:1.0625rem}
+.wrap{width:min(1240px,100% - 48px)}
+.pad{padding:clamp(5.2rem,10vw,8.4rem) 0}
+h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
+.lead{font-size:1.12rem}
+.chead>p{font-size:1.04rem}
+
+/* citação da médica */
+.quote-sec{padding:clamp(3.6rem,7vw,5.6rem) 0;background:
+  linear-gradient(150deg,color-mix(in srgb,var(--x-tint) 62%,#fff) 0%,var(--x-bg) 60%,color-mix(in srgb,var(--x-tint2) 70%,#fff) 100%);
+  border-block:1px solid color-mix(in srgb,var(--x-accent) 10%,transparent)}
+.quote-sec blockquote{margin:.8rem 0 0;font-family:var(--x-head);font-weight:400;font-style:italic;
+  font-size:clamp(1.9rem,3.8vw,3.1rem);line-height:1.16;letter-spacing:-.01em;color:var(--x-ink);max-width:26ch}
+.quote-sec .attr{margin-top:1rem;font-size:.92rem;color:var(--x-muted)}
+@media (min-width:901px){.hero .htxt{padding-left:max(24px,calc((100vw - 1240px)/2))}}
