@@ -1029,6 +1029,7 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .hero .hfoto{background:var(--x-tint)}
 .hero .hfoto img{filter:saturate(1.02) contrast(1.01);object-position:var(--x-hero-pos,50% 20%)}
 .hero .placar .ln svg{fill:none;stroke:currentColor;stroke-width:1.8;width:14px;height:14px}
+.hero .hfoto::after{display:none!important}
 .hero .placar .ptop{color:var(--x-accent)}
 .hero .placar .rec{background:var(--x-accent)}
 .x-tag{letter-spacing:.16em;font-weight:600;color:var(--x-accent)}
