@@ -307,3 +307,47 @@ a.card:hover figure img{transform:scale(1.04)}
   .carrow{display:none}
   .dots{bottom:12px}
 }
+
+/* conta, lista e atalhos */
+.iconbtn{display:inline-flex;align-items:center;gap:.35rem;background:none;border:0;color:var(--ink);font-family:var(--head);font-weight:600;font-size:.8rem;cursor:pointer;padding:.35rem;position:relative}
+.iconbtn svg{width:22px;height:22px}
+.iconbtn .count{position:absolute;top:-4px;right:-6px;background:var(--vermelho);color:#fff;border-radius:999px;min-width:18px;height:18px;display:grid;place-items:center;font-size:.62rem;padding:0 4px}
+.roundrow{background:#fff;border-bottom:1px solid var(--linha);padding:.95rem 0}
+.roundrow .wrap{display:flex;gap:1.5rem;justify-content:center;overflow-x:auto;scrollbar-width:none}
+.roundrow .wrap::-webkit-scrollbar{display:none}
+.round{display:flex;flex-direction:column;align-items:center;gap:.35rem;font-family:var(--head);font-weight:700;font-size:.78rem;color:var(--ink);white-space:nowrap}
+.round .rc{width:64px;height:64px;border-radius:50%;background:var(--creme2);display:grid;place-items:center;font-size:1.65rem;border:1px solid var(--linha);transition:background .2s,border-color .2s,transform .2s}
+.round:hover .rc{background:var(--amarelo);border-color:var(--amarelo);transform:translateY(-2px)}
+.prod .old{font-size:.78rem;color:var(--muted);text-decoration:line-through;margin-top:.2rem}
+.prod .add{margin-top:.55rem;background:var(--laranja);color:#fff;border:0;border-radius:999px;padding:.58rem;font-family:var(--head);font-weight:700;font-size:.8rem;cursor:pointer;transition:background .2s}
+.prod .add:hover{background:var(--laranja-d)}
+.prod .add.on{background:var(--verde)}
+.lista{position:fixed;top:0;right:0;bottom:0;width:min(380px,100%);background:#fff;z-index:90;box-shadow:-24px 0 60px rgba(36,20,13,.25);transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column}
+.lista.open{transform:none}
+.lhead{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.2rem;border-bottom:1px solid var(--linha)}
+.lhead b{font-family:var(--head);font-size:1.2rem}
+.lclose{background:none;border:0;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--ink)}
+.litems{flex:1;overflow:auto;padding:.6rem 1.2rem}
+.vazia{color:var(--muted);font-size:.88rem;padding:1rem 0}
+.li{display:flex;align-items:center;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--linha);font-size:.86rem}
+.li .n{flex:1}.li .p{font-family:var(--head);font-weight:700;white-space:nowrap}
+.li .lrem{background:none;border:0;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:0 .2rem}
+.lfoot{padding:1rem 1.2rem 1.2rem;border-top:1px solid var(--linha)}
+.ltotal{display:flex;justify-content:space-between;align-items:center;font-family:var(--head);font-weight:800;font-size:1.1rem}
+.lnote{font-size:.72rem;color:var(--muted);margin:.35rem 0 .8rem}
+.lfoot .btn{width:100%}
+.lsec{width:100%;background:#fff;border:1px solid var(--linha);border-radius:999px;padding:.6rem;margin-top:.5rem;font-family:var(--head);font-weight:700;font-size:.8rem;cursor:pointer}
+.cookies{position:fixed;left:0;right:0;bottom:0;z-index:85;background:var(--ink);color:#fff;padding:.8rem 1rem;display:flex;gap:1rem;align-items:center;justify-content:center;font-size:.78rem;flex-wrap:wrap}
+.cookies p{max-width:760px;color:#EADBCB}
+.cookies span{text-decoration:underline;cursor:pointer}
+.cookies button{background:var(--verde);color:#fff;border:0;border-radius:999px;padding:.5rem .9rem;font-family:var(--head);font-weight:700;cursor:pointer}
+.cookies.hide{display:none}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(8px);background:var(--ink);color:#fff;padding:.7rem 1rem;border-radius:999px;font-size:.82rem;z-index:95;opacity:0;pointer-events:none;transition:.3s}
+.toast.on{opacity:1;transform:translateX(-50%)}
+@media(max-width:960px){
+  .iconbtn#contaBtn{display:none}
+  .roundrow .wrap{justify-content:flex-start;gap:1rem}
+  .round .rc{width:54px;height:54px;font-size:1.4rem}
+  .round{font-size:.7rem}
+}
+@media(max-width:1200px){.iconbtn#contaBtn span{display:none}.search{max-width:300px}.menu{gap:1rem}}
