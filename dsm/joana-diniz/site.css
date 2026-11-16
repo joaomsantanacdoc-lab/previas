@@ -1007,7 +1007,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-tint:#EEF2EB;--x-tint2:#F8EDE7;
   --x-head:"Sora",system-ui,sans-serif;--x-head-w:500;--x-sans:"Figtree",system-ui,sans-serif;--x-brand-w:600;
   --x-r:20px;--x-rb:999px;--x-navh:76px;
-  --x-phero-bg:#1F3327;--x-phero-ink:#FFFDF9;--x-phero-ink2:#CBD8CE;--x-phero-hi:#B5795F;
+  --x-phero-bg:#1F3327;--x-phero-ink:#FFFDF9;--x-phero-ink2:#CBD8CE;--x-phero-hi:#E9C6B4;--x-on-hi:#1F3327;
   --x-grad:linear-gradient(135deg,#B5795F 0%,#4E6B57 60%,#38503F 100%);
   --x-navy2:#1F3327;--x-hero-pos:50% 10%;--x-mob-pos:50% 22%;--x-grid:rgba(78,107,87,.055)}
 html{background:var(--x-bg)}
@@ -1037,16 +1037,16 @@ h2 em,h1 em{font-style:normal;color:var(--x-accent)}
 .x-door{border-top:4px solid var(--x-accent)}
 .x-door small{color:var(--x-accent)}
 .escuro{background:linear-gradient(160deg,color-mix(in srgb,var(--x-dark) 86%,#fff) 0%,var(--x-dark) 58%,color-mix(in srgb,var(--x-dark) 84%,#000) 100%)}
-.escuro .x-tag,.escuro h2 em{color:var(--x-hi)}
+.escuro .x-tag,.escuro h2 em,.x-final .x-tag{color:var(--x-phero-hi)}
 .escuro .x-tile{background:color-mix(in srgb,#fff 7%,transparent)!important;border-color:color-mix(in srgb,var(--x-hi) 26%,transparent)!important}
 .escuro .x-tile h3{color:#FFFDF9}
 .escuro .x-tile p{color:var(--x-on-dark2)}
-.fase .fn{background:var(--x-hi);color:var(--x-dark)}
+.fase .fn{background:var(--x-hi);color:var(--x-on-hi)}
 .fase .ico{color:var(--x-hi)}
 .fase{border-color:color-mix(in srgb,var(--x-hi) 26%,transparent)}
 .ritmo .sos{background:var(--x-tint2)}
 .x-final{background:linear-gradient(150deg,var(--x-dark) 0%,color-mix(in srgb,var(--x-dark) 72%,#000) 100%)}
-.x-final .btn.x-btn{background:var(--x-hi)!important;color:var(--x-dark)!important}
+.x-final .btn.x-btn{background:var(--x-hi)!important;color:var(--x-on-hi)!important}
 .ft{background:var(--x-dark)}
 .ft .fbrand b{color:#FFFDF9} .ft .fbrand small{color:var(--x-hi)}
 .x-phero{background:linear-gradient(150deg,color-mix(in srgb,var(--x-accent) 88%,#000) 0%,var(--x-dark) 100%)}
@@ -1085,6 +1085,15 @@ h2 em,h1 em{font-style:normal;color:var(--x-accent)}
   .hero .placar{margin:.8rem .8rem 0}
 }
 .x-phero .x-btn{background:#FFFFFF!important;color:#38503F!important}
+@media (max-width:900px) and (max-height:700px){
+  .hero .hfoto figure{height:clamp(200px,32vh,260px)!important}
+  .hero h1{font-size:2.3rem!important;margin:.5rem 0 .4rem}
+  .hero .htxt{padding-top:.6rem!important}
+  .hero .hfoto figure img{object-position:50% 30%!important}
+  .hero .hcred{margin:.05rem 0 .55rem}
+  .hero .ctas{margin-top:.7rem}
+  .hero .lema{font-size:.62rem}
+}
 @media (max-width:640px){
   .hero .lema{font-size:.66rem;letter-spacing:.09em}
   .hero .placar .ptop{font-size:.6rem}
