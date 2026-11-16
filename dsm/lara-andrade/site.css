@@ -1009,7 +1009,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-r:18px;--x-rb:999px;--x-navh:76px;
   --x-phero-bg:#2A1E17;--x-phero-ink:#FFFDF9;--x-phero-ink2:#DCC9B4;--x-phero-hi:#F3EAB0;--x-on-hi:#2A1E17;
   --x-grad:linear-gradient(135deg,#D9A94E 0%,#7A4E33 60%,#5C3722 100%);
-  --x-navy2:#2A1E17;--x-hero-pos:50% 18%;--x-mob-pos:50% 10%;--x-grid:rgba(122,78,51,.055)}
+  --x-navy2:#2A1E17;--x-hero-pos:50% 18%;--x-mob-pos:50% 10%;--x-mob-short-pos:50% 28%;--x-grid:rgba(122,78,51,.055)}
 html{background:var(--x-bg)}
 body{background:var(--x-bg);font-family:var(--x-sans);font-size:1.03rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand b,.ft .fbrand b,.x-door h3,.x-post h3,.x-tile h3,.local b,.pq b,.fase b,.x-pcard b{font-family:var(--x-head);font-weight:var(--x-head-w);letter-spacing:-.008em}
@@ -1089,7 +1089,7 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   .hero .hfoto figure{height:clamp(200px,32vh,260px)!important}
   .hero h1{font-size:2.3rem!important;margin:.5rem 0 .4rem}
   .hero .htxt{padding-top:.6rem!important}
-  .hero .hfoto figure img{object-position:50% 30%!important}
+  .hero .hfoto figure img{object-position:var(--x-mob-short-pos,50% 30%)!important}
   .hero .hcred{margin:.05rem 0 .55rem}
   .hero .ctas{margin-top:.7rem}
   .hero .lema{font-size:.62rem}
