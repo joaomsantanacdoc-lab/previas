@@ -282,3 +282,28 @@ a.card:hover figure img{transform:scale(1.04)}
 .oferta-strip .btn{margin-left:auto;padding:.68rem 1rem;font-size:.79rem}
 @media(max-width:960px){.prodgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.prodgrid{grid-template-columns:1fr 1fr;gap:.65rem}.prod{padding:.6rem}.prod h3{font-size:.86rem}.price{font-size:1.45rem}.pbtn{font-size:.7rem}.oferta-strip div{border:0;padding:0}.oferta-strip .btn{margin-left:0;width:100%}}
+
+/* carrossel */
+.carousel{position:relative;background:var(--ink);overflow:hidden}
+.slide{position:absolute;inset:0;display:flex;align-items:center;opacity:0;transition:opacity .7s ease;pointer-events:none;background:linear-gradient(90deg,rgba(36,20,13,.95) 0%,rgba(36,20,13,.72) 44%,rgba(36,20,13,.22) 100%),var(--img) center/cover}
+.slide.on{position:relative;opacity:1;pointer-events:auto}
+.slide .wrap{padding:clamp(3rem,7vw,5.5rem) 0;min-height:520px;display:flex;flex-direction:column;justify-content:center}
+.slide h1,.slide h2{color:#fff;font-size:clamp(2.6rem,5vw,4.4rem);max-width:15ch;font-weight:900;letter-spacing:-.045em;line-height:1.02}
+.slide h1 em,.slide h2 em{color:var(--amarelo);font-style:normal}
+.slide p{color:#F3E4D7;max-width:54ch;margin-top:.9rem}
+.slide .ctas{margin-top:1.5rem}
+.kick{font-family:var(--head);font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amarelo)}
+.carrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:1.35rem;cursor:pointer;backdrop-filter:blur(8px)}
+.carrow:hover{background:rgba(255,255,255,.28)}
+.carrow.prev{left:14px}.carrow.next{right:14px}
+.dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;z-index:5}
+.dots button{width:26px;height:4px;border:0;border-radius:2px;background:rgba(255,255,255,.42);cursor:pointer;padding:0}
+.dots button.on{background:var(--amarelo)}
+.nores{background:#fff;border:1px dashed var(--linha);border-radius:14px;padding:1rem 1.2rem;color:var(--ink2);margin-bottom:1rem}
+@media(max-width:760px){
+  .slide .wrap{min-height:430px;padding:2.2rem 0}
+  .slide h1,.slide h2{font-size:2.15rem;max-width:14ch}
+  .slide p{font-size:.9rem}
+  .carrow{display:none}
+  .dots{bottom:12px}
+}
