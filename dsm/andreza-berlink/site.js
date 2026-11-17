@@ -138,3 +138,20 @@
     }, { threshold: .2 }).observe(oferta);
   }
 })();
+
+/* DSM hero overlay guard 20261117: a camada flutuante não cobre a capa móvel. */
+(() => {
+  const hero = document.querySelector('.hero');
+  if (!hero || !document.querySelector('.jm-pilula')) return;
+  const sync = () => {
+    const r = hero.getBoundingClientRect();
+    document.documentElement.classList.toggle('jm-no-topo', r.bottom > 0 && r.top < innerHeight);
+  };
+  sync();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(sync, {threshold:0}).observe(hero);
+  } else {
+    addEventListener('scroll', sync, {passive:true});
+  }
+  addEventListener('resize', sync, {passive:true});
+})();
