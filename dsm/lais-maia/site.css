@@ -1101,4 +1101,17 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   .x-door h3{font-size:1.12rem}
 }
 
+.batidas{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.4rem}
+.batidas li{background:var(--x-surface);border:1px solid var(--x-line);border-radius:var(--x-r);padding:1.4rem 1.3rem;box-shadow:0 22px 50px -42px rgba(0,0,0,.55)}
+.batidas .bt{display:block;width:44px;height:4px;border-radius:2px;background:var(--x-accent);opacity:.55;margin-bottom:1rem}
+.batidas b{display:block;font-family:var(--x-head);font-weight:700;font-size:1.15rem;color:var(--x-ink)}
+.batidas p{margin-top:.4rem;font-size:.94rem;color:var(--x-ink2);line-height:1.55}
+.acts{margin-top:.4rem}
+@media(max-width:1080px){.batidas{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.batidas{grid-template-columns:1fr}}
+@media (min-width:641px) and (max-width:900px){
+  .hero .hfoto figure{max-width:none;width:100%;aspect-ratio:4/3.2;border-radius:0;margin:0}
+  .hero .hfoto figure img{height:100%!important;object-position:50% 38%}
+}
+
 :root{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
