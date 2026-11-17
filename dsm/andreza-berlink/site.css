@@ -1141,6 +1141,13 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
 }
 
+/* DSM hero fit 20261117: foto inteira, sem ampliação, teto de 70% da tela. */
+.hero .hfoto img{object-fit:scale-down;object-position:50% 50%}
+@media(min-width:901px){
+ .hero .hfoto{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
+ .hero .hfoto figure{max-height:70vh;max-height:70svh}
+}
+
 }
 @scope (html[data-dsm-page="silvania-brunelly"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -2282,6 +2289,13 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .crednote{color:var(--x-ink);background:var(--x-surface);font-size:.75rem;line-height:1.45;font-weight:500;border-radius:6px;padding:.2rem .35rem}
 @media(max-width:640px){
   :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
+}
+
+/* DSM hero fit 20261117: foto inteira, sem ampliação, teto de 70% da tela. */
+.hero .hfoto img{object-fit:scale-down;object-position:50% 50%}
+@media(min-width:901px){
+ .hero .hfoto{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
+ .hero .hfoto figure{max-height:70vh;max-height:70svh}
 }
 
 }
@@ -3427,6 +3441,13 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
 }
 
+/* DSM hero fit 20261117: foto inteira, sem ampliação, teto de 70% da tela. */
+.hero .hfoto img{object-fit:scale-down;object-position:50% 50%}
+@media(min-width:901px){
+ .hero .hfoto{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
+ .hero .hfoto figure{max-height:70vh;max-height:70svh}
+}
+
 }
 @scope (html[data-dsm-page="andreza-berlink"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -4568,6 +4589,13 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .crednote{color:var(--x-ink);background:var(--x-surface);font-size:.75rem;line-height:1.45;font-weight:500;border-radius:6px;padding:.2rem .35rem}
 @media(max-width:640px){
   :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
+}
+
+/* DSM hero fit 20261117: foto inteira, sem ampliação, teto de 70% da tela. */
+.hero .hfoto img{object-fit:scale-down;object-position:50% 50%}
+@media(min-width:901px){
+ .hero .hfoto{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
+ .hero .hfoto figure{max-height:70vh;max-height:70svh}
 }
 
 }
@@ -5713,6 +5741,13 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
 }
 
+/* DSM hero fit 20261117: foto inteira, sem ampliação, teto de 70% da tela. */
+.hero .hfoto img{object-fit:scale-down;object-position:50% 50%}
+@media(min-width:901px){
+ .hero .hfoto{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
+ .hero .hfoto figure{max-height:70vh;max-height:70svh}
+}
+
 }
 @scope (html[data-dsm-page="leo-santos"]) {
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -5950,6 +5985,13 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
 .wa span{display:none}
 .wa:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 
+/* DSM hero fit 20261117: foto inteira, sem ampliação, teto de 70% da tela. */
+.hero .photo img{object-fit:scale-down;object-position:50% 50%}
+@media(min-width:901px){
+ .hero .photo{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
+ .hero .photo figure{max-height:70vh;max-height:70svh}
+}
+
 }
 @scope (html[data-dsm-page="manauara-estetica"]) {
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -6186,5 +6228,12 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
 .wa svg{display:block;width:26px;height:26px;flex:none}
 .wa span{display:none}
 .wa:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+
+/* DSM hero fit 20261117: foto inteira, sem ampliação, teto de 70% da tela. */
+.hero .photo img{object-fit:scale-down;object-position:50% 50%}
+@media(min-width:901px){
+ .hero .photo{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
+ .hero .photo figure{max-height:70vh;max-height:70svh}
+}
 
 }
