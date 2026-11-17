@@ -1009,7 +1009,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-r:20px;--x-rb:999px;--x-navh:76px;
   --x-phero-bg:#172A44;--x-phero-ink:#FFFDF9;--x-phero-ink2:#DCCFB4;--x-phero-hi:#D9B24C;--x-on-hi:#FFFFFF;
   --x-grad:linear-gradient(135deg,#D9B24C 0%,#1E3A5F 60%,#142944 100%);
-  --x-navy2:#172A44;--x-hero-pos:50% 18%;--x-mob-pos:50% 8%;--x-mob-short-pos:50% 30%;--x-grid:rgba(30,58,95,.05)}
+  --x-navy2:#172A44;--x-hero-pos:50% 18%;--x-mob-pos:50% 18%;--x-mob-short-pos:50% 30%;--x-grid:rgba(30,58,95,.05)}
 html{background:var(--x-bg)}
 body{background:var(--x-bg);font-family:var(--x-sans);font-size:1.03rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand b,.ft .fbrand b,.x-door h3,.x-post h3,.x-tile h3,.local b,.pq b,.fase b,.x-pcard b{font-family:var(--x-head);font-weight:var(--x-head-w);letter-spacing:-.01em}
