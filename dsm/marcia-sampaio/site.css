@@ -5944,6 +5944,12 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
 .mc-body .btn{margin-top:.8rem;width:100%;justify-content:center;padding:.75rem 1rem;font-size:.85rem}
 @media(max-width:860px){.mapcard{min-height:460px}}
 
+/* DSM bounded WhatsApp 20261117: atalho flutuante não ocupa o rodapé. */
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35)}
+.wa svg{display:block;width:26px;height:26px;flex:none}
+.wa span{display:none}
+.wa:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+
 }
 @scope (html[data-dsm-page="manauara-estetica"]) {
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -6174,5 +6180,11 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
 .mc-hours b{font-family:var(--sans);font-size:.78rem;color:var(--ink);margin:0}
 .mc-body .btn{margin-top:.8rem;width:100%;justify-content:center;padding:.75rem 1rem;font-size:.85rem}
 @media(max-width:860px){.mapcard{min-height:460px}}
+
+/* DSM bounded WhatsApp 20261117: atalho flutuante não ocupa o rodapé. */
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35)}
+.wa svg{display:block;width:26px;height:26px;flex:none}
+.wa span{display:none}
+.wa:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 
 }
