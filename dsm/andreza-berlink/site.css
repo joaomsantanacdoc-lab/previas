@@ -1,7 +1,7 @@
 /* DSM: lote único; temas preservados por página. */
 @scope (html[data-dsm-page="lais-maia"]) {
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
-.js .rv.in{opacity:1;transform:none}
+:scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
+:scope.js .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35);transition:transform .35s,opacity .35s}
 .wa:hover{transform:scale(1.06)}
@@ -18,12 +18,12 @@
 .hello-pill.show{display:inline-flex}
 .hello-pill i{width:8px;height:8px;border-radius:50%;background:#25D366}
 @media (max-width:640px){.hello-pill{left:12px;bottom:18px;font-size:.76rem;max-width:calc(100vw - 100px)}.hello{left:12px;right:84px;bottom:14px;width:auto;font-size:.8rem;padding:.8rem .9rem}.hello small{display:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}:scope.js .rv{opacity:1;transform:none}}
 span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
 
 /* ===== estrutura comum (tokens definidos no skin de cada médico) ===== */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+:scope{scroll-behavior:smooth}
 body{background:var(--x-bg);color:var(--x-ink);font-family:var(--x-sans);line-height:1.66;overflow-x:hidden;font-variant-numeric:lining-nums}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -245,7 +245,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 
 
 /* Dra. Giselle Pensado · pediatria e neurodesenvolvimento em Santana, São Paulo. Creme (#F8F5EC), verde profundo (#123528) e dourado (#C6A75E) da Clínica Luminã. Tema: constelação de nós do desenvolvimento. Fraunces + Inter. */
-:root{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
+:scope{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
 
 body{font-size:1.04rem}
 h1,h2,h3{letter-spacing:-.01em}
@@ -694,8 +694,8 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .brand .mark{box-shadow:0 8px 20px -12px color-mix(in srgb,var(--x-accent) 90%,transparent)}
 
 /* 10. entrada dos blocos */
-.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
-.js .rv:not(.in){filter:blur(7px)}
+:scope.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
+:scope.js .rv:not(.in){filter:blur(7px)}
 
 /* 11. celular: texto primeiro (nome, CRM, botão) e monitor como faixa sob a foto */
 @media (max-width:900px){
@@ -715,7 +715,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 /* 12. menos movimento, mesma beleza */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
-  .js .rv:not(.in){filter:none}
+  :scope.js .rv:not(.in){filter:none}
 }
 
 .x-final .btn.x-btn,.x-final .x-btn,.x-final .btn{
@@ -786,7 +786,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
   .hero::before,.hero .hgrid::before,.hero .hfoto::before{animation:none !important}
 }
 
-.js .rv:not(.in){filter:none !important}
+:scope.js .rv:not(.in){filter:none !important}
 @media (max-width:600px){
   .hero .lema{white-space:nowrap;font-size:.68rem;letter-spacing:.1em;padding:.45rem .8rem .45rem .5rem}
   .hero .lema::after{display:none}
@@ -1004,7 +1004,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
 
 
 /* ================= tema lais-maia ================= */
-:root{--x-bg:#FBF7F2;--x-surface:#FFFFFF;--x-ink:#3A2A24;--x-ink2:#6B564C;--x-muted:#9A867A;--x-line:rgba(122,78,51,.14);
+:scope{--x-bg:#FBF7F2;--x-surface:#FFFFFF;--x-ink:#3A2A24;--x-ink2:#6B564C;--x-muted:#9A867A;--x-line:rgba(122,78,51,.14);
   --x-dark:#2A1A16;--x-on-dark:#FFF9F4;--x-on-dark2:#E8D6C9;--x-hi:#C98C82;--x-accent:#8A5A44;--x-accent-d:#6B422F;
   --x-tint:#F5E8E1;--x-tint2:#FBEFEA;
   --x-head:"Fraunces",Georgia,serif;--x-head-w:500;--x-sans:"Inter",system-ui,sans-serif;--x-brand-w:600;
@@ -1012,7 +1012,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-phero-bg:#2A1A16;--x-phero-ink:#FFFDF9;--x-phero-ink2:#E8D6C9;--x-phero-hi:#C98C82;--x-on-hi:#FFFFFF;
   --x-grad:linear-gradient(135deg,#C98C82 0%,#8A5A44 60%,#6B422F 100%);
   --x-navy2:#2A1A16;--x-hero-pos:50% 12%;--x-mob-pos:50% 8%;--x-mob-short-pos:50% 30%;--x-grid:rgba(138,90,68,.05)}
-html{background:var(--x-bg)}
+:scope{background:var(--x-bg)}
 body{background:var(--x-bg);font-family:var(--x-sans);font-size:1.03rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand b,.ft .fbrand b,.x-door h3,.x-post h3,.x-tile h3,.local b,.pq b,.fase b,.x-pcard b{font-family:var(--x-head);font-weight:var(--x-head-w);letter-spacing:-.01em}
 h2{font-weight:var(--x-head-w)}
@@ -1133,12 +1133,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   .hero .hfoto figure img{height:100%!important;object-position:50% 38%}
 }
 
-:root{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
+:scope{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
 
 }
 @scope (html[data-dsm-page="silvania-brunelly"]) {
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
-.js .rv.in{opacity:1;transform:none}
+:scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
+:scope.js .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35);transition:transform .35s,opacity .35s}
 .wa:hover{transform:scale(1.06)}
@@ -1155,12 +1155,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .hello-pill.show{display:inline-flex}
 .hello-pill i{width:8px;height:8px;border-radius:50%;background:#25D366}
 @media (max-width:640px){.hello-pill{left:12px;bottom:18px;font-size:.76rem;max-width:calc(100vw - 100px)}.hello{left:12px;right:84px;bottom:14px;width:auto;font-size:.8rem;padding:.8rem .9rem}.hello small{display:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}:scope.js .rv{opacity:1;transform:none}}
 span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
 
 /* ===== estrutura comum (tokens definidos no skin de cada médico) ===== */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+:scope{scroll-behavior:smooth}
 body{background:var(--x-bg);color:var(--x-ink);font-family:var(--x-sans);line-height:1.66;overflow-x:hidden;font-variant-numeric:lining-nums}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -1382,7 +1382,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 
 
 /* Dra. Giselle Pensado · pediatria e neurodesenvolvimento em Santana, São Paulo. Creme (#F8F5EC), verde profundo (#123528) e dourado (#C6A75E) da Clínica Luminã. Tema: constelação de nós do desenvolvimento. Fraunces + Inter. */
-:root{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
+:scope{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
 
 body{font-size:1.04rem}
 h1,h2,h3{letter-spacing:-.01em}
@@ -1831,8 +1831,8 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .brand .mark{box-shadow:0 8px 20px -12px color-mix(in srgb,var(--x-accent) 90%,transparent)}
 
 /* 10. entrada dos blocos */
-.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
-.js .rv:not(.in){filter:blur(7px)}
+:scope.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
+:scope.js .rv:not(.in){filter:blur(7px)}
 
 /* 11. celular: texto primeiro (nome, CRM, botão) e monitor como faixa sob a foto */
 @media (max-width:900px){
@@ -1852,7 +1852,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 /* 12. menos movimento, mesma beleza */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
-  .js .rv:not(.in){filter:none}
+  :scope.js .rv:not(.in){filter:none}
 }
 
 .x-final .btn.x-btn,.x-final .x-btn,.x-final .btn{
@@ -1923,7 +1923,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
   .hero::before,.hero .hgrid::before,.hero .hfoto::before{animation:none !important}
 }
 
-.js .rv:not(.in){filter:none !important}
+:scope.js .rv:not(.in){filter:none !important}
 @media (max-width:600px){
   .hero .lema{white-space:nowrap;font-size:.68rem;letter-spacing:.1em;padding:.45rem .8rem .45rem .5rem}
   .hero .lema::after{display:none}
@@ -2141,7 +2141,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
 
 
 /* ================= tema silvania-brunelly ================= */
-:root{--x-bg:#FAF5EE;--x-surface:#FFFFFF;--x-ink:#3A2A22;--x-ink2:#6B5548;--x-muted:#978273;--x-line:rgba(154,74,56,.15);
+:scope{--x-bg:#FAF5EE;--x-surface:#FFFFFF;--x-ink:#3A2A22;--x-ink2:#6B5548;--x-muted:#978273;--x-line:rgba(154,74,56,.15);
   --x-dark:#2A1C17;--x-on-dark:#FFF9F3;--x-on-dark2:#E8D3C6;--x-hi:#B96A50;--x-accent:#9A4A38;--x-accent-d:#743225;
   --x-tint:#F5E5DB;--x-tint2:#F0E8D8;
   --x-head:"Fraunces",Georgia,serif;--x-head-w:500;--x-sans:"Inter",system-ui,sans-serif;--x-brand-w:600;
@@ -2149,7 +2149,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-phero-bg:#2A1C17;--x-phero-ink:#FFFDF9;--x-phero-ink2:#E8D3C6;--x-phero-hi:#B96A50;--x-on-hi:#FFFFFF;
   --x-grad:linear-gradient(135deg,#B96A50 0%,#9A4A38 60%,#743225 100%);
   --x-navy2:#2A1C17;--x-hero-pos:50% 5%;--x-mob-pos:50% 8%;--x-mob-short-pos:50% 30%;--x-grid:rgba(154,74,56,.05)}
-html{background:var(--x-bg)}
+:scope{background:var(--x-bg)}
 body{background:var(--x-bg);font-family:var(--x-sans);font-size:1.03rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand b,.ft .fbrand b,.x-door h3,.x-post h3,.x-tile h3,.local b,.pq b,.fase b,.x-pcard b{font-family:var(--x-head);font-weight:var(--x-head-w);letter-spacing:-.01em}
 h2{font-weight:var(--x-head-w)}
@@ -2270,12 +2270,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   .hero .hfoto figure img{height:100%!important;object-position:50% 38%}
 }
 
-:root{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
+:scope{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
 
 }
 @scope (html[data-dsm-page="vanessa-pontes"]) {
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
-.js .rv.in{opacity:1;transform:none}
+:scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
+:scope.js .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35);transition:transform .35s,opacity .35s}
 .wa:hover{transform:scale(1.06)}
@@ -2292,12 +2292,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .hello-pill.show{display:inline-flex}
 .hello-pill i{width:8px;height:8px;border-radius:50%;background:#25D366}
 @media (max-width:640px){.hello-pill{left:12px;bottom:18px;font-size:.76rem;max-width:calc(100vw - 100px)}.hello{left:12px;right:84px;bottom:14px;width:auto;font-size:.8rem;padding:.8rem .9rem}.hello small{display:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}:scope.js .rv{opacity:1;transform:none}}
 span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
 
 /* ===== estrutura comum (tokens definidos no skin de cada médico) ===== */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+:scope{scroll-behavior:smooth}
 body{background:var(--x-bg);color:var(--x-ink);font-family:var(--x-sans);line-height:1.66;overflow-x:hidden;font-variant-numeric:lining-nums}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -2519,7 +2519,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 
 
 /* Dra. Giselle Pensado · pediatria e neurodesenvolvimento em Santana, São Paulo. Creme (#F8F5EC), verde profundo (#123528) e dourado (#C6A75E) da Clínica Luminã. Tema: constelação de nós do desenvolvimento. Fraunces + Inter. */
-:root{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
+:scope{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
 
 body{font-size:1.04rem}
 h1,h2,h3{letter-spacing:-.01em}
@@ -2968,8 +2968,8 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .brand .mark{box-shadow:0 8px 20px -12px color-mix(in srgb,var(--x-accent) 90%,transparent)}
 
 /* 10. entrada dos blocos */
-.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
-.js .rv:not(.in){filter:blur(7px)}
+:scope.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
+:scope.js .rv:not(.in){filter:blur(7px)}
 
 /* 11. celular: texto primeiro (nome, CRM, botão) e monitor como faixa sob a foto */
 @media (max-width:900px){
@@ -2989,7 +2989,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 /* 12. menos movimento, mesma beleza */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
-  .js .rv:not(.in){filter:none}
+  :scope.js .rv:not(.in){filter:none}
 }
 
 .x-final .btn.x-btn,.x-final .x-btn,.x-final .btn{
@@ -3060,7 +3060,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
   .hero::before,.hero .hgrid::before,.hero .hfoto::before{animation:none !important}
 }
 
-.js .rv:not(.in){filter:none !important}
+:scope.js .rv:not(.in){filter:none !important}
 @media (max-width:600px){
   .hero .lema{white-space:nowrap;font-size:.68rem;letter-spacing:.1em;padding:.45rem .8rem .45rem .5rem}
   .hero .lema::after{display:none}
@@ -3278,7 +3278,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
 
 
 /* ================= tema vanessa-pontes ================= */
-:root{--x-bg:#F7FAF6;--x-surface:#FFFFFF;--x-ink:#1E3A36;--x-ink2:#4E625B;--x-muted:#7E9088;--x-line:rgba(30,91,90,.14);
+:scope{--x-bg:#F7FAF6;--x-surface:#FFFFFF;--x-ink:#1E3A36;--x-ink2:#4E625B;--x-muted:#7E9088;--x-line:rgba(30,91,90,.14);
   --x-dark:#143B3A;--x-on-dark:#F6FBF7;--x-on-dark2:#CBE0D4;--x-hi:#9DBBA8;--x-accent:#1E5B5A;--x-accent-d:#144544;
   --x-tint:#E8F1EA;--x-tint2:#F7E7D8;
   --x-head:"Sora",system-ui,sans-serif;--x-head-w:500;--x-sans:"Inter",system-ui,sans-serif;--x-brand-w:600;
@@ -3286,7 +3286,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-phero-bg:#143B3A;--x-phero-ink:#FFFDF9;--x-phero-ink2:#CBE0D4;--x-phero-hi:#9DBBA8;--x-on-hi:#FFFFFF;
   --x-grad:linear-gradient(135deg,#9DBBA8 0%,#1E5B5A 60%,#144544 100%);
   --x-navy2:#143B3A;--x-hero-pos:50% 14%;--x-mob-pos:50% 8%;--x-mob-short-pos:50% 30%;--x-grid:rgba(30,91,90,.05)}
-html{background:var(--x-bg)}
+:scope{background:var(--x-bg)}
 body{background:var(--x-bg);font-family:var(--x-sans);font-size:1.03rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand b,.ft .fbrand b,.x-door h3,.x-post h3,.x-tile h3,.local b,.pq b,.fase b,.x-pcard b{font-family:var(--x-head);font-weight:var(--x-head-w);letter-spacing:-.01em}
 h2{font-weight:var(--x-head-w)}
@@ -3407,12 +3407,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   .hero .hfoto figure img{height:100%!important;object-position:50% 38%}
 }
 
-:root{--x-head:"Sora",system-ui,sans-serif;--x-sans:"Inter",system-ui,sans-serif}
+:scope{--x-head:"Sora",system-ui,sans-serif;--x-sans:"Inter",system-ui,sans-serif}
 
 }
 @scope (html[data-dsm-page="andreza-berlink"]) {
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
-.js .rv.in{opacity:1;transform:none}
+:scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
+:scope.js .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35);transition:transform .35s,opacity .35s}
 .wa:hover{transform:scale(1.06)}
@@ -3429,12 +3429,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .hello-pill.show{display:inline-flex}
 .hello-pill i{width:8px;height:8px;border-radius:50%;background:#25D366}
 @media (max-width:640px){.hello-pill{left:12px;bottom:18px;font-size:.76rem;max-width:calc(100vw - 100px)}.hello{left:12px;right:84px;bottom:14px;width:auto;font-size:.8rem;padding:.8rem .9rem}.hello small{display:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}:scope.js .rv{opacity:1;transform:none}}
 span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
 
 /* ===== estrutura comum (tokens definidos no skin de cada médico) ===== */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+:scope{scroll-behavior:smooth}
 body{background:var(--x-bg);color:var(--x-ink);font-family:var(--x-sans);line-height:1.66;overflow-x:hidden;font-variant-numeric:lining-nums}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -3656,7 +3656,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 
 
 /* Dra. Giselle Pensado · pediatria e neurodesenvolvimento em Santana, São Paulo. Creme (#F8F5EC), verde profundo (#123528) e dourado (#C6A75E) da Clínica Luminã. Tema: constelação de nós do desenvolvimento. Fraunces + Inter. */
-:root{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
+:scope{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
 
 body{font-size:1.04rem}
 h1,h2,h3{letter-spacing:-.01em}
@@ -4105,8 +4105,8 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .brand .mark{box-shadow:0 8px 20px -12px color-mix(in srgb,var(--x-accent) 90%,transparent)}
 
 /* 10. entrada dos blocos */
-.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
-.js .rv:not(.in){filter:blur(7px)}
+:scope.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
+:scope.js .rv:not(.in){filter:blur(7px)}
 
 /* 11. celular: texto primeiro (nome, CRM, botão) e monitor como faixa sob a foto */
 @media (max-width:900px){
@@ -4126,7 +4126,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 /* 12. menos movimento, mesma beleza */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
-  .js .rv:not(.in){filter:none}
+  :scope.js .rv:not(.in){filter:none}
 }
 
 .x-final .btn.x-btn,.x-final .x-btn,.x-final .btn{
@@ -4197,7 +4197,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
   .hero::before,.hero .hgrid::before,.hero .hfoto::before{animation:none !important}
 }
 
-.js .rv:not(.in){filter:none !important}
+:scope.js .rv:not(.in){filter:none !important}
 @media (max-width:600px){
   .hero .lema{white-space:nowrap;font-size:.68rem;letter-spacing:.1em;padding:.45rem .8rem .45rem .5rem}
   .hero .lema::after{display:none}
@@ -4415,7 +4415,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
 
 
 /* ================= tema andreza-berlink ================= */
-:root{--x-bg:#FBF7F4;--x-surface:#FFFFFF;--x-ink:#3A2438;--x-ink2:#6B5068;--x-muted:#9A8298;--x-line:rgba(122,92,158,.14);
+:scope{--x-bg:#FBF7F4;--x-surface:#FFFFFF;--x-ink:#3A2438;--x-ink2:#6B5068;--x-muted:#9A8298;--x-line:rgba(122,92,158,.14);
   --x-dark:#2E1F33;--x-on-dark:#FFF8FC;--x-on-dark2:#E7D2E2;--x-hi:#C9899C;--x-accent:#7A5C9E;--x-accent-d:#5B427A;
   --x-tint:#F1E8F5;--x-tint2:#F9E9EF;
   --x-head:"Fraunces",Georgia,serif;--x-head-w:500;--x-sans:"Inter",system-ui,sans-serif;--x-brand-w:600;
@@ -4423,7 +4423,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-phero-bg:#2E1F33;--x-phero-ink:#FFFDF9;--x-phero-ink2:#E7D2E2;--x-phero-hi:#C9899C;--x-on-hi:#FFFFFF;
   --x-grad:linear-gradient(135deg,#C9899C 0%,#7A5C9E 60%,#5B427A 100%);
   --x-navy2:#2E1F33;--x-hero-pos:50% 18%;--x-mob-pos:50% 8%;--x-mob-short-pos:50% 30%;--x-grid:rgba(122,92,158,.05)}
-html{background:var(--x-bg)}
+:scope{background:var(--x-bg)}
 body{background:var(--x-bg);font-family:var(--x-sans);font-size:1.03rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand b,.ft .fbrand b,.x-door h3,.x-post h3,.x-tile h3,.local b,.pq b,.fase b,.x-pcard b{font-family:var(--x-head);font-weight:var(--x-head-w);letter-spacing:-.01em}
 h2{font-weight:var(--x-head-w)}
@@ -4544,12 +4544,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   .hero .hfoto figure img{height:100%!important;object-position:50% 38%}
 }
 
-:root{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
+:scope{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
 
 }
 @scope (html[data-dsm-page="marcia-sampaio"]) {
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
-.js .rv.in{opacity:1;transform:none}
+:scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
+:scope.js .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.35);transition:transform .35s,opacity .35s}
 .wa:hover{transform:scale(1.06)}
@@ -4566,12 +4566,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .hello-pill.show{display:inline-flex}
 .hello-pill i{width:8px;height:8px;border-radius:50%;background:#25D366}
 @media (max-width:640px){.hello-pill{left:12px;bottom:18px;font-size:.76rem;max-width:calc(100vw - 100px)}.hello{left:12px;right:84px;bottom:14px;width:auto;font-size:.8rem;padding:.8rem .9rem}.hello small{display:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}:scope.js .rv{opacity:1;transform:none}}
 span.stars{color:#C9962E!important;display:inline!important;margin:0!important}
 
 /* ===== estrutura comum (tokens definidos no skin de cada médico) ===== */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+:scope{scroll-behavior:smooth}
 body{background:var(--x-bg);color:var(--x-ink);font-family:var(--x-sans);line-height:1.66;overflow-x:hidden;font-variant-numeric:lining-nums}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -4793,7 +4793,7 @@ a.x-pcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(0,0
 
 
 /* Dra. Giselle Pensado · pediatria e neurodesenvolvimento em Santana, São Paulo. Creme (#F8F5EC), verde profundo (#123528) e dourado (#C6A75E) da Clínica Luminã. Tema: constelação de nós do desenvolvimento. Fraunces + Inter. */
-:root{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
+:scope{--x-bg:#FBF6EF;--x-surface:#FFFFFF;--x-ink:#152B33;--x-ink2:#4C6066;--x-muted:#889497;--x-line:rgba(21,43,51,.13);--x-dark:#0F2732;--x-on-dark:#F8EFE6;--x-on-dark2:#C6D2D3;--x-hi:#C99A8E;--x-accent:#8C2436;--x-accent-d:#6C1828;--x-tint:#F7E7E1;--x-tint2:#FBF1EC;--x-head:"Bodoni Moda",Georgia,serif;--x-head-w:400;--x-sans:"Inter",system-ui,sans-serif;--x-r:18px;--x-rb:999px;--x-navh:76px;--x-brand-w:500;--x-phero-bg:#0F2732;--x-phero-ink:#F8EFE6;--x-phero-ink2:#C6D2D3;--x-phero-hi:#E6BDB1;--x-grad:linear-gradient(135deg,#C99A8E 0%,#A9636A 60%,#8C2436 100%);--x-navy2:#0F2732;--x-hero-pos:50% 18%;--x-voz-pos:50% 12%;--x-mob-pos:50% 10%}
 
 body{font-size:1.04rem}
 h1,h2,h3{letter-spacing:-.01em}
@@ -5242,8 +5242,8 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 .brand .mark{box-shadow:0 8px 20px -12px color-mix(in srgb,var(--x-accent) 90%,transparent)}
 
 /* 10. entrada dos blocos */
-.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
-.js .rv:not(.in){filter:blur(7px)}
+:scope.js .rv{transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s}
+:scope.js .rv:not(.in){filter:blur(7px)}
 
 /* 11. celular: texto primeiro (nome, CRM, botão) e monitor como faixa sob a foto */
 @media (max-width:900px){
@@ -5263,7 +5263,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
 /* 12. menos movimento, mesma beleza */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
-  .js .rv:not(.in){filter:none}
+  :scope.js .rv:not(.in){filter:none}
 }
 
 .x-final .btn.x-btn,.x-final .x-btn,.x-final .btn{
@@ -5334,7 +5334,7 @@ header.nav{-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blu
   .hero::before,.hero .hgrid::before,.hero .hfoto::before{animation:none !important}
 }
 
-.js .rv:not(.in){filter:none !important}
+:scope.js .rv:not(.in){filter:none !important}
 @media (max-width:600px){
   .hero .lema{white-space:nowrap;font-size:.68rem;letter-spacing:.1em;padding:.45rem .8rem .45rem .5rem}
   .hero .lema::after{display:none}
@@ -5552,7 +5552,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
 
 
 /* ================= tema marcia-sampaio ================= */
-:root{--x-bg:#FBF7EE;--x-surface:#FFFFFF;--x-ink:#1E2C3A;--x-ink2:#4E5A66;--x-muted:#8A8578;--x-line:rgba(30,58,95,.14);
+:scope{--x-bg:#FBF7EE;--x-surface:#FFFFFF;--x-ink:#1E2C3A;--x-ink2:#4E5A66;--x-muted:#8A8578;--x-line:rgba(30,58,95,.14);
   --x-dark:#172A44;--x-on-dark:#FFF9EE;--x-on-dark2:#DCCFB4;--x-hi:#D9B24C;--x-accent:#1E3A5F;--x-accent-d:#142944;
   --x-tint:#EEE8D8;--x-tint2:#F7EFD9;
   --x-head:"Sora",system-ui,sans-serif;--x-head-w:500;--x-sans:"Inter",system-ui,sans-serif;--x-brand-w:600;
@@ -5560,7 +5560,7 @@ h2{font-size:clamp(2.05rem,3.6vw,2.95rem)}
   --x-phero-bg:#172A44;--x-phero-ink:#FFFDF9;--x-phero-ink2:#DCCFB4;--x-phero-hi:#D9B24C;--x-on-hi:#FFFFFF;
   --x-grad:linear-gradient(135deg,#D9B24C 0%,#1E3A5F 60%,#142944 100%);
   --x-navy2:#172A44;--x-hero-pos:50% 18%;--x-mob-pos:50% 18%;--x-mob-short-pos:50% 30%;--x-grid:rgba(30,58,95,.05)}
-html{background:var(--x-bg)}
+:scope{background:var(--x-bg)}
 body{background:var(--x-bg);font-family:var(--x-sans);font-size:1.03rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand b,.ft .fbrand b,.x-door h3,.x-post h3,.x-tile h3,.local b,.pq b,.fase b,.x-pcard b{font-family:var(--x-head);font-weight:var(--x-head-w);letter-spacing:-.01em}
 h2{font-weight:var(--x-head-w)}
@@ -5681,18 +5681,18 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
   .hero .hfoto figure img{height:100%!important;object-position:50% 38%}
 }
 
-:root{--x-head:"Sora",system-ui,sans-serif;--x-sans:"Inter",system-ui,sans-serif}
+:scope{--x-head:"Sora",system-ui,sans-serif;--x-sans:"Inter",system-ui,sans-serif}
 
 }
 @scope (html[data-dsm-page="leo-santos"]) {
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
+:scope{
   --bg:#F8F3EA;--surface:#fff;--ink:#171310;--ink2:#5E5046;--muted:#8C7B6D;--line:#E7DCCD;
   --accent:#8A5A2B;--accent-d:#6B4220;--hi:#C6A15B;--dark:#100D0A;--on-dark:#FBF6EC;
   --head:"Bodoni Moda",Georgia,serif;--sans:"Inter",system-ui,sans-serif;
   --r:22px;--navh:78px;--shadow:0 24px 60px -40px rgba(23,19,16,.55)
 }
-html{scroll-behavior:smooth}
+:scope{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -5917,13 +5917,13 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
 }
 @scope (html[data-dsm-page="manauara-estetica"]) {
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
+:scope{
   --bg:#F8F3EA;--surface:#fff;--ink:#171310;--ink2:#5E5046;--muted:#8C7B6D;--line:#E7DCCD;
   --accent:#8A5A2B;--accent-d:#6B4220;--hi:#C6A15B;--dark:#100D0A;--on-dark:#FBF6EC;
   --head:"Bodoni Moda",Georgia,serif;--sans:"Inter",system-ui,sans-serif;
   --r:22px;--navh:78px;--shadow:0 24px 60px -40px rgba(23,19,16,.55)
 }
-html{scroll-behavior:smooth}
+:scope{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
