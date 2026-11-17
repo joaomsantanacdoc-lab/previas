@@ -1148,6 +1148,9 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
  .hero .hfoto figure{max-height:70vh;max-height:70svh}
 }
 
+/* DSM hero credential clearance: faixa reservada, sem cobrir o retrato. */
+@media(min-width:901px){.hero .hfoto figure img{height:max(1px,calc(100% - 180px))!important}}
+
 }
 @scope (html[data-dsm-page="silvania-brunelly"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -2297,6 +2300,9 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
  .hero .hfoto{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
  .hero .hfoto figure{max-height:70vh;max-height:70svh}
 }
+
+/* DSM hero credential clearance: faixa reservada, sem cobrir o retrato. */
+@media(min-width:901px){.hero .hfoto figure img{height:max(1px,calc(100% - 180px))!important}}
 
 }
 @scope (html[data-dsm-page="vanessa-pontes"]) {
@@ -3448,6 +3454,9 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
  .hero .hfoto figure{max-height:70vh;max-height:70svh}
 }
 
+/* DSM hero credential clearance: faixa reservada, sem cobrir o retrato. */
+@media(min-width:901px){.hero .hfoto figure img{height:max(1px,calc(100% - 180px))!important}}
+
 }
 @scope (html[data-dsm-page="andreza-berlink"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -4598,6 +4607,9 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
  .hero .hfoto figure{max-height:70vh;max-height:70svh}
 }
 
+/* DSM hero credential clearance: faixa reservada, sem cobrir o retrato. */
+@media(min-width:901px){.hero .hfoto figure img{height:max(1px,calc(100% - 180px))!important}}
+
 }
 @scope (html[data-dsm-page="marcia-sampaio"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -5747,6 +5759,9 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
  .hero .hfoto{height:70vh;height:70svh;max-height:70vh;max-height:70svh;align-self:center}
  .hero .hfoto figure{max-height:70vh;max-height:70svh}
 }
+
+/* DSM hero credential clearance: faixa reservada, sem cobrir o retrato. */
+@media(min-width:901px){.hero .hfoto figure img{height:max(1px,calc(100% - 180px))!important}}
 
 }
 @scope (html[data-dsm-page="leo-santos"]) {
