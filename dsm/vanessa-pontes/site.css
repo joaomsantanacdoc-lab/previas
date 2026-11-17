@@ -1135,6 +1135,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 
 :scope{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
 
+/* DSM legal readability 20261117: informação de registro com base opaca. */
+.crednote{color:var(--x-ink);background:var(--x-surface);font-size:.75rem;line-height:1.45;font-weight:500;border-radius:6px;padding:.2rem .35rem}
+@media(max-width:640px){
+  :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
+}
+
 }
 @scope (html[data-dsm-page="silvania-brunelly"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -2271,6 +2277,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 }
 
 :scope{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
+
+/* DSM legal readability 20261117: informação de registro com base opaca. */
+.crednote{color:var(--x-ink);background:var(--x-surface);font-size:.75rem;line-height:1.45;font-weight:500;border-radius:6px;padding:.2rem .35rem}
+@media(max-width:640px){
+  :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
+}
 
 }
 @scope (html[data-dsm-page="vanessa-pontes"]) {
@@ -3409,6 +3421,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 
 :scope{--x-head:"Sora",system-ui,sans-serif;--x-sans:"Inter",system-ui,sans-serif}
 
+/* DSM legal readability 20261117: informação de registro com base opaca. */
+.crednote{color:var(--x-ink);background:var(--x-surface);font-size:.75rem;line-height:1.45;font-weight:500;border-radius:6px;padding:.2rem .35rem}
+@media(max-width:640px){
+  :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
+}
+
 }
 @scope (html[data-dsm-page="andreza-berlink"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -4546,6 +4564,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 
 :scope{--x-head:"Fraunces",Georgia,serif;--x-sans:"Inter",system-ui,sans-serif}
 
+/* DSM legal readability 20261117: informação de registro com base opaca. */
+.crednote{color:var(--x-ink);background:var(--x-surface);font-size:.75rem;line-height:1.45;font-weight:500;border-radius:6px;padding:.2rem .35rem}
+@media(max-width:640px){
+  :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
+}
+
 }
 @scope (html[data-dsm-page="marcia-sampaio"]) {
 :scope.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1)}
@@ -5682,6 +5706,12 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 }
 
 :scope{--x-head:"Sora",system-ui,sans-serif;--x-sans:"Inter",system-ui,sans-serif}
+
+/* DSM legal readability 20261117: informação de registro com base opaca. */
+.crednote{color:var(--x-ink);background:var(--x-surface);font-size:.75rem;line-height:1.45;font-weight:500;border-radius:6px;padding:.2rem .35rem}
+@media(max-width:640px){
+  :scope.jm-no-topo .jm-pilula,:scope.jm-no-topo .jm-recado{visibility:hidden;pointer-events:none}
+}
 
 }
 @scope (html[data-dsm-page="leo-santos"]) {
