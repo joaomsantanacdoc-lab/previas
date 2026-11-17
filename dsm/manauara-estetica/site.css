@@ -208,3 +208,21 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,4vw,2.6rem);align-items:start}
 @media(max-width:760px){.two{grid-template-columns:1fr}}
 .note{background:color-mix(in srgb,var(--hi) 12%,#fff);border:1px solid color-mix(in srgb,var(--hi) 35%,#fff);border-radius:16px;padding:1.1rem 1.2rem;font-size:.9rem;color:var(--ink2)}
+
+/* cartão de endereço no lugar do mapa que não renderiza */
+.mapcard{position:relative;min-height:420px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end;padding:1.1rem;
+  background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(150deg,var(--bg),#fff 72%)}
+.mapcard::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 28% 32%,color-mix(in srgb,var(--hi) 18%,transparent),transparent 70%);pointer-events:none}
+.mc-pin{position:absolute;z-index:2;top:22px;left:22px;width:56px;height:56px;border-radius:50%;background:var(--accent);display:grid;place-items:center;box-shadow:0 18px 36px -18px color-mix(in srgb,var(--accent) 85%,transparent)}
+.mc-pin svg{width:26px;height:26px;color:#fff}
+.mc-n{position:absolute;top:26px;right:24px;font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.16em;color:var(--muted)}
+.mc-route{position:absolute;top:52px;left:58px;width:170px;height:110px;border-left:1.5px dashed color-mix(in srgb,var(--accent) 38%,transparent);border-bottom:1.5px dashed color-mix(in srgb,var(--accent) 38%,transparent);border-radius:0 0 0 44px;transform:rotate(-7deg);opacity:.7}
+.mc-body{position:relative;z-index:2;width:100%;background:color-mix(in srgb,#fff 88%,transparent);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px;padding:1rem 1.15rem}
+.mc-body small{font-family:var(--sans);font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.mc-body b{display:block;font-family:var(--head);font-weight:600;font-size:1.2rem;margin-top:.15rem}
+.mc-body p{color:var(--ink2);font-size:.88rem;margin-top:.35rem;line-height:1.5}
+.mc-body .mc-ref{font-size:.78rem;color:var(--muted)}
+.mc-hours{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-top:1px solid var(--line);margin-top:.7rem;padding-top:.55rem;font-size:.78rem;color:var(--muted)}
+.mc-hours b{font-family:var(--sans);font-size:.78rem;color:var(--ink);margin:0}
+.mc-body .btn{margin-top:.8rem;width:100%;justify-content:center;padding:.75rem 1rem;font-size:.85rem}
+@media(max-width:860px){.mapcard{min-height:360px}}
