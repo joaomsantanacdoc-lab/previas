@@ -1123,7 +1123,7 @@ h2 em,h1 em{font-style:italic;color:var(--x-accent)}
 .mc-hours{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-top:1px solid var(--x-line);margin-top:.7rem;padding-top:.55rem;font-size:.78rem;color:var(--x-muted)}
 .mc-hours b{font-family:var(--x-sans);font-size:.78rem;color:var(--x-ink);margin:0}
 .mc-body .btn{margin-top:.8rem;width:100%;justify-content:center;padding:.75rem 1rem;font-size:.85rem}
-@media(max-width:860px){.mapcard{min-height:360px}}
+@media(max-width:860px){.mapcard{min-height:460px}}
 @media(max-width:1080px){.batidas{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.batidas{grid-template-columns:1fr}}
 @media (min-width:641px) and (max-width:900px){
